@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="MMAdmin.app/MMAdmin">
+      <BCSymbolMapName>MMAdmin.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>MMAdmin.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/luqmanakram/Projects/MMAdmin/MMAdmin/obj/Debug/net8.0-ios/iossimulator-arm64/mtouch-symbols.list</SymbolFile>
+      <DSymName>MMAdmin.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/luqmanakram/Projects/MMAdmin/MMAdmin</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
