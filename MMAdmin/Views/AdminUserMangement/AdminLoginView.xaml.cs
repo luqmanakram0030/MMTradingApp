@@ -20,4 +20,9 @@ public partial class AdminLoginView : ContentPage
     {
        // Application.Current.MainPage = new AppShell();
     }
+
+    async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    {
+        await ToastService.ShowToastAsync("Hello, this is a toast message!");
+    }
 }

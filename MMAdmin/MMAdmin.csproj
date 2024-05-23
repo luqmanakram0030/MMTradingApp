@@ -68,6 +68,9 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 		<PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="CommunityToolkit.Maui.Core" Version="7.0.1" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -91,6 +94,7 @@
 	  <None Remove="Resources\Images\forgotpwimg.png" />
 	  <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
 	  <None Remove="ViewModels\AdminViewModels\" />
+	  <None Remove="Controls\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -106,6 +110,7 @@
 	  <Folder Include="Domain\Services\Interface\" />
 	  <Folder Include="Views\AdminUserMangement\" />
 	  <Folder Include="ViewModels\AdminViewModels\" />
+	  <Folder Include="Controls\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\logowhite.png" />
