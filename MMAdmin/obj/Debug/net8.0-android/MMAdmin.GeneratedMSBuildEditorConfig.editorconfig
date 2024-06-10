@@ -69,3 +69,27 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.AdminUserMangement.AdminRegisterView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/AdminUserMangement/AdminRegisterView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/AdminUserMangement/AdminRegisterView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/EmployeeManagement/EmployeeView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.EmployeeManagement.EmployeeView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EmployeeManagement/EmployeeView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EmployeeManagement/EmployeeView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ProductManagement/ProductView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ProductManagement.ProductView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ProductManagement/ProductView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ProductManagement/ProductView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/schedulerManagement/SchedulerView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.schedulerManagement.SchedulerView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/schedulerManagement/SchedulerView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/schedulerManagement/SchedulerView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ShopManagement/ShopView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ShopManagement.ShopView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ShopManagement/ShopView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ShopManagement/ShopView.xaml

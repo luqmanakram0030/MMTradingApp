@@ -1321,7 +1321,6 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Numerics.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Numerics.Vectors.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.ObjectModel.dll
-/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Private.CoreLib.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Private.DataContractSerialization.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Private.Uri.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Private.Xml.dll
@@ -2108,3 +2107,4 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/src/crc64159f3caeb1269279/MauiSemanticOrderView.java
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/src/crc648fc34c62be8fbbff/Snackbar_SnackbarCallback.java
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/src/crc64d6358e7bf64fbac4/SpeechToTextImplementation_SpeechRecognitionListener.java
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Private.CoreLib.dll

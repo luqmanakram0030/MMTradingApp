@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Maui;
-
+﻿
 namespace MMAdmin;
 
 public static class MauiProgram
@@ -17,6 +16,12 @@ public static class MauiProgram
                 fonts.AddFont("materialdesignicons-webfont.ttf", "FontIcons");
             });
         FormHandler.RemoveBorders();
+        builder.Services.AddScoped<IAdminUser, AdminUserService>();
+        builder.Services.AddTransient<AdminLoginView>();
+        builder.Services.AddTransient<AppShell>();
+        builder.Services.AddTransient<AdminLoginViewModel>();
+        builder.Services.AddTransient <AdminRegisterViewModel>();
+        builder.Services.AddTransient <AdminRegisterView>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

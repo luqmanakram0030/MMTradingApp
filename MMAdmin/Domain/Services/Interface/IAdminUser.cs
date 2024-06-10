@@ -7,6 +7,7 @@ namespace MMAdmin.Domain.Services.Interface
     {
         
         Task<AdminUserModel> LoginAsync(string email);
+        Task<bool> RegisterAsync(AdminUserModel user);
     }
 }
 

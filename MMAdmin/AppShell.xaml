@@ -3,14 +3,100 @@
     x:Class="MMAdmin.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MMAdmin.Views.AdminUserMangement"
+    xmlns:login="clr-namespace:MMAdmin.Views.AdminUserMangement"
+    xmlns:local="clr-namespace:MMAdmin.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="MMAdmin">
 
+
+    
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="Shell.NavBarHasShadow" Value="True" />
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="Shell.TitleColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource BackgroundPageColor}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#757575"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource PrimaryColor}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" x:Name="MyTabbar">
+        <ShellContent x:Name="Employee" Title="Employee" Route="EmployeeView"  ContentTemplate="{DataTemplate local:EmployeeView}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="&#xf056e;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
+
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent x:Name="ProductView"  Title="Product" Route="ProductView" ContentTemplate="{DataTemplate local:ProductView}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="&#xf0365;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
+
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent x:Name="ShopView"  Route="ShopView" Title="Shop"  ContentTemplate="{DataTemplate local:ShopView}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="&#xf009c;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
+
+            </ShellContent.Icon>
+
+        </ShellContent>
+      
+         <ShellContent x:Name="ScheduleView" Title="Schedule" Route="ScheduleView" ContentTemplate="{DataTemplate local:SchedulerView}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="&#xf0e18;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
+
+            </ShellContent.Icon>
+        </ShellContent>
+    </FlyoutItem>
+
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:AdminRegisterView}"
-        Route="MainPage" />
+       x:Name="Login"
+        ContentTemplate="{DataTemplate login:AdminLoginView}"
+        Route="LoginPage"
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"/>
+
+ 
+
+ 
+   
+     <Shell.ItemTemplate>
+        <DataTemplate>
+            <ContentView BackgroundColor="White">
+                <!--Bindable Properties: Title, Icon-->
+                <Grid RowDefinitions="auto,1" ColumnDefinitions="2,*" Padding="0,25,0,2">
+                    <Image HeightRequest="28" Source="{Binding Icon}" VerticalOptions="Center"/>
+                    <Label Grid.Column="1" Text="{Binding Title}" TextColor="Black" FontSize="16" FontFamily="SemiBold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="10,5,0,0"/>
+                </Grid>
+            </ContentView>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+
+    <!--// MenuItemTemplate is for MenuItems as displayed in a Flyout
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-menuitem-appearance-->
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <ContentView BackgroundColor="White" >
+                <!--Bindable Properties: Text, Icon-->
+                <Grid RowDefinitions="auto,10"   ColumnDefinitions="30,*" Padding="20,10,0,0" RowSpacing="0">
+                    <Image HeightRequest="28" Source="{Binding Icon}" VerticalOptions="Center"/>
+                    <Label Grid.Column="1" Text="{Binding Title}" TextColor="Black" FontSize="16" FontFamily="SemiBold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="10,5,0,0"/>
+                    <BoxView Grid.Row="1"  HeightRequest="0.5" VerticalOptions="EndAndExpand" Grid.ColumnSpan="2" BackgroundColor="#757575" HorizontalOptions="FillAndExpand" Margin="-70,0,0,0" Opacity="0.8"/>
+                </Grid>
+            </ContentView>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
 
 </Shell>
 

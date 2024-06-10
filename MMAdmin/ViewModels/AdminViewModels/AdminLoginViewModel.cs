@@ -1,12 +1,5 @@
-﻿using System;
-using Android.Widget;
-using Firebase.Auth;
-using Newtonsoft.Json;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-using MMAdmin.Domain.Services.Interface;
-using CommunityToolkit.Mvvm.Input;
-using MMAdmin.Views.AdminUserMangement;
+﻿
+
 
 namespace MMAdmin.ViewModels.AdminViewModels
 {
@@ -21,23 +14,20 @@ namespace MMAdmin.ViewModels.AdminViewModels
         
         private readonly FirebaseWebApi _webApi;
 
-        private readonly IAdminUser _userService;
+        private readonly IAdminUser userService;
        
        
         #endregion
 
         #region Constructor
-        public AdminLoginViewModel()
+        public AdminLoginViewModel(IAdminUser _userService)
         {
             Email = string.Empty;
             Password = string.Empty;
-
             _webApi = new FirebaseWebApi();
-            _userService = DependencyService.Resolve<IAdminUser>();
+            this.userService = _userService;
 
-           
-
-        }
+            }
         #endregion
 
         #region Methods
@@ -65,25 +55,25 @@ namespace MMAdmin.ViewModels.AdminViewModels
             try
             {
                 
-                var response = await _userService.LoginAsync(Email.Trim().ToLower());
+                var response = await userService.LoginAsync(Email.Trim().ToLower());
 
                 if (response != null)
                 {
                     var authProvider = new FirebaseAuthProvider(new FirebaseConfig(_webApi.WebAPIKey));
                     var auth = await authProvider.SignInWithEmailAndPasswordAsync(Email.Trim().ToLower(), Password);
-
                     var content = await auth.GetFreshAuthAsync();
 
                     var serializedcontnet = JsonConvert.SerializeObject(content);
 
                     Preferences.Set("Email", Email.Trim().ToLower());
-                    Preferences.Set("Islogined", "true");
-                    Preferences.Set("Name", response.FullName.Trim());
-                   
-
+                    Preferences.Set("isloggedin", true);
                     
-                        Application.Current.MainPage = new AppShell();
-                   
+                    Preferences.Set("Name", response.FullName.Trim());
+
+
+                    Application.Current.MainPage = new AppShell();
+
+
                 }
                 else
                 {
@@ -94,13 +84,13 @@ namespace MMAdmin.ViewModels.AdminViewModels
             catch (Exception ex)
             {
                
-                await ShowErrorAsync("Invalid email or password");
+                await ShowErrorAsync("Invalid email or password("+ex.Message+")");
             }
         }
         [RelayCommand]
-        public async Task Signup() => await Application.Current.MainPage.Navigation.PushAsync(new AdminRegisterView());
+        public async Task Signup() => await Shell.Current.GoToAsync(nameof(AdminRegisterView));
         [RelayCommand]
-        public async Task NavigateForgotPassword() => await Application.Current.MainPage.Navigation.PushAsync(new AdminForgetPasswordView());
+        public async Task NavigateForgotPassword() => await Shell.Current.GoToAsync(nameof(AdminForgetPasswordView));
 
         private async Task<bool> CheckInternetConnectionAsync()
         {
