@@ -12,7 +12,7 @@
       <CodesignDisableTimestamp>true</CodesignDisableTimestamp>
       <CodesignKeychain></CodesignKeychain>
       <CodesignUseHardenedRuntime></CodesignUseHardenedRuntime>
-      <SourceProjectPath>/Users/luqmanakram/Projects/MMAdmin/MMAdmin</SourceProjectPath>
+      <SourceProjectPath>/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin</SourceProjectPath>
     </_CodesignBundle>
   </ItemGroup>
 </Project>

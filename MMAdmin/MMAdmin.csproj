@@ -46,10 +46,10 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\logo.png" BaseSize="456,456" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" BaseSize="456,456" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -60,6 +60,7 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<MauiIcon Include="Resources\AppIcon\logo.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,6 +72,7 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="CommunityToolkit.Maui.Core" Version="7.0.1" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
+		<PackageReference Include="Controls.UserDialogs.Maui" Version="1.5.4" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -95,6 +97,9 @@
 	  <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
 	  <None Remove="ViewModels\AdminViewModels\" />
 	  <None Remove="Controls\" />
+	  <None Remove="Resources\AppIcon\logo.png" />
+	  <None Remove="Utility\" />
+	  <None Remove="ViewModels\EmployeeManagement\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -111,6 +116,8 @@
 	  <Folder Include="Views\AdminUserMangement\" />
 	  <Folder Include="ViewModels\AdminViewModels\" />
 	  <Folder Include="Controls\" />
+	  <Folder Include="Utility\" />
+	  <Folder Include="ViewModels\EmployeeManagement\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\logowhite.png" />

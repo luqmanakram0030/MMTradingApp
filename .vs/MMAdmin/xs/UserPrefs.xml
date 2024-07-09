@@ -1,55 +1,36 @@
 ﻿<Properties StartupConfiguration="{BB304A3F-654C-417B-BAF4-BEAB72A09C45}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.MMAdmin PreferredExecutionTarget="Android.pixel_6_-_api_33" Xamarin.HotReload.DebuggerTimeoutException.MMAdmin.HideInfoBar="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MMAdmin/AppShell.xaml.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MMAdmin PreferredExecutionTarget="Android.pixel_6_-_api_33" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.85" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MMAdmin/MMAdmin.csproj">
     <Files>
-      <File FileName="MMAdmin/Views/AdminUserMangement/AdminRegisterView.xaml" Line="28" Column="60" />
-      <File FileName="MMAdmin/ViewModels/AdminViewModels/AdminRegisterViewModel.cs" Line="56" Column="13" />
-      <File FileName="MMAdmin/Views/AdminUserMangement/AdminRegisterView.xaml.cs" Line="6" Column="43" />
-      <File FileName="MMAdmin/Domain/Models/AdminUserModel.cs" Line="14" Column="37" />
-      <File FileName="MMAdmin/MauiProgram.cs" Line="21" Column="47" />
-      <File FileName="MMAdmin/ViewModels/AdminViewModels/AdminLoginViewModel.cs" Line="74" Column="67" />
-      <File FileName="MMAdmin/Domain/Services/Implementation/AdminUserService.cs" Line="30" Column="32" />
-      <File FileName="MMAdmin/Domain/Services/Interface/IAdminUser.cs" Line="10" Column="33" />
-      <File FileName="MMAdmin/App.xaml.cs" Line="1" Column="1" />
-      <File FileName="MMAdmin/Views/AdminUserMangement/AdminLoginView.xaml" Line="5" Column="56" />
-      <File FileName="MMAdmin/GlobalUsings.cs" Line="17" Column="8" />
-      <File FileName="MMAdmin/AppShell.xaml.cs" Line="20" Column="44" />
-      <File FileName="MMAdmin/AppShell.xaml" Line="33" Column="39" />
-      <File FileName="MMAdmin/Views/EmployeeManagement/EmployeeView.xaml" Line="5" Column="42" />
-      <File FileName="MMAdmin/Views/ProductManagement/ProductView.xaml" Line="4" Column="36" />
-      <File FileName="MMAdmin/Views/schedulerManagement/SchedulerView.xaml" Line="4" Column="36" />
-      <File FileName="MMAdmin/Views/ShopManagement/ShopView.xaml" Line="4" Column="36" />
-      <File FileName="MMAdmin/Views/ShopManagement/ShopView.xaml.cs" Line="1" Column="24" />
-      <File FileName="MMAdmin/Views/schedulerManagement/SchedulerView.xaml.cs" Line="1" Column="24" />
-      <File FileName="MMAdmin/Views/ProductManagement/ProductView.xaml.cs" Line="1" Column="24" />
-      <File FileName="MMAdmin/Views/EmployeeManagement/EmployeeView.xaml.cs" Line="1" Column="24" />
+      <File FileName="MMAdmin/Views/EmployeeManagement/EmployeeView.xaml" Line="1" Column="1" />
+      <File FileName="MMAdmin/Views/EmployeeManagement/AddEmployee.xaml" />
+      <File FileName="MMAdmin/Utility/APIEndPoint.cs" />
+      <File FileName="MMAdmin/Utility/Common.cs" />
+      <File FileName="MMAdmin/Utility/Constraints.cs" />
+      <File FileName="MMAdmin/Utility/DisplayUIMessage.cs" />
+      <File FileName="MMAdmin/AppShell.xaml.cs" />
+      <File FileName="MMAdmin/LanguageLocalization/ILocalizationService.cs" />
+      <File FileName="MMAdmin/LanguageLocalization/Localization.cs" />
+      <File FileName="MMAdmin/LanguageLocalization/LocalizationService.cs" />
+      <File FileName="MMAdmin/Resources/Languages/AppResources.resx" />
+      <File FileName="MMAdmin/Resources/Languages/AppResources.Designer.cs" />
+      <File FileName="MMAdmin/Resources/Languages/AppResources.es.resx" />
+      <File FileName="MMAdmin/MMAdmin.csproj" Line="52" Column="96" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MMAdmin">
-            <Node name="MMAdmin">
-              <Node name="Domain" expanded="True">
-                <Node name="Services" expanded="True">
-                  <Node name="Implementation" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="ViewModels" expanded="True">
-                <Node name="AdminViewModels" expanded="True" />
-              </Node>
-              <Node name="Views">
-                <Node name="AdminUserMangement" expanded="True" />
+            <Node name="MMAdmin" expanded="True" selected="True">
+              <Node name="Views" expanded="True">
                 <Node name="EmployeeManagement" expanded="True" />
-                <Node name="ProductManagement" expanded="True" />
-                <Node name="schedulerManagement" expanded="True" />
-                <Node name="ShopManagement" expanded="True">
-                  <Node name="ShopView.xaml" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="App.xaml" expanded="True" />
-              <Node name="AppShell.xaml">
-                <Node name="AppShell.xaml.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -57,11 +38,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.85" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

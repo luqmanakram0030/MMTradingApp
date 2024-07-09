@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0-android34.0": {
+      "AndHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -50,6 +63,24 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "AndHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -2864,6 +2895,19 @@
       }
     },
     "net8.0-android34.0/android-arm": {
+      "AndHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -2912,6 +2956,24 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "AndHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -5662,6 +5724,19 @@
       }
     },
     "net8.0-android34.0/android-arm64": {
+      "AndHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -5710,6 +5785,24 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "AndHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -8460,6 +8553,19 @@
       }
     },
     "net8.0-android34.0/android-x64": {
+      "AndHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -8508,6 +8614,24 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "AndHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -11258,6 +11382,19 @@
       }
     },
     "net8.0-android34.0/android-x86": {
+      "AndHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -11306,6 +11443,24 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "AndHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -14056,6 +14211,19 @@
       }
     },
     "net8.0-android34.0/iossimulator-arm64": {
+      "AndHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -14104,6 +14272,24 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "AndHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -16854,6 +17040,19 @@
       }
     },
     "net8.0-android34.0/maccatalyst-arm64": {
+      "AndHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/AndHUD.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -16902,6 +17101,24 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "AndHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -19652,6 +19869,19 @@
       }
     },
     "net8.0-ios17.2": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -19700,6 +19930,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -21497,6 +21741,19 @@
       }
     },
     "net8.0-ios17.2/android-arm": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -21545,6 +21802,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -23649,6 +23920,19 @@
       }
     },
     "net8.0-ios17.2/android-arm64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -23697,6 +23981,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -25801,6 +26099,19 @@
       }
     },
     "net8.0-ios17.2/android-x64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -25849,6 +26160,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -27953,6 +28278,19 @@
       }
     },
     "net8.0-ios17.2/android-x86": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -28001,6 +28339,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -30105,6 +30457,19 @@
       }
     },
     "net8.0-ios17.2/iossimulator-arm64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -30153,6 +30518,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -32257,6 +32636,19 @@
       }
     },
     "net8.0-ios17.2/maccatalyst-arm64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -32305,6 +32697,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -34409,6 +34815,19 @@
       }
     },
     "net8.0-maccatalyst17.2": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -34457,6 +34876,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -36254,6 +36687,19 @@
       }
     },
     "net8.0-maccatalyst17.2/android-arm": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -36302,6 +36748,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -38406,6 +38866,19 @@
       }
     },
     "net8.0-maccatalyst17.2/android-arm64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -38454,6 +38927,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -40558,6 +41045,19 @@
       }
     },
     "net8.0-maccatalyst17.2/android-x64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -40606,6 +41106,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -42710,6 +43224,19 @@
       }
     },
     "net8.0-maccatalyst17.2/android-x86": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -42758,6 +43285,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -44862,6 +45403,19 @@
       }
     },
     "net8.0-maccatalyst17.2/iossimulator-arm64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -44910,6 +45464,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -47014,6 +47582,19 @@
       }
     },
     "net8.0-maccatalyst17.2/maccatalyst-arm64": {
+      "BTProgressHUD/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -47062,6 +47643,20 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "Controls.UserDialogs.Maui/1.5.4": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "2.0.1",
+          "Microsoft.Maui.Controls": "8.0.3",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll": {}
         }
       },
       "FirebaseAuthentication.net/3.7.2": {
@@ -49167,6 +49762,53 @@
     }
   },
   "libraries": {
+    "AndHUD/2.0.1": {
+      "sha512": "wp4MRrLI6nRWtgYMCBePuKo816nFBI9UyHU4dNOmx+ZZbqOrcI/ef7CD8l5j79ajdAHv9+6du2nL/bDhImJgEw==",
+      "type": "package",
+      "path": "andhud/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "andhud.2.0.1.nupkg.sha512",
+        "andhud.nuspec",
+        "icon.png",
+        "lib/net6.0-android31.0/AndHUD.aar",
+        "lib/net6.0-android31.0/AndHUD.dll",
+        "lib/net6.0-android31.0/AndHUD.pdb",
+        "lib/net6.0-android31.0/AndHUD.xml",
+        "lib/net7.0-android33.0/AndHUD.aar",
+        "lib/net7.0-android33.0/AndHUD.dll",
+        "lib/net7.0-android33.0/AndHUD.pdb",
+        "lib/net7.0-android33.0/AndHUD.xml"
+      ]
+    },
+    "BTProgressHUD/2.0.1": {
+      "sha512": "oFyJYJT9AbLm7I4u2lUD6M31nY1vWL4nll5apvRwAJhVfUrZ1mArNPrRgtrydOGh61TFXBvd3HF1sf1vdyt0Nw==",
+      "type": "package",
+      "path": "btprogresshud/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NOTICE",
+        "btprogresshud.2.0.1.nupkg.sha512",
+        "btprogresshud.nuspec",
+        "icon.png",
+        "lib/net6.0-ios16.1/BTProgressHUD.dll",
+        "lib/net6.0-ios16.1/BTProgressHUD.pdb",
+        "lib/net6.0-ios16.1/BTProgressHUD.xml",
+        "lib/net6.0-maccatalyst16.1/BTProgressHUD.dll",
+        "lib/net6.0-maccatalyst16.1/BTProgressHUD.pdb",
+        "lib/net6.0-maccatalyst16.1/BTProgressHUD.xml",
+        "lib/net7.0-ios16.1/BTProgressHUD.dll",
+        "lib/net7.0-ios16.1/BTProgressHUD.pdb",
+        "lib/net7.0-ios16.1/BTProgressHUD.xml",
+        "lib/net7.0-maccatalyst16.1/BTProgressHUD.dll",
+        "lib/net7.0-maccatalyst16.1/BTProgressHUD.pdb",
+        "lib/net7.0-maccatalyst16.1/BTProgressHUD.xml"
+      ]
+    },
     "CommunityToolkit.Maui/7.0.1": {
       "sha512": "ecgi4LwhP8uMftmRdriPA9/I+BP4nDuwrW408e7cnCthMArog0W9/A50RyEP65WH/+T7nM0gUlrz4xLpmIiXRQ==",
       "type": "package",
@@ -49249,6 +49891,25 @@
         "lib/netstandard2.1/CommunityToolkit.Mvvm.dll",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.pdb",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
+      ]
+    },
+    "Controls.UserDialogs.Maui/1.5.4": {
+      "sha512": "J4CN0nZl4FubilTFH6ePEs35GU9Nn+HjhhtbFrqgASEaeQ020IO2+gwu3U8X49VqgODeRRszNe5y5/DrGSLtZg==",
+      "type": "package",
+      "path": "controls.userdialogs.maui/1.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "controls.userdialogs.maui.1.5.4.nupkg.sha512",
+        "controls.userdialogs.maui.nuspec",
+        "lib/net8.0-android34.0/Controls.UserDialogs.Maui.dll",
+        "lib/net8.0-android34.0/Controls.UserDialogs.Maui.xml",
+        "lib/net8.0-ios17.2/Controls.UserDialogs.Maui.dll",
+        "lib/net8.0-maccatalyst17.2/Controls.UserDialogs.Maui.dll",
+        "lib/net8.0/Controls.UserDialogs.Maui.dll",
+        "readme.md",
+        "userdialogs_maui_icon.png"
       ]
     },
     "FirebaseAuthentication.net/3.7.2": {
@@ -56732,6 +57393,7 @@
       "CommunityToolkit.Maui >= 7.0.1",
       "CommunityToolkit.Maui.Core >= 7.0.1",
       "CommunityToolkit.Mvvm >= 8.2.2",
+      "Controls.UserDialogs.Maui >= 1.5.4",
       "FirebaseAuthentication.net >= 3.7.2",
       "FirebaseDatabase.net >= 4.2.0",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
@@ -56743,6 +57405,7 @@
       "CommunityToolkit.Maui >= 7.0.1",
       "CommunityToolkit.Maui.Core >= 7.0.1",
       "CommunityToolkit.Mvvm >= 8.2.2",
+      "Controls.UserDialogs.Maui >= 1.5.4",
       "FirebaseAuthentication.net >= 3.7.2",
       "FirebaseDatabase.net >= 4.2.0",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
@@ -56754,6 +57417,7 @@
       "CommunityToolkit.Maui >= 7.0.1",
       "CommunityToolkit.Maui.Core >= 7.0.1",
       "CommunityToolkit.Mvvm >= 8.2.2",
+      "Controls.UserDialogs.Maui >= 1.5.4",
       "FirebaseAuthentication.net >= 3.7.2",
       "FirebaseDatabase.net >= 4.2.0",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
@@ -56823,6 +57487,10 @@
             "target": "Package",
             "version": "[8.2.2, )"
           },
+          "Controls.UserDialogs.Maui": {
+            "target": "Package",
+            "version": "[1.5.4, )"
+          },
           "FirebaseAuthentication.net": {
             "target": "Package",
             "version": "[3.7.2, )"
@@ -56886,6 +57554,10 @@
             "target": "Package",
             "version": "[8.2.2, )"
           },
+          "Controls.UserDialogs.Maui": {
+            "target": "Package",
+            "version": "[1.5.4, )"
+          },
           "FirebaseAuthentication.net": {
             "target": "Package",
             "version": "[3.7.2, )"
@@ -56948,6 +57620,10 @@
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.2, )"
+          },
+          "Controls.UserDialogs.Maui": {
+            "target": "Package",
+            "version": "[1.5.4, )"
           },
           "FirebaseAuthentication.net": {
             "target": "Package",

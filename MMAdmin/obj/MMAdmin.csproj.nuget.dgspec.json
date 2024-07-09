@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[8.2.2, )"
             },
+            "Controls.UserDialogs.Maui": {
+              "target": "Package",
+              "version": "[1.5.4, )"
+            },
             "FirebaseAuthentication.net": {
               "target": "Package",
               "version": "[3.7.2, )"
@@ -125,6 +129,10 @@
               "target": "Package",
               "version": "[8.2.2, )"
             },
+            "Controls.UserDialogs.Maui": {
+              "target": "Package",
+              "version": "[1.5.4, )"
+            },
             "FirebaseAuthentication.net": {
               "target": "Package",
               "version": "[3.7.2, )"
@@ -187,6 +195,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.2, )"
+            },
+            "Controls.UserDialogs.Maui": {
+              "target": "Package",
+              "version": "[1.5.4, )"
             },
             "FirebaseAuthentication.net": {
               "target": "Package",

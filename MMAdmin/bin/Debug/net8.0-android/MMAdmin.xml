@@ -4,6 +4,437 @@
         <name>MMAdmin</name>
     </assembly>
     <members>
+        <member name="T:MMAdmin.Resources.Languages.AppResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblAdd">
+            <summary>
+              Looks up a localized string similar to Add.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblAddLeads">
+            <summary>
+              Looks up a localized string similar to Add Leads.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblAddNote">
+            <summary>
+              Looks up a localized string similar to Add Note.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblAddReminder">
+            <summary>
+              Looks up a localized string similar to Add Reminder.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblAgent">
+            <summary>
+              Looks up a localized string similar to Agent.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblArchive">
+            <summary>
+              Looks up a localized string similar to Archive.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblBackToLogin">
+            <summary>
+              Looks up a localized string similar to Back to login.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblCancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblChangePassword">
+            <summary>
+              Looks up a localized string similar to Change password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblChat">
+            <summary>
+              Looks up a localized string similar to Chat.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblConfirmPassword">
+            <summary>
+              Looks up a localized string similar to Confirm password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblDashboard">
+            <summary>
+              Looks up a localized string similar to Dashboard.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblDate">
+            <summary>
+              Looks up a localized string similar to Date.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblDelete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblDisponible">
+            <summary>
+              Looks up a localized string similar to Disponible.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblDocuments">
+            <summary>
+              Looks up a localized string similar to Documents.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEdit">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEditAccount">
+            <summary>
+              Looks up a localized string similar to Edit account.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEditLeads">
+            <summary>
+              Looks up a localized string similar to Edit Leads.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEditReminder">
+            <summary>
+              Looks up a localized string similar to Edit Reminder.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEmailAddress">
+            <summary>
+              Looks up a localized string similar to Email Address.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEndTime">
+            <summary>
+              Looks up a localized string similar to End time.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEnterCredentials">
+            <summary>
+              Looks up a localized string similar to Enter your credentials to log in.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblEnterYourEmail">
+            <summary>
+              Looks up a localized string similar to Enter your email to reset your password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblFilter">
+            <summary>
+              Looks up a localized string similar to Filter.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblFirstName">
+            <summary>
+              Looks up a localized string similar to First name.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblForgotMyPassword">
+            <summary>
+              Looks up a localized string similar to I forgot my password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblForgotPassword">
+            <summary>
+              Looks up a localized string similar to Forgot Password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblFuneralStep">
+            <summary>
+              Looks up a localized string similar to Funeral Step.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblHour">
+            <summary>
+              Looks up a localized string similar to Hour.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblInformation">
+            <summary>
+              Looks up a localized string similar to Information.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblLastName">
+            <summary>
+              Looks up a localized string similar to Last name.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblLead">
+            <summary>
+              Looks up a localized string similar to Lead.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblLeads">
+            <summary>
+              Looks up a localized string similar to Leads.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblLeadStatus">
+            <summary>
+              Looks up a localized string similar to Lead status.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblLocation">
+            <summary>
+              Looks up a localized string similar to Location.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblLogin">
+            <summary>
+              Looks up a localized string similar to Login.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblLogout">
+            <summary>
+              Looks up a localized string similar to Logout.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNewAppointment">
+            <summary>
+              Looks up a localized string similar to New Appointment.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNewMeeting">
+            <summary>
+              Looks up a localized string similar to New Meeting.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNewPassword">
+            <summary>
+              Looks up a localized string similar to New password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNewReminder">
+            <summary>
+              Looks up a localized string similar to New Reminder.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNoControl">
+            <summary>
+              Looks up a localized string similar to No. Control.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNotes">
+            <summary>
+              Looks up a localized string similar to Notes.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNotification">
+            <summary>
+              Looks up a localized string similar to Notification.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblNotifications">
+            <summary>
+              Looks up a localized string similar to Notifications.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblOldPassword">
+            <summary>
+              Looks up a localized string similar to Old password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblPassword">
+            <summary>
+              Looks up a localized string similar to Password.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblPhone">
+            <summary>
+              Looks up a localized string similar to Phone.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblPhotoAndVideo">
+            <summary>
+              Looks up a localized string similar to Photo &amp; Video.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblProduct">
+            <summary>
+              Looks up a localized string similar to Product.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblProfile">
+            <summary>
+              Looks up a localized string similar to Profile.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblQuickResponse">
+            <summary>
+              Looks up a localized string similar to Quick Response.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblRating">
+            <summary>
+              Looks up a localized string similar to Rating.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblReminder">
+            <summary>
+              Looks up a localized string similar to Reminder.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblResponsible">
+            <summary>
+              Looks up a localized string similar to Responsible.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblRole">
+            <summary>
+              Looks up a localized string similar to Role.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblSampleMail">
+            <summary>
+              Looks up a localized string similar to sample@mail.com.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblSave">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblSchedule">
+            <summary>
+              Looks up a localized string similar to Schedule.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblSearch">
+            <summary>
+              Looks up a localized string similar to Search.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblSeemore">
+            <summary>
+              Looks up a localized string similar to See more.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblSend">
+            <summary>
+              Looks up a localized string similar to Send.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblSendQuickResponse">
+            <summary>
+              Looks up a localized string similar to Send quick response.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblStartTime">
+            <summary>
+              Looks up a localized string similar to Start time.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblStatus">
+            <summary>
+              Looks up a localized string similar to Status.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblTelephone">
+            <summary>
+              Looks up a localized string similar to Telephone.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblTimeline">
+            <summary>
+              Looks up a localized string similar to Timeline.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblTitle">
+            <summary>
+              Looks up a localized string similar to Title.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblUnread">
+            <summary>
+              Looks up a localized string similar to Unread.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblVersion">
+            <summary>
+              Looks up a localized string similar to Version.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblWelcome">
+            <summary>
+              Looks up a localized string similar to Welcome!.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblWelcomeWith">
+            <summary>
+              Looks up a localized string similar to Welcome,.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblWriteNote">
+            <summary>
+              Looks up a localized string similar to Write note....
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblWriteYourMessage">
+            <summary>
+              Looks up a localized string similar to Write your message....
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblYesClose">
+            <summary>
+              Looks up a localized string similar to Yes, Close.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.lblYesDelete">
+            <summary>
+              Looks up a localized string similar to Yes, Delete.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.msgDoYouWantToDeleteArchive">
+            <summary>
+              Looks up a localized string similar to Do you want to delete archive lead.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.msgPasswordFormat">
+            <summary>
+              Looks up a localized string similar to 1 Capital letters, letters, numbers and symbols.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.msgPleaseCheckYourInbox">
+            <summary>
+              Looks up a localized string similar to Please check your inbox. If you don&apos;t receive the email within a few minutes, please check your junk or spam folder.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.msgSendPasswordLink">
+            <summary>
+              Looks up a localized string similar to We have just sent a password reset link to the email:.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.msgToThelink">
+            <summary>
+              Looks up a localized string similar to to the email:.
+            </summary>
+        </member>
+        <member name="P:MMAdmin.Resources.Languages.AppResources.msgWouldYouLikeToLogout">
+            <summary>
+              Looks up a localized string similar to Would you like to log out?.
+            </summary>
+        </member>
         <member name="T:MMAdmin.ViewModels.AdminViewModels.AdminLoginViewModel">
             <inheritdoc/>
             <inheritdoc/>

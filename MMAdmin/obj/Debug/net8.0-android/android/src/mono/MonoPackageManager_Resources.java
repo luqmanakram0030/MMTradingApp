@@ -3,9 +3,11 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "MMAdmin.dll" comes first in this list. */
 		"MMAdmin.dll",
+		"AndHUD.dll",
 		"CommunityToolkit.Maui.dll",
 		"CommunityToolkit.Maui.Core.dll",
 		"CommunityToolkit.Mvvm.dll",
+		"Controls.UserDialogs.Maui.dll",
 		"Firebase.Auth.dll",
 		"Firebase.dll",
 		"GoogleGson.dll",

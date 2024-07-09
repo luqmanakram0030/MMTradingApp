@@ -70,6 +70,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.AdminUserMan
 build_metadata.AdditionalFiles.TargetPath = Views/AdminUserMangement/AdminRegisterView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/AdminUserMangement/AdminRegisterView.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/EmployeeManagement/AddEmployee.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.EmployeeManagement.AddEmployee.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EmployeeManagement/AddEmployee.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EmployeeManagement/AddEmployee.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/EmployeeManagement/EmployeeView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.EmployeeManagement.EmployeeView.xaml

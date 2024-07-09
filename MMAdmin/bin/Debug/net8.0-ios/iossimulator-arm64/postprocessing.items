@@ -7,9 +7,9 @@
       <dSYMSourcePathExists>false</dSYMSourcePathExists>
       <NoSymbolStrip>true</NoSymbolStrip>
       <dSYMInfoPlistRelativePath>MMAdmin.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
-      <SymbolFile>/Users/luqmanakram/Projects/MMAdmin/MMAdmin/obj/Debug/net8.0-ios/iossimulator-arm64/mtouch-symbols.list</SymbolFile>
+      <SymbolFile>/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-ios/iossimulator-arm64/mtouch-symbols.list</SymbolFile>
       <DSymName>MMAdmin.app.dSYM</DSymName>
-      <SourceProjectPath>/Users/luqmanakram/Projects/MMAdmin/MMAdmin</SourceProjectPath>
+      <SourceProjectPath>/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin</SourceProjectPath>
     </_PostProcessingItem>
   </ItemGroup>
 </Project>
