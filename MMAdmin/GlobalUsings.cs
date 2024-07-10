@@ -15,5 +15,5 @@ global using MMAdmin.Domain.Services.Implementation;
 global using Firebase.Database;
 global using MMAdmin.Domain.Models;
 global using MMAdmin.Views;
-
+global using MMAdmin.ViewModels.EmployeeManagement;
 

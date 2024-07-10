@@ -1,11 +1,10 @@
-﻿using System;
-namespace MMAdmin.ViewModels.EmployeeManagement
+﻿
+namespace MMAdmin.ViewModels.EmployeeManagement;
+
+public class EmployeeViewModel
 {
-	public class EmployeeViewModel
+	public EmployeeViewModel()
 	{
-		public EmployeeViewModel()
-		{
-		}
 	}
 }
 

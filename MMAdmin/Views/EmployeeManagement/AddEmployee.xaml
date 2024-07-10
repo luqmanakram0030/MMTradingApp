@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
              x:Class="MMAdmin.Views.EmployeeManagement.AddEmployee"
-             Title="AddEmployee">
+             Title="AddEmployee" Shell.NavBarIsVisible="False"
+              >
      <Grid
         Margin="20,10"
         RowDefinitions="*,Auto"

@@ -1,11 +1,10 @@
-﻿using System;
-namespace MMAdmin.ViewModels.EmployeeManagement
+﻿
+namespace MMAdmin.ViewModels.EmployeeManagement;
+
+public partial class AddEmployeeViewModel : ObservableObject
 {
-	public class AddEmployeeViewModel
+	public AddEmployeeViewModel()
 	{
-		public AddEmployeeViewModel()
-		{
-		}
 	}
 }
 

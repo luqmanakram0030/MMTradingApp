@@ -1,3 +1,4 @@
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/es/MMAdmin.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/icudt.dat
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/ar/Microsoft.Maui.Controls.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/ca/Microsoft.Maui.Controls.resources.dll
@@ -34,11 +35,14 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/runtimeconfig.bin
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/BTProgressHUD.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/CommunityToolkit.Maui.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/CommunityToolkit.Maui.Core.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/CommunityToolkit.Mvvm.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Controls.UserDialogs.Maui.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Firebase.Auth.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Firebase.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Maui.FreakyEffects.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/LiteDB.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Abstractions.dll
@@ -56,6 +60,10 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Microsoft.Maui.Essentials.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Microsoft.Maui.Graphics.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/Newtonsoft.Json.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/SkiaSharp.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/SkiaSharp.Views.iOS.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/SkiaSharp.Views.Maui.Controls.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/SkiaSharp.Views.Maui.Core.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/System.Reactive.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/System.Runtime.InteropServices.WindowsRuntime.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../MMAdmin.app/Contents/MonoBundle/MMAdmin.dll
