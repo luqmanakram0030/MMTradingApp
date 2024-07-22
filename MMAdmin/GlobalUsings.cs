@@ -16,4 +16,8 @@ global using Firebase.Database;
 global using MMAdmin.Domain.Models;
 global using MMAdmin.Views;
 global using MMAdmin.ViewModels.EmployeeManagement;
-
+global using Firebase.Database.Query;
+global using System.Collections.ObjectModel;
+global using System.Net.Http.Headers;
+global using MMAdmin.Utility;
+global using MMAdmin.Views.EmployeeManagement;

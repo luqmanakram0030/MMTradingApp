@@ -488,6 +488,70 @@
         <member name="P:MMAdmin.ViewModels.AdminViewModels.AdminRegisterViewModel.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.AdminViewModels.AdminRegisterViewModel.Login"/>.</summary>
         </member>
+        <member name="T:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.EmployeeList">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.employeeList"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.FilterDataList">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.filterDataList"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.UnfilteredEmployeesList">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.unfilteredEmployeesList"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.FilterIsVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.filterIsVisible"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SearchText">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.searchText"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.Employees">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.employees"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SelectedEmployee">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.selectedEmployee"/>
+        </member>
+        <member name="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.OnSearchTextChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SearchText"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SearchText"/> is changed.</remarks>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.removeFilterDataCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.RemoveFilterDataCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.RemoveFilterDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.RemoveFilterData(System.String)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.toggleFilterVisibilityCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ToggleFilterVisibilityCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ToggleFilterVisibilityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ToggleFilterVisibility"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.applyFilterCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ApplyFilterCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ApplyFilterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ApplyFilter(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.navigateToDetailCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToDetailCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToDetail"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.navigateToAddNewLeadCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddNewLeadCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddNewLeadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddNewLead(System.Object)"/>.</summary>
+        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
@@ -626,6 +690,27 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "User" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmployeeList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmployeeList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilterDataList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilterDataList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UnfilteredEmployeesList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UnfilteredEmployeesList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilterIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilterIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Employees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Employees" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -643,6 +728,27 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "User" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmployeeList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmployeeList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilterDataList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilterDataList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UnfilteredEmployeesList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UnfilteredEmployeesList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilterIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilterIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Employees">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Employees" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
         </member>
     </members>
 </doc>

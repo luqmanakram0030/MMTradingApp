@@ -82,6 +82,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.EmployeeMana
 build_metadata.AdditionalFiles.TargetPath = Views/EmployeeManagement/EmployeeView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/EmployeeManagement/EmployeeView.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Home/DashboardView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Home.DashboardView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Home/DashboardView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Home/DashboardView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Home/NotificationView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Home.NotificationView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Home/NotificationView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Home/NotificationView.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ProductManagement/ProductView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ProductManagement.ProductView.xaml

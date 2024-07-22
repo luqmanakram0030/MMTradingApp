@@ -3,27 +3,31 @@
     x:Class="MMAdmin.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+
+    xmlns:Home="clr-namespace:MMAdmin.Views.Home"
+    xmlns:Employee="clr-namespace:MMAdmin.Views.EmployeeManagement"
+    xmlns:Shop="clr-namespace:MMAdmin.Views"
+   
     xmlns:login="clr-namespace:MMAdmin.Views.AdminUserMangement"
-    xmlns:local="clr-namespace:MMAdmin.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="MMAdmin">
+    Title="Oportia">
 
+   
 
-    
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource PrimarySmokyWhite}" />
                 <Setter Property="Shell.NavBarHasShadow" Value="True" />
                 <Setter Property="Shell.ForegroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.TitleColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                
-                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Black}"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="Black"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Black}"/>
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource PrimarySmokyWhite}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource PrimaryBlack}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Primary}"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -31,33 +35,17 @@
     </Shell.Resources>
 
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem" x:Name="MyTabbar">
-        <ShellContent x:Name="Employee" Title="Employee" Route="EmployeeView"  ContentTemplate="{DataTemplate local:EmployeeView}">
-            <ShellContent.Icon>
-                <FontImageSource Glyph="&#xf056e;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
+        <ShellContent x:Name="DashboardView" Title="Dashboard" Route="DashboardView"  ContentTemplate="{DataTemplate Home:DashboardView}"/>       
+       
+        <ShellContent x:Name="ShopView"  Title="Shop" Route="ShopView" ContentTemplate="{DataTemplate Shop:ShopView}"/>  
+       
+        <ShellContent x:Name="NotificationsView"  Route="NotificationsView" Title="Notifications"  ContentTemplate="{DataTemplate Home:NotificationView}"/>
 
-            </ShellContent.Icon>
-        </ShellContent>
-        <ShellContent x:Name="ProductView"  Title="Product" Route="ProductView" ContentTemplate="{DataTemplate local:ProductView}">
-            <ShellContent.Icon>
-                <FontImageSource Glyph="&#xf0365;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
+        <ShellContent  x:Name="EmployeeView" Title="Employee" Route="EmployeeView" ContentTemplate="{DataTemplate Shop:EmployeeView}"/>
 
-            </ShellContent.Icon>
-        </ShellContent>
-
-        <ShellContent x:Name="ShopView"  Route="ShopView" Title="Shop"  ContentTemplate="{DataTemplate local:ShopView}">
-            <ShellContent.Icon>
-                <FontImageSource Glyph="&#xf009c;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
-
-            </ShellContent.Icon>
-
-        </ShellContent>
-      
-         <ShellContent x:Name="ScheduleView" Title="Schedule" Route="ScheduleView" ContentTemplate="{DataTemplate local:SchedulerView}">
-            <ShellContent.Icon>
-                <FontImageSource Glyph="&#xf0e18;" Color="{StaticResource PrimaryColor}" Size="30" FontFamily="FontIcons"/>
-
-            </ShellContent.Icon>
-        </ShellContent>
+        <ShellContent x:Name="ScheduleView" Title="Schedule" Route="ScheduleView" ContentTemplate="{DataTemplate Shop:SchedulerView}"/>
+           
+        
     </FlyoutItem>
 
     <ShellContent
@@ -100,4 +88,3 @@
     </Shell.MenuItemTemplate>
 
 </Shell>
-

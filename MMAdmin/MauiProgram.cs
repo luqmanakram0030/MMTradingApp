@@ -13,7 +13,12 @@ public static class MauiProgram
 		builder
 			.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
-            
+             .ConfigureMauiHandlers(h =>
+             {
+#if ANDROID || IOS
+                 h.AddHandler<Shell, TabbarBadgeRenderer>();
+#endif
+             })
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -27,10 +32,15 @@ public static class MauiProgram
         builder.Services.AddTransient<AdminLoginViewModel>();
         builder.Services.AddTransient <AdminRegisterViewModel>();
         builder.Services.AddTransient <AdminRegisterView>();
-        builder.Services.AddTransient<EmployeeViewModel>();
+        
         builder.Services.AddTransient<EmployeeView>();
         builder.Services.AddTransient<AddEmployeeViewModel>();
         builder.Services.AddTransient<AddEmployee>();
+        // Register services
+        builder.Services.AddSingleton<IProductService, ProductService>();
+        builder.Services.AddSingleton<ICategoryService, CategoryService>();
+        builder.Services.AddSingleton<IEmployeeService, EmployeeService>();
+        builder.Services.AddTransient<EmployeesViewModel>();
 
 #if DEBUG
         builder.Logging.AddDebug();
