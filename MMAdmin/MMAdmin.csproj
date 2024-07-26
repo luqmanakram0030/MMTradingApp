@@ -179,6 +179,9 @@
 	  <None Remove="Resources\Images\img_right_curve.png" />
 	  <None Remove="Resources\Images\img_top.png" />
 	  <None Remove="Views\Home\" />
+	  <None Remove="Views\Components\" />
+	  <None Remove="Resources\Images\selectedshop.png" />
+	  <None Remove="Resources\Images\shop.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -198,6 +201,7 @@
 	  <Folder Include="Utility\" />
 	  <Folder Include="ViewModels\EmployeeManagement\" />
 	  <Folder Include="Views\Home\" />
+	  <Folder Include="Views\Components\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\logowhite.png" />
@@ -285,5 +289,7 @@
 	  <BundleResource Include="Resources\Images\img_line.png" />
 	  <BundleResource Include="Resources\Images\img_right_curve.png" />
 	  <BundleResource Include="Resources\Images\img_top.png" />
+	  <BundleResource Include="Resources\Images\selectedshop.png" />
+	  <BundleResource Include="Resources\Images\shop.png" />
 	</ItemGroup>
 </Project>

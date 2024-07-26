@@ -1,27 +1,46 @@
 ﻿<Properties StartupConfiguration="{BB304A3F-654C-417B-BAF4-BEAB72A09C45}|Default">
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.85" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MMAdmin Xamarin.HotReload.DebuggerTimeoutException.MMAdmin.HideInfoBar="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.17138375-956F-41B1-A4CA-7174C6B625B6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/ViewModels/EmployeeManagement/EmployeeViewModel.cs" relfile="MMAdmin/ViewModels/EmployeeManagement/EmployeeViewModel.cs" line="65" column="1" />
+      <Breakpoint file="/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Domain/Services/Implementation/EmployeeService.cs" relfile="MMAdmin/Domain/Services/Implementation/EmployeeService.cs" line="42" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.MMAdmin Xamarin.HotReload.DebuggerTimeoutException.MMAdmin.HideInfoBar="True" PreferredExecutionTarget="Android.pixel_6_-_api_33" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MMAdmin/Domain/Services/Implementation/AdminUserService.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.17138375-956F-41B1-A4CA-7174C6B625B6" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MMAdmin/MauiProgram.cs">
     <Files>
+      <File FileName="MMAdmin/Domain/Services/Implementation/EmployeeService.cs" />
+      <File FileName="MMAdmin/Domain/Services/Implementation/AdminUserService.cs" />
+      <File FileName="MMAdmin/Domain/Services/Implementation/ProductService.cs" />
+      <File FileName="MMAdmin/Domain/Services/Implementation/CategoryService.cs" />
       <File FileName="MMAdmin/Views/EmployeeManagement/EmployeeView.xaml" />
-      <File FileName="MMAdmin/Resources/Styles/Styles.xaml" />
-      <File FileName="MMAdmin/Resources/Styles/Colors.xaml" />
       <File FileName="MMAdmin/ViewModels/EmployeeManagement/EmployeeViewModel.cs" />
+      <File FileName="MMAdmin/Views/EmployeeManagement/AddEmployee.xaml" Line="79" Column="65" />
       <File FileName="MMAdmin/Domain/Models/EmployeeModel.cs" />
-      <File FileName="MMAdmin/Domain/Services/Interface/IAdminUser.cs" />
-      <File FileName="MMAdmin/Domain/Services/Implementation/AdminUserService.cs" Line="1" Column="1" />
+      <File FileName="MMAdmin/Views/EmployeeManagement/EmployeeView.xaml.cs" />
+      <File FileName="MMAdmin/Domain/Services/Interface/IEmployeeService.cs" />
+      <File FileName="MMAdmin/MauiProgram.cs" Line="17" Column="38" />
+      <File FileName="MMAdmin/Platforms/Android/TabbarBadgeRenderer.cs" Line="117" Column="65" />
+      <File FileName="MMAdmin/Platforms/iOS/TabbarBadgeRenderer.cs" Line="40" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__" />
+        <State name="__root__">
+          <Node name="MMAdmin">
+            <Node name="MMAdmin">
+              <Node name="Platforms" expanded="True">
+                <Node name="Android" expanded="True" />
+                <Node name="iOS" expanded="True" />
+              </Node>
+              <Node name="MauiProgram.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.85" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33" />
 </Properties>

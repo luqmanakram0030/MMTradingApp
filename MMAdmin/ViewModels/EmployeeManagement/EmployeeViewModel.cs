@@ -39,9 +39,9 @@ public partial class EmployeesViewModel : ObservableObject
     {
         _employeeService = employeeService;
         Employees = new ObservableCollection<EmployeeModel>();
-
-        // Initialize commands
-        LoadEmployeesCommand = new AsyncRelayCommand(LoadEmployeesAsync);
+        SelectedEmployee = new EmployeeModel();
+            // Initialize commands
+            LoadEmployeesCommand = new AsyncRelayCommand(LoadEmployeesAsync);
         AddEmployeeCommand = new AsyncRelayCommand(AddEmployeeAsync);
         UpdateEmployeeCommand = new AsyncRelayCommand(UpdateEmployeeAsync);
         DeleteEmployeeCommand = new AsyncRelayCommand(DeleteEmployeeAsync);

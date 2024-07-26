@@ -2225,3 +2225,5 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/resizetizer/r/drawable/img_right_curve.png
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/resizetizer/r/drawable/img_top.png
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/android/assets/System.Private.CoreLib.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/resizetizer/r/drawable/shop.png
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-android/resizetizer/r/drawable/selectedshop.png

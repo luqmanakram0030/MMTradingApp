@@ -39,8 +39,10 @@ obj/Debug/net8.0-android/resizetizer/r/drawable/icon_chat_black.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_microphone.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_schedule_outline.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_menu.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/shop.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_alarm.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_dashboard.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/selectedshop.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_leads.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_call.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/loginimg.png

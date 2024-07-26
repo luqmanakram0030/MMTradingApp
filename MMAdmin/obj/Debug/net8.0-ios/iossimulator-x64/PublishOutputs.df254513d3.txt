@@ -1,3 +1,4 @@
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/es/MMAdmin.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/icudt.dat
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/ar/Microsoft.Maui.Controls.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/ca/Microsoft.Maui.Controls.resources.dll
@@ -34,9 +35,11 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/runtimeconfig.bin
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/BTProgressHUD.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/CommunityToolkit.Maui.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/CommunityToolkit.Maui.Core.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/CommunityToolkit.Mvvm.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/Controls.UserDialogs.Maui.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/Firebase.Auth.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/Firebase.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-x64/publish/../MMAdmin.app/LiteDB.dll

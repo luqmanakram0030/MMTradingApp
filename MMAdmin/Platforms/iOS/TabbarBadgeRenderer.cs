@@ -1,10 +1,11 @@
-﻿using System;
+﻿
 using Microsoft.Maui.Controls.Handlers.Compatibility;
 using Microsoft.Maui.Controls.Platform.Compatibility;
 using Microsoft.Maui.Platform;
+
 using UIKit;
 
-namespace Oportia
+namespace MMAdmin
 {
     public class TabbarBadgeRenderer : ShellRenderer
     {
@@ -90,7 +91,7 @@ namespace Oportia
                 case 0:
                     return isSelected ? UIImage.FromBundle("icon_dashboard") : UIImage.FromBundle("icon_dashboard_black");
                 case 1:
-                    return isSelected ? UIImage.FromBundle("icon_chat") : UIImage.FromBundle("icon_chat_black");
+                    return isSelected ? UIImage.FromBundle("selectedshop") : UIImage.FromBundle("shop");
                 case 2:
                     return isSelected ? UIImage.FromBundle("icon_notification") : UIImage.FromBundle("icon_notification_black");
                 case 3:

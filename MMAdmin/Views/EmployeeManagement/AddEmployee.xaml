@@ -2,279 +2,104 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+             xmlns:vm="clr-namespace:MMAdmin.ViewModels.EmployeeManagement"
+             x:DataType="vm:EmployeesViewModel"
              x:Class="MMAdmin.Views.EmployeeManagement.AddEmployee"
-             Title="AddEmployee" Shell.NavBarIsVisible="False"
-              >
-     <Grid
-        Margin="20,10"
-        RowDefinitions="*,Auto"
-        RowSpacing="15">
+             Title="AddEmployee" Shell.NavBarIsVisible="False">
 
+    
+
+    <Grid Margin="20,10" RowDefinitions="*,Auto" RowSpacing="15">
         <ScrollView VerticalScrollBarVisibility="Never">
-
             <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15">
+                <Label x:Name="lblTitle"
+                       FontFamily="Bold"
+                       FontSize="20"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{x:Static res:AppResources.lblAddLeads}"
+                       TextColor="{StaticResource PrimaryBlack}"
+                       VerticalOptions="StartAndExpand" />
 
-                <Label
-                    x:Name="lblTitle"
-                    
-                    FontFamily="Bold"
-                    FontSize="20"
-                    HorizontalOptions="StartAndExpand"
-                    Text="{x:Static res:AppResources.lblAddLeads}"
-                    TextColor="{StaticResource PrimaryBlack}"
-                    VerticalOptions="StartAndExpand" />
+                <ImageButton x:Name="imgBtnMenu"
+                             HeightRequest="20"
+                             HorizontalOptions="EndAndExpand"
+                             Source="icon_menu.png"
+                             VerticalOptions="CenterAndExpand"
+                             WidthRequest="20" />
 
-                <ImageButton
-                    x:Name="imgBtnMenu"
-                    
-                    HeightRequest="20"
-                    HorizontalOptions="EndAndExpand"
-                    Source="icon_menu.png"
-                    VerticalOptions="CenterAndExpand"
-                    WidthRequest="20" />
-
-                <Border
-                    x:Name="brdFirstname"
-                    Grid.Row="1"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
+                <Border x:Name="brdFirstname" Grid.Row="1" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
                         <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Entry
-                            x:Name="txtFirstname"
-                            Grid.Column="1"
-                            Placeholder="{x:Static res:AppResources.lblFirstName}"
-                            Style="{StaticResource PrimaryEntry}" />
+                        <Entry x:Name="txtFirstname"
+                               Grid.Column="1"
+                               Placeholder="Fullname"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedEmployee.FullName}" />
                     </Grid>
                 </Border>
 
-                <Border
-                    x:Name="brdLastname"
-                    Grid.Row="2"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
-                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Entry
-                            x:Name="txtLastname"
-                            Grid.Column="1"
-                            Placeholder="{x:Static res:AppResources.lblLastName}"
-                            Style="{StaticResource PrimaryEntry}" />
-                    </Grid>
-                </Border>
+                
 
-                <Border
-                    x:Name="brdTelephone"
-                    Grid.Row="3"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
+                <Border x:Name="brdTelephone" Grid.Row="3" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
                         <Image Source="icon_call.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Entry
-                            x:Name="txtTelephone"
-                            Grid.Column="1"
-                            Keyboard="Telephone"
-                            Placeholder="{x:Static res:AppResources.lblTelephone}"
-                            Style="{StaticResource PrimaryEntry}" />
+                        <Entry x:Name="txtTelephone"
+                               Grid.Column="1"
+                               Keyboard="Telephone"
+                               Placeholder="Phone#"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedEmployee.PhoneNumber}" />
                     </Grid>
                 </Border>
 
-                <Border
-                    x:Name="brdEmail"
-                    Grid.Row="4"
-                    Style="{StaticResource PrimaryBorder}">
+                <Border x:Name="brdEmail" Grid.Row="4" Style="{StaticResource PrimaryBorder}">
                     <Grid ColumnDefinitions="45,*">
-                        <Image
-                            Margin="10"
-                            Aspect="AspectFit"
-                            Source="icon_email.png" />
-                        <Entry
-                            x:Name="txtEmail"
-                            Grid.Column="1"
-                            Keyboard="Email"
-                            Placeholder="{x:Static res:AppResources.lblEmailAddress}"
-                            Style="{StaticResource PrimaryEntry}" />
+                        <Image Margin="10"
+                               Aspect="AspectFit"
+                               Source="icon_email.png" />
+                        <Entry x:Name="txtEmail"
+                               Grid.Column="1"
+                               Keyboard="Email"
+                               Placeholder="Email"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedEmployee.Email}" />
                     </Grid>
                 </Border>
 
-                <Border
-                    x:Name="brdFunnelStep"
-                    Grid.Row="5"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
-                        <Image Source="icon_filter.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Picker
-                            x:Name="pkFunralStep"
-                            Title="{x:Static res:AppResources.lblFuneralStep}"
-                            Grid.Column="1"
-                            Style="{StaticResource PrimaryPicker}" />
-                        <Image
-                            Grid.Column="1"
-                            HorizontalOptions="EndAndExpand"
-                            Source="icon_arrow_down_black.png"
-                            Style="{StaticResource PrimaryImageDownErrow}" />
+                <Border x:Name="brdPassword" Grid.Row="5" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_lock.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry x:Name="txtPassword"
+                               Grid.Column="1"
+                               Placeholder="Password"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedEmployee.Password}" />
+                    </Grid>
+                </Border>
+                 <Border x:Name="brdConfirmPassword" Grid.Row="6" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_lock.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry x:Name="txtConfirmPassword"
+                               Grid.Column="1"
+                               Placeholder="Confirm Password"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedEmployee.Password}" />
                     </Grid>
                 </Border>
 
-                <Border
-                    x:Name="brdLeadStatus"
-                    Grid.Row="6"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
-                        <Image Source="icon_status.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Picker
-                            x:Name="pkLeadStatus"
-                            Title="{x:Static res:AppResources.lblLeadStatus}"
-                            Grid.Column="1"
-                            Style="{StaticResource PrimaryPicker}" />
-                        <Image
-                            Grid.Column="1"
-                            HorizontalOptions="EndAndExpand"
-                            Source="icon_arrow_down_black.png"
-                            Style="{StaticResource PrimaryImageDownErrow}" />
-                    </Grid>
-                </Border>
+                
 
-                <Border
-                    x:Name="brdProduct"
-                    Grid.Row="7"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
-                        <Image Source="icon_product.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Picker
-                            x:Name="pkProduct"
-                            Title="{x:Static res:AppResources.lblProduct}"
-                            Grid.Column="1"
-                            Style="{StaticResource PrimaryPicker}" />
-                        <Image
-                            Grid.Column="1"
-                            HorizontalOptions="EndAndExpand"
-                            Source="icon_arrow_down_black.png"
-                            Style="{StaticResource PrimaryImageDownErrow}" />
-                    </Grid>
-                </Border>
+                
 
-                <Border
-                    x:Name="brdControl"
-                    Grid.Row="8"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
-                        <Image Source="icon_has.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Entry
-                            x:Name="txtControl"
-                            Grid.Column="1"
-                            Placeholder="{x:Static res:AppResources.lblNoControl}"
-                            Style="{StaticResource PrimaryEntry}" />
-                    </Grid>
-                </Border>
-
-                <Border
-                    x:Name="brdRating"
-                    Grid.Row="9"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*,Auto"
-                        ColumnSpacing="5">
-                        <Image Source="icon_rating.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Entry
-                            x:Name="txtRating"
-                            Grid.Column="1"
-                            Placeholder="{x:Static res:AppResources.lblRating}"
-                            Style="{StaticResource PrimaryEntry}" />
-
-                        <Slider
-                            Grid.Column="2"
-                            BackgroundColor="Transparent"
-                            HeightRequest="30"
-                            Maximum="5"
-                            MaximumTrackColor="Transparent"
-                            Minimum="0"
-                            MinimumTrackColor="Transparent"
-                            ThumbColor="Transparent"
-                            
-                            WidthRequest="130" />
-
-                       
-                    </Grid>
-                </Border>
-
-                <Border
-                    x:Name="brdAgent"
-                    Grid.Row="10"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
-                        <Image Source="icon_person.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Picker
-                            x:Name="pkAgent"
-                            Title="{x:Static res:AppResources.lblAgent}"
-                            Grid.Column="1"
-                            Style="{StaticResource PrimaryPicker}" />
-                        <Image
-                            Grid.Column="1"
-                            HorizontalOptions="EndAndExpand"
-                            Source="icon_arrow_down_black.png"
-                            Style="{StaticResource PrimaryImageDownErrow}" />
-                    </Grid>
-                </Border>
-
-                <Border
-                    x:Name="brdNotes"
-                    Grid.Row="11"
-                    MinimumHeightRequest="100"
-                    Style="{StaticResource PrimaryBorder}">
-                    <Grid
-                        Padding="10,0"
-                        ColumnDefinitions="25,*"
-                        ColumnSpacing="5">
-                        <Image
-                            Margin="0,10,0,0"
-                            Source="icon_note.png"
-                            Style="{StaticResource PrimaryImageEntry}"
-                            VerticalOptions="StartAndExpand" />
-                        <Editor
-                            x:Name="txtNotes"
-                            Grid.Column="1"
-                            FontFamily="Medium"
-                            HorizontalOptions="FillAndExpand"
-                            Placeholder="{x:Static res:AppResources.lblNotes}"
-                            PlaceholderColor="{StaticResource PrimaryBlack35}"
-                            VerticalOptions="FillAndExpand"
-                            VerticalTextAlignment="Start" />
-                    </Grid>
-                </Border>
-
+      
             </Grid>
-
         </ScrollView>
 
-        <Button
-            x:Name="btnSave"
-            Grid.Row="1"
-            Margin="0"
-            
-            Style="{StaticResource PrimaryButton}"
-            Text="{x:Static res:AppResources.lblSave}" />
+        <Button x:Name="btnSave"
+                Grid.Row="1"
+                Margin="0"
+                Style="{StaticResource PrimaryButton}"
+                Text="Save"
+                Command="{Binding AddEmployeeCommand}" />
     </Grid>
 </ContentPage>

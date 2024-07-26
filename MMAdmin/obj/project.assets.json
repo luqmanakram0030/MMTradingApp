@@ -14210,7 +14210,7 @@
         }
       }
     },
-    "net8.0-android34.0/iossimulator-arm64": {
+    "net8.0-android34.0/iossimulator-x64": {
       "AndHUD/2.0.1": {
         "type": "package",
         "compile": {
@@ -30456,7 +30456,7 @@
         }
       }
     },
-    "net8.0-ios17.2/iossimulator-arm64": {
+    "net8.0-ios17.2/iossimulator-x64": {
       "BTProgressHUD/2.0.1": {
         "type": "package",
         "compile": {
@@ -45402,7 +45402,7 @@
         }
       }
     },
-    "net8.0-maccatalyst17.2/iossimulator-arm64": {
+    "net8.0-maccatalyst17.2/iossimulator-x64": {
       "BTProgressHUD/2.0.1": {
         "type": "package",
         "compile": {
@@ -57688,7 +57688,7 @@
       "android-x86": {
         "#import": []
       },
-      "iossimulator-arm64": {
+      "iossimulator-x64": {
         "#import": []
       },
       "maccatalyst-arm64": {

@@ -1,8 +1,6 @@
 ﻿
 
 
-using MMAdmin.Views.EmployeeManagement;
-
 namespace MMAdmin;
 
 public static class MauiProgram
@@ -34,7 +32,7 @@ public static class MauiProgram
         builder.Services.AddTransient <AdminRegisterView>();
         
         builder.Services.AddTransient<EmployeeView>();
-        builder.Services.AddTransient<AddEmployeeViewModel>();
+        
         builder.Services.AddTransient<AddEmployee>();
         // Register services
         builder.Services.AddSingleton<IProductService, ProductService>();

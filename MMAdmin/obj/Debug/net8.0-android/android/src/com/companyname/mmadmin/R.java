@@ -11759,10 +11759,12 @@ public final class R {
     public static final int rightangle=0x7f070137;
     public static final int roundedbg=0x7f070138;
     public static final int roundedbgdark=0x7f070139;
-    public static final int splash=0x7f07013a;
-    public static final int test_level_drawable=0x7f07013b;
-    public static final int tooltip_frame_dark=0x7f07013c;
-    public static final int tooltip_frame_light=0x7f07013d;
+    public static final int selectedshop=0x7f07013a;
+    public static final int shop=0x7f07013b;
+    public static final int splash=0x7f07013c;
+    public static final int test_level_drawable=0x7f07013d;
+    public static final int tooltip_frame_dark=0x7f07013e;
+    public static final int tooltip_frame_light=0x7f07013f;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

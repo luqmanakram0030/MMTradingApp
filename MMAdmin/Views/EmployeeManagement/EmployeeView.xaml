@@ -5,6 +5,8 @@
              xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Shell.TabBarIsVisible="True" Shell.NavBarIsVisible="False"
+              xmlns:vm="clr-namespace:MMAdmin.ViewModels.EmployeeManagement" xmlns:models="clr-namespace:MMAdmin.Domain.Models"
+             x:DataType="vm:EmployeesViewModel"
              Title="EmployeeView">
    <StackLayout>
        
@@ -123,72 +125,13 @@
                     RowDefinitions="Auto,Auto,Auto,Auto"
                     RowSpacing="15">
 
-                        <Grid RowDefinitions="Auto,Auto" RowSpacing="5">
-                            <Label
-                            
-                            FontFamily="SemiBold"
-                            FontSize="14"
-                            Text="{x:Static res:AppResources.lblFuneralStep}"
-                            TextColor="{StaticResource PrimaryBlack}" />
-                            <Border Grid.Row="1" Style="{StaticResource PrimaryBorder}">
-                                <Grid Padding="10,0">
-                                    <Picker ItemsSource="{Binding FunnelStepList}" SelectedItem="{Binding SelectedFunnelStep}"
-                                    x:Name="pkFunralStep" ItemDisplayBinding="{Binding Name}"
-                                    Title="All"
-                                    Style="{StaticResource PrimaryPicker}" />
-                                    <Image Source="icon_arrow_down_black.png" Style="{StaticResource PrimaryImageDownErrow}" />
-                                </Grid>
-                            </Border>
-                        </Grid>
-
-                        <Grid
-                        Grid.Row="1"
-                        RowDefinitions="Auto,Auto"
-                        RowSpacing="5">
-                            <Label
-                            
-                            FontFamily="SemiBold"
-                            FontSize="14"
-                            Text="{x:Static res:AppResources.lblLeadStatus}"
-                            TextColor="{StaticResource PrimaryBlack}" />
-                            <Border Grid.Row="1" Style="{StaticResource PrimaryBorder}">
-                                <Grid Padding="10,0">
-                                    <Picker ItemsSource="{Binding LeadStatusList}" SelectedItem="{Binding SelectedLeadStatus}"
-                                    x:Name="pkLeadStatus" ItemDisplayBinding="{Binding Name}"
-                                    Title="All"
-                                    Style="{StaticResource PrimaryPicker}" />
-                                    <Image Source="icon_arrow_down_black.png" Style="{StaticResource PrimaryImageDownErrow}" />
-                                </Grid>
-                            </Border>
-                        </Grid>
-
-                        <Grid
-                        Grid.Row="2"
-                        RowDefinitions="Auto,Auto"
-                        RowSpacing="5">
-                            <Label
-                            
-                            FontFamily="SemiBold"
-                            FontSize="14"
-                            Text="{x:Static res:AppResources.lblProduct}"
-                            TextColor="{StaticResource PrimaryBlack}" />
-                            <Border Grid.Row="1" Style="{StaticResource PrimaryBorder}">
-                                <Grid Padding="10,0">
-                                    <Picker
-                                    x:Name="pkProduct"
-                                    Title="All"
-                                    Style="{StaticResource PrimaryPicker}" />
-                                    <Image Source="icon_arrow_down_black.png" Style="{StaticResource PrimaryImageDownErrow}" />
-                                </Grid>
-                            </Border>
-                        </Grid>
-
-                        <Button Command="{Binding ApplyFilterCommand}" CommandParameter="{Binding Source={x:Reference btnFilter}}"
-                        x:Name="btnFilter"
-                        Grid.Row="3"
                        
-                        Style="{StaticResource PrimaryButton}"
-                        Text="{x:Static res:AppResources.lblFilter}" />
+
+                      
+
+                        
+
+                      
                     </Grid>
 
                     <!--#endregion-->
@@ -199,7 +142,7 @@
 
                 <!--#region [ Row 2 [ List ]]-->
 
-                <ListView ItemsSource="{Binding LeadsList}"
+                <ListView ItemsSource="{Binding Employees}"
                 x:Name="lstDetails"
                 Grid.Row="2"
                 Margin="0"
@@ -211,7 +154,7 @@
                 SeparatorVisibility="Default"
                 VerticalScrollBarVisibility="Never">
                     <ListView.ItemTemplate>
-                        <DataTemplate >
+                        <DataTemplate x:DataType="models:EmployeeModel">
                             <ViewCell>
                                 <Grid 
                                 Margin="0"
@@ -231,9 +174,9 @@
                                         Aspect="AspectFit"
                                         Source="icon_avatar.png" />
                                 </Border>-->
-                                    <toolkit:AvatarView   Text="{Binding Initials}"    BorderWidth="0" TextColor="{StaticResource PrimaryWhite}"
+                                    <toolkit:AvatarView       BorderWidth="0" TextColor="{StaticResource PrimaryWhite}"
                                    x:Name="ProfileImage"  HorizontalOptions="CenterAndExpand" 
-                                                     BackgroundColor="{Binding Color}"
+                                                     
                                                      HeightRequest="36"  
                                                      WidthRequest="36"
                                                      CornerRadius="36"
@@ -256,7 +199,7 @@
                                             
                                             FontFamily="Medium"
                                             FontSize="12"
-                                            Text="{Binding CreateDate, StringFormat='{}{0:MM/dd/yyyy}'}"
+                                            
                                             TextColor="{StaticResource PrimaryBlack60}" />
                                             <Label
                                             
@@ -268,7 +211,7 @@
                                             
                                             FontFamily="Medium"
                                             FontSize="12"
-                                            Text="{Binding ProductId}"
+                                            
                                             TextColor="{StaticResource PrimaryBlack60}" />
                                         </HorizontalStackLayout>
                                     </Grid>
@@ -276,7 +219,7 @@
                                     <Border
                                     Grid.Column="2"
                                     Padding="5,2"
-                                    BackgroundColor="{Binding Status.Color}"
+                                   
                                     Opacity="0.1"
                                     HorizontalOptions="CenterAndExpand"
                                     StrokeShape="{RoundRectangle CornerRadius=3}"
@@ -286,16 +229,16 @@
                                         IsVisible="False"
                                         FontFamily="Medium"
                                         FontSize="11"
-                                        Text="{Binding Status.Name}"
-                                        TextColor="{Binding Status.Color}" />
+                                        
+                                        />
                                     </Border>
                                     <Label  Grid.Column="2"
                                         HorizontalOptions="CenterAndExpand"
                                         VerticalOptions="CenterAndExpand"
                                         FontFamily="Medium"
                                         FontSize="11"
-                                        Text="{Binding Status.Name}"
-                                        TextColor="{Binding Status.Color}" />
+                                        
+                                         />
                                     <Grid.GestureRecognizers>
                                         <TapGestureRecognizer NumberOfTapsRequired="1"  />
                                     </Grid.GestureRecognizers>
