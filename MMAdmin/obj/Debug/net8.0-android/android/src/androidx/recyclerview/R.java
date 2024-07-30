@@ -8,16 +8,16 @@ package androidx.recyclerview;
 
 public final class R {
 	public static final class attr {
-		public static final int fastScrollEnabled = 0x7f0301e5;
-		public static final int fastScrollHorizontalThumbDrawable = 0x7f0301e6;
-		public static final int fastScrollHorizontalTrackDrawable = 0x7f0301e7;
-		public static final int fastScrollVerticalThumbDrawable = 0x7f0301e8;
-		public static final int fastScrollVerticalTrackDrawable = 0x7f0301e9;
-		public static final int layoutManager = 0x7f030282;
-		public static final int recyclerViewStyle = 0x7f0303b2;
-		public static final int reverseLayout = 0x7f0303b9;
-		public static final int spanCount = 0x7f0303f5;
-		public static final int stackFromEnd = 0x7f030407;
+		public static final int fastScrollEnabled = 0x7f0301f0;
+		public static final int fastScrollHorizontalThumbDrawable = 0x7f0301f1;
+		public static final int fastScrollHorizontalTrackDrawable = 0x7f0301f2;
+		public static final int fastScrollVerticalThumbDrawable = 0x7f0301f3;
+		public static final int fastScrollVerticalTrackDrawable = 0x7f0301f4;
+		public static final int layoutManager = 0x7f030293;
+		public static final int recyclerViewStyle = 0x7f0303c6;
+		public static final int reverseLayout = 0x7f0303cd;
+		public static final int spanCount = 0x7f03040a;
+		public static final int stackFromEnd = 0x7f03041c;
 	}
 	public static final class dimen {
 		public static final int fastscroll_default_thickness = 0x7f060092;
@@ -28,10 +28,10 @@ public final class R {
 		public static final int item_touch_helper_swipe_escape_velocity = 0x7f06009e;
 	}
 	public static final class id {
-		public static final int item_touch_helper_previous_elevation = 0x7f0800ee;
+		public static final int item_touch_helper_previous_elevation = 0x7f0800f3;
 	}
 	public static final class styleable {
-		public static final int[] RecyclerView = new int[] { 0x010100c4, 0x010100eb, 0x010100f1, 0x7f0301e5, 0x7f0301e6, 0x7f0301e7, 0x7f0301e8, 0x7f0301e9, 0x7f030282, 0x7f0303b9, 0x7f0303f5, 0x7f030407 };
+		public static final int[] RecyclerView = new int[] { 0x010100c4, 0x010100eb, 0x010100f1, 0x7f0301f0, 0x7f0301f1, 0x7f0301f2, 0x7f0301f3, 0x7f0301f4, 0x7f030293, 0x7f0303cd, 0x7f03040a, 0x7f03041c };
 		public static final int RecyclerView_android_clipToPadding = 1;
 		public static final int RecyclerView_android_descendantFocusability = 2;
 		public static final int RecyclerView_android_orientation = 0;

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.CategoryManagement.AddCategory"
+             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+             xmlns:vm="clr-namespace:MMAdmin.ViewModels.CategoryManagement"
+             x:DataType="vm:AddCategoryViewModel"
+             Shell.NavBarIsVisible="False">
+    <Grid Margin="20,10" RowDefinitions="*,Auto" RowSpacing="15">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="15">
+                <Label x:Name="lblTitle"
+                   FontFamily="Bold"
+                   FontSize="20"
+                   HorizontalOptions="StartAndExpand"
+                   Text="Add Category"
+                   TextColor="{StaticResource PrimaryBlack}"
+                   VerticalOptions="StartAndExpand" />
+
+                <ImageButton x:Name="imgBtnMenu"
+                         HeightRequest="20"
+                         HorizontalOptions="EndAndExpand"
+                         Source="icon_menu.png"
+                         VerticalOptions="CenterAndExpand"
+                         WidthRequest="20" 
+                         IsVisible="{Binding IsVisible, Mode=TwoWay}"
+                         Command="{Binding DeleteCategoryCommand}"/>
+
+                <Border x:Name="brdFirstname" Grid.Row="1" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry x:Name="txtFirstname"
+                           Grid.Column="1"
+                           Placeholder="Name"
+                           Style="{StaticResource PrimaryEntry}"
+                           Text="{Binding SelectedCategory.Name}" />
+                    </Grid>
+                </Border>
+
+                <Border x:Name="brdEmail" Grid.Row="2" Style="{StaticResource PrimaryBorder}">
+                    <Grid ColumnDefinitions="45,*">
+                        <Image Margin="10"
+                           Aspect="AspectFit"
+                           Source="icon_email.png" />
+                        <Entry x:Name="txtEmail"
+                           Grid.Column="1"
+                           Placeholder="Description"
+                           Style="{StaticResource PrimaryEntry}"
+                           Text="{Binding SelectedCategory.Description}" />
+                    </Grid>
+                </Border>
+
+                
+            </Grid>
+        </ScrollView>
+
+        <Button x:Name="btnSave"
+            Grid.Row="1"
+            Margin="0"
+            Style="{StaticResource PrimaryButton}"
+            Text="Save"
+            Command="{Binding AddCategoryCommand}" />
+    </Grid>
+</ContentPage>

@@ -34,6 +34,7 @@ namespace MMAdmin.ViewModels.AdminViewModels
         [RelayCommand]
         public async Task Login()
         {
+           
             if (!await CheckInternetConnectionAsync())
             {
                 await ShowErrorAsync("Connect your device to the internet");
@@ -54,7 +55,7 @@ namespace MMAdmin.ViewModels.AdminViewModels
 
             try
             {
-                
+                Common.BusyIndicator(true);
                 var response = await userService.LoginAsync(Email.Trim().ToLower());
 
                 if (response != null)
@@ -80,10 +81,11 @@ namespace MMAdmin.ViewModels.AdminViewModels
                    
                     await ShowErrorAsync("Invalid email or password");
                 }
+                Common.BusyIndicator(false);
             }
             catch (Exception ex)
             {
-               
+                Common.BusyIndicator(false);
                 await ShowErrorAsync("Invalid email or password("+ex.Message+")");
             }
         }

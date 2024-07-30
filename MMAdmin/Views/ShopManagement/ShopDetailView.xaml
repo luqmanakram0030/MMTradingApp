@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.ShopManagement.ShopDetailView"
+             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+             xmlns:vm="clr-namespace:MMAdmin.ViewModels.ShopManagement"
+             x:DataType="vm:AddShopViewModel"
+             xmlns:models="clr-namespace:MMAdmin.Domain.Models"
+             Title="AddEmployee"
+             Shell.NavBarIsVisible="False">
+    <Grid Margin="20,10" RowDefinitions="*,Auto" RowSpacing="15">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <Grid RowDefinitions="Auto,*" RowSpacing="15">
+                <Label x:Name="lblTitle"
+                   FontFamily="Bold"
+                   FontSize="20"
+                   HorizontalOptions="StartAndExpand"
+                   Text="Shop Detail"
+                   TextColor="{StaticResource PrimaryBlack}"
+                   VerticalOptions="StartAndExpand" />
+
+                <ImageButton x:Name="imgBtnMenu"
+                         HeightRequest="20"
+                         HorizontalOptions="EndAndExpand"
+                         Source="icon_menu.png"
+                         VerticalOptions="CenterAndExpand"
+                         WidthRequest="20" 
+                         IsVisible="{Binding IsVisible, Mode=TwoWay}"
+                         Command="{Binding DeleteShopCommand}"/>
+                <StackLayout Grid.Row="1"
+                             VerticalOptions="CenterAndExpand">
+                    <Label Text="{Binding SelectedShop.Name}"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Title"/>
+
+                    <Label TextColor="Black" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Owner: "/>
+                                <Span Text="{Binding SelectedShop.OwnerName}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label TextColor="Black" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Phone: "/>
+                                <Span Text="{Binding SelectedShop.PhoneNo}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label TextColor="Black" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Address: "/>
+                                <Span Text="{Binding SelectedShop.Location.Address}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+        <Grid ColumnDefinitions="*,*"
+          ColumnSpacing="10"
+          Grid.Row="1">
+            <Button 
+            Margin="0"
+            Style="{StaticResource PrimaryButton}"
+            Text="Edit"
+            Command="{Binding EditShopCommand}" />
+            <Button Grid.Column="1"
+            Margin="0"
+            Style="{StaticResource PrimaryButton}"
+            Text="View Map"
+            Command="{Binding ViewOnMapCommand}" />
+        </Grid>
+    </Grid>
+</ContentPage>

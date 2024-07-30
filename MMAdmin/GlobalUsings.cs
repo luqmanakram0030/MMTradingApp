@@ -21,3 +21,7 @@ global using System.Collections.ObjectModel;
 global using System.Net.Http.Headers;
 global using MMAdmin.Utility;
 global using MMAdmin.Views.EmployeeManagement;
+global using Controls.UserDialogs.Maui;
+global using MMAdmin.Views.Popup;
+global using Mopups.Services;
+global using System.Text.RegularExpressions;

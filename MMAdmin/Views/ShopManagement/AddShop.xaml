@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.ShopManagement.AddShop"
+             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+             xmlns:vm="clr-namespace:MMAdmin.ViewModels.ShopManagement"
+             x:DataType="vm:AddShopViewModel"
+             xmlns:models="clr-namespace:MMAdmin.Domain.Models"
+             Title="AddEmployee" Shell.NavBarIsVisible="False">
+
+    <Grid Margin="20,10" RowDefinitions="*,Auto" RowSpacing="15">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15">
+                <Label x:Name="lblTitle"
+                       FontFamily="Bold"
+                       FontSize="20"
+                       HorizontalOptions="StartAndExpand"
+                       Text="Add Shop"
+                       TextColor="{StaticResource PrimaryBlack}"
+                       VerticalOptions="StartAndExpand" />
+
+                <ImageButton x:Name="imgBtnMenu"
+                             HeightRequest="20"
+                             HorizontalOptions="EndAndExpand"
+                             Source="icon_menu.png"
+                             VerticalOptions="CenterAndExpand"
+                             WidthRequest="20" 
+                             IsVisible="{Binding IsVisible, Mode=TwoWay}"
+                             Command="{Binding DeleteShopCommand}"/>
+
+                <Border x:Name="brdFirstname" Grid.Row="1" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry x:Name="txtFirstname"
+                               Grid.Column="1"
+                               Placeholder="Fullname"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedShop.Name}" />
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="2" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry Grid.Column="1"
+                               Placeholder="Owner Name"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedShop.OwnerName}" />
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="3" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry Grid.Column="1"
+                               Placeholder="Phone No."
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedShop.PhoneNo}" />
+                    </Grid>
+                </Border>
+                <Border Grid.Row="4" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Label Grid.Column="1"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SelectedPlaceDetails.Address}" />
+                    </Grid>
+                </Border>
+                <Border Grid.Row="5" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry Grid.Column="1"
+                               Placeholder="Search location"
+                               Style="{StaticResource PrimaryEntry}"
+                               Text="{Binding SearchText}" />
+                    </Grid>
+                </Border>
+                <CollectionView x:Name="placesList"
+                                ItemsSource="{Binding Places, Mode=TwoWay}"
+                                Grid.Row="6">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="1"
+                                     Orientation="Vertical"
+                                     VerticalItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Place">
+                            <Frame Padding="0"
+                               CornerRadius="0"
+                               BackgroundColor="Transparent"
+                               BorderColor="Transparent">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectLocationCommand, Source={x:Reference placesList}}" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <StackLayout>
+                                    <Label Text="{Binding Description}"
+                                   FontSize="18"
+                                   TextColor="Black"/>
+                                    <BoxView Color="Gray"
+                                     HeightRequest="1"
+                                     HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </Grid>
+        </ScrollView>
+
+        <Button x:Name="btnSave"
+                Grid.Row="1"
+                Margin="0"
+                Style="{StaticResource PrimaryButton}"
+                Text="Save"
+                Command="{Binding AddShopCommand}" />
+    </Grid>
+</ContentPage>

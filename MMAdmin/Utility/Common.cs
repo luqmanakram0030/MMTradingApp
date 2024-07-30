@@ -1,6 +1,4 @@
-﻿using Controls.UserDialogs.Maui;
-using System.Text.RegularExpressions;
-
+﻿
 namespace MMAdmin.Utility
 {
     public static class Common
@@ -151,6 +149,18 @@ namespace MMAdmin.Utility
                 Position = ToastPosition.Bottom,
                 MessageColor = Color.FromArgb("#FFFFFF")
             });
+        }
+        public static void BusyIndicator(bool _IsBusy)
+        {
+            if (_IsBusy)
+            {
+                MopupService.Instance.PushAsync(new LoadingView());
+
+            }
+            else
+            {
+                MopupService.Instance.PopAllAsync();
+            }
         }
     }
 }

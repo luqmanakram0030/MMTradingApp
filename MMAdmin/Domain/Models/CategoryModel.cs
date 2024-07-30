@@ -4,7 +4,7 @@ namespace MMAdmin.Domain.Models;
 public class Category
 {
     // Unique identifier for the category
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     // Name of the category
     public string Name { get; set; }
@@ -18,7 +18,6 @@ public class Category
     // Constructor to initialize the category
     public Category()
     {
-       
         Products = new List<Product>();
     }
 

@@ -4,7 +4,7 @@ namespace MMAdmin.Domain.Models;
 public class Product
 {
     // Unique identifier for the product
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     // Name of the product
     public string Name { get; set; }
@@ -23,6 +23,9 @@ public class Product
 
     // Image URL for the product
     public string ImageUrl { get; set; }
+
+    // Image Source for the product
+    public object ProductImage { get; set; }
 
     // Constructor to initialize the product
     

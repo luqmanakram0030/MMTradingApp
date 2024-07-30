@@ -11,7 +11,6 @@ public partial class EmployeeView : ContentPage
             InitializeComponent();
             this.employeeViewModel = _employeeViewModel;
             BindingContext = employeeViewModel;
-
         }
         catch (Exception ex)
         {

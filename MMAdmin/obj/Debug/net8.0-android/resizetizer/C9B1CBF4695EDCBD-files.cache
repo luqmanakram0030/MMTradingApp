@@ -27,6 +27,7 @@ obj/Debug/net8.0-android/resizetizer/r/drawable/icon_send.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/rightangle.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_notification_black.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/img_left_curve.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/product.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/logowhite.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_hide.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_person.png
@@ -72,6 +73,7 @@ obj/Debug/net8.0-android/resizetizer/r/drawable/icon_schedule.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_camera.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_calendar.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_arrow_right_black.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/back_icon.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_status.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_group.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/emoji_smile.png
@@ -89,12 +91,14 @@ obj/Debug/net8.0-android/resizetizer/r/drawable/icon_note.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_email.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_filter.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_notification.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/camera_icon.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_arrow_right.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/forgotpwimg.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_lock.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/img_bottom.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_off.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_has.png
+obj/Debug/net8.0-android/resizetizer/r/drawable/selectedproduct.png
 obj/Debug/net8.0-android/resizetizer/r/drawable/icon_logout_red.png
 obj/Debug/net8.0-android/resizetizer/r/mipmap-xxxhdpi/appicon_foreground.png
 obj/Debug/net8.0-android/resizetizer/r/mipmap-xxxhdpi/logo_foreground.png

@@ -63,6 +63,7 @@ namespace MMAdmin.ViewModels.AdminViewModels
 
             try
             {
+                Common.BusyIndicator(true);
                 User.Email = User.Email.ToLower().Trim();
                 var authProvider = new FirebaseAuthProvider(new FirebaseConfig(_webApi.WebAPIKey));
 
@@ -84,17 +85,20 @@ namespace MMAdmin.ViewModels.AdminViewModels
 
                 await ShowErrorAsync("Registered");
                 await Application.Current.MainPage.Navigation.PopAsync();
+                Common.BusyIndicator(false);
             }
             catch (FirebaseAuthException ex)
             {
                 
                 var message = $"Firebase authentication error: {ex.InnerException?.Message ?? ex.Message}";
                 await ShowErrorAsync(message);
+                Common.BusyIndicator(false);
             }
             catch (Exception ex)
             {
                 
                 await ShowErrorAsync("Account already exists");
+                Common.BusyIndicator(false);
             }
         }
         [RelayCommand]

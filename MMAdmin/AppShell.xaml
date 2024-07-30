@@ -35,15 +35,17 @@
     </Shell.Resources>
 
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem" x:Name="MyTabbar">
-        <ShellContent x:Name="DashboardView" Title="Dashboard" Route="DashboardView"  ContentTemplate="{DataTemplate Home:DashboardView}"/>       
-       
-        <ShellContent x:Name="ShopView"  Title="Shop" Route="ShopView" ContentTemplate="{DataTemplate Shop:ShopView}"/>  
-       
-        <ShellContent x:Name="NotificationsView"  Route="NotificationsView" Title="Notifications"  ContentTemplate="{DataTemplate Home:NotificationView}"/>
+        <ShellContent x:Name="DashboardView" Title="Dashboard" Route="DashboardView"  ContentTemplate="{DataTemplate Home:DashboardView}"/>
 
-        <ShellContent  x:Name="EmployeeView" Title="Employee" Route="EmployeeView" ContentTemplate="{DataTemplate Shop:EmployeeView}"/>
+        <ShellContent x:Name="ShopView"  Title="Shops" Route="ShopView" ContentTemplate="{DataTemplate Shop:ShopView}"/>
 
-        <ShellContent x:Name="ScheduleView" Title="Schedule" Route="ScheduleView" ContentTemplate="{DataTemplate Shop:SchedulerView}"/>
+        <ShellContent  x:Name="ProductView" Title="Products" Route="ProductView" ContentTemplate="{DataTemplate Shop:ProductView}"/>
+
+        <ShellContent x:Name="EmployeeView" Title="Employee" Route="EmployeeView" ContentTemplate="{DataTemplate Shop:EmployeeView}"/>
+
+        <ShellContent  Route="ScheduleView" Title="Schedule"  ContentTemplate="{DataTemplate Shop:SchedulerView}"/>
+        
+        <!--<ShellContent x:Name="NotificationsView" Route="NotificationsView" Title="Notifications"  ContentTemplate="{DataTemplate Home:NotificationView}"/>-->
            
         
     </FlyoutItem>

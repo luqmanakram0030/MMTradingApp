@@ -1,12 +1,200 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MMAdmin.Views.Home.DashboardView"
-             Title="DashboardView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="MMAdmin.Views.Home.DashboardView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MMAdmin.Drawables"
+    xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+    xmlns:components="clr-namespace:MMAdmin.Views.Components"
+    BackgroundColor="{StaticResource PrimaryLightGray}"
+    Shell.NavBarIsVisible="False"
+    xmlns:viewmodel="clr-namespace:MMAdmin.ViewModels.Home"
+    x:DataType="viewmodel:DashboardViewModel">
+    <Grid RowDefinitions="Auto,*">
+        <components:HeaderTemplete Grid.Row="0"/>
+        <ScrollView Grid.Row="1" >
+
+            <StackLayout  Spacing="15" Margin="10">
+
+                <Frame BackgroundColor="White" Padding="20,30"
+                       BorderColor="White"
+                               CornerRadius="8"
+                               >
+                    <StackLayout>
+                        <!--#region [ Welcome Section]-->
+                        <Grid  RowDefinitions="Auto,Auto" 
+                                   ColumnDefinitions="Auto,*">
+                            <Label
+                                        x:Name="lblUser"
+                                        FontFamily="Bold"
+                                        FontSize="16"
+                                        Text="{x:Static res:AppResources.lblWelcomeWith}"
+                                        TextColor="{StaticResource PrimaryBlack}" />
+                            <HorizontalStackLayout Grid.Row="1" Spacing="5">
+                                <Image
+                                            Aspect="AspectFit"
+                                            HeightRequest="15"
+                                            Source="icon_calendar.png"
+                                            WidthRequest="15" />
+                                <Label FontFamily="Medium"
+                                            FontSize="11"
+                                            Text="Sales May, 2024"
+                                            TextColor="{StaticResource PrimaryBlack35}" />
+                            </HorizontalStackLayout>
+
+                            <Label FontFamily="Bold"
+                                       Grid.Column="1"
+                                       HorizontalTextAlignment="End"
+                                            FontSize="11"
+                                            Text="This Month"
+                                            TextColor="{StaticResource PrimaryDarkGray}" />
+                        </Grid>
+                        <!--#endregion-->
+                        <!--#region [ Statistics Section ]-->
+
+                        <Grid Grid.Row="1" ColumnDefinitions="*,*">
+
+                            <VerticalStackLayout
+                                        HorizontalOptions="StartAndExpand"
+                                        Spacing="5"
+                                        VerticalOptions="EndAndExpand">
+                                <Label
+                                    FontFamily="Bold"
+                                    FontSize="20"
+                                   
+                                    TextColor="{StaticResource PrimaryBlack}" >
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="$"/>
+                                            <Span Text="2000"/>
+
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                </Label>
+                                <Label
+                                    FontFamily="Medium"
+                                    FontSize="15"
+                                    HorizontalTextAlignment="Center"
+                                  
+                                    TextColor="{StaticResource PrimaryBlack}" >
+                                     <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="80"/>
+                                            <Span Text="% "/>
+                                            <Span Text="of the goal"/>
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                </Label>
+                            </VerticalStackLayout>
+
+                            <controls:CircularProgressBar
+                                        Grid.Column="1"
+                                        Padding="0"
+                                        Fontsize="18"
+                                        HorizontalOptions="EndAndExpand"
+                                        Progress="80"
+                                        ProgressColor="{StaticResource Primary}"
+                                        ProgressLeftColor="{StaticResource PrimaryLightGray}"
+                                        Size="70"
+                                        StrokeLineCap="Round"
+                                        TextColor="{StaticResource PrimaryBlack}"
+                                        Thickness="5" />
+
+                        </Grid>
+
+                        <!--#endregion-->
+                    </StackLayout>
+                </Frame>
+                <!--#region [ Activity Section]-->
+                <Frame BackgroundColor="White"
+                       BorderColor="White"
+                       CornerRadius="8"
+                       Padding="10">
+                    <Grid RowDefinitions="Auto,Auto,Auto" ColumnSpacing="10" RowSpacing="10" ColumnDefinitions="*,*"
+                              >
+                        <Label FontFamily="Bold"
+                               Margin="0,10,0,0"
+                                    FontSize="16"
+                                    Text="Latest Actitvity"
+                                    TextColor="{StaticResource PrimaryBlack}" />
+                        <Label FontFamily="Bold"
+                                   Grid.Column="1"
+                                   HorizontalTextAlignment="End"
+                                   VerticalTextAlignment="Center"
+                                    FontSize="11"
+                                    Text="This Month"
+                                    TextColor="{StaticResource PrimaryDarkGray}" />
+
+                        <components:ActivityButtonsTemplate Activities="5"
+                                                            Text="New Leads"
+                                                            Grid.Column="0"
+                                                            Grid.Row="1"
+                                                            Command="{Binding .}"/>
+
+                        <components:ActivityButtonsTemplate Activities="10"
+                                                            Text="Appointments"
+                                                            Grid.Column="1"
+                                                            Grid.Row="1"
+                                                            Command="{Binding .}"/>
+
+                        <components:ActivityButtonsTemplate Activities="5"
+                                                            Text="Meetings"
+                                                            Grid.Column="0"
+                                                            Grid.Row="2"
+                                                            Command="{Binding .}"/>
+
+                        <components:ActivityButtonsTemplate Activities="3"
+                                                            Text="Reminders"
+                                                            Grid.Column="1"
+                                                            Grid.Row="2"
+                                                            Command="{Binding .}"/>
+                    </Grid>
+                </Frame>
+
+                <!--#endregion-->
+                <!--#region [ Statistics Section]-->
+                <Frame BackgroundColor="White"
+                       BorderColor="White"
+                       CornerRadius="8"
+                      Padding="20,30">
+                    <Grid RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="10" ColumnDefinitions="*,*">
+                        <Label FontFamily="Bold"
+                               Margin="0,10,0,0"
+                                    FontSize="16"
+                                    Text="Statistics"
+                                    TextColor="{StaticResource PrimaryBlack}" />
+                        <Label Grid.Column="1"
+                               FontAttributes="Bold"
+                                   HorizontalTextAlignment="End"
+                                   VerticalTextAlignment="Center"
+                                    FontSize="11"
+                                    Text="This Month"
+                                    TextColor="{StaticResource PrimaryDarkGray}" />
+
+                        <components:StatisticsViewTemplate TitleText="10%"
+                                                           Text="Conversion rate"
+                                                           TextColor="Red"
+                                                           Icon="graph_down.png"
+                                                           Grid.Column="0"
+                                                           Grid.Row="1"/>
+
+                        <components:StatisticsViewTemplate TitleText="1:00 Hours"
+                                                           Text="Reply time"
+                                                           TextColor="Green"
+                                                           Icon="graph_up.png"
+                                                           Grid.Column="1"
+                                                           Grid.Row="1"/>
+                    </Grid>
+                </Frame>
+
+                <!--#endregion-->
+
+            </StackLayout>
+
+        </ScrollView>
+    </Grid>
 </ContentPage>

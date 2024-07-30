@@ -2,11 +2,99 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MMAdmin.Views.ShopView"
-             Title="ShopView" Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Shell.TabBarIsVisible="True" Shell.NavBarIsVisible="False"
+              xmlns:vm="clr-namespace:MMAdmin.ViewModels.ShopManagement"
+             xmlns:models="clr-namespace:MMAdmin.Domain.Models"
+             x:DataType="vm:ShopViewModel">
+    <StackLayout>
+
+        <Grid VerticalOptions="FillAndExpand">
+
+            <Grid
+         Margin="0,10"
+         RowDefinitions="Auto,Auto,*"
+         RowSpacing="10">
+
+                <!--#region [ Row 0 [Text Leads] ]-->
+
+                <Label
+             Margin="20,0"
+             
+             FontFamily="Bold"
+             FontSize="20"
+             HorizontalOptions="StartAndExpand"
+             Text="Shops"
+             TextColor="{StaticResource PrimaryBlack}"
+             VerticalOptions="CenterAndExpand" />
+
+                <!--#endregion-->
+
+                <!--#region [ Search Bar ]-->
+
+                <Border Style="{StaticResource PrimaryBorder}"
+                     Grid.Row="1"
+                     Margin="20">
+                    <Grid Padding="10,0" ColumnDefinitions="*,25">
+                        <Entry Text="{Binding SearchText}" Placeholder="Search " Style="{StaticResource PrimaryEntry}" />
+                        <Image
+                         Grid.Column="1"
+                         Source="icon_search.png"
+                         Style="{StaticResource PrimaryImageEntry}" />
+                    </Grid>
+                </Border>
+
+                <!--#endregion-->
+
+                <!--#region [ Employee List ]-->
+                <CollectionView ItemsSource="{Binding Shops}"
+                             x:Name="lstEmployees"
+                             Grid.Row="2"
+                             Margin="20,0"
+                             BackgroundColor="{StaticResource PrimaryWhite}"
+                             SelectionMode="None"
+                             VerticalScrollBarVisibility="Never">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout VerticalItemSpacing="10"
+                                      Orientation="Vertical"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:ShopModel">
+                            <StackLayout>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateToShopDetailCommand, Source={x:Reference lstEmployees}}" 
+                                                       CommandParameter="{Binding .}"/>
+                                </StackLayout.GestureRecognizers>
+                                <Label FontFamily="Bold"
+                                         FontSize="15"
+                                         Text="{Binding Name}"
+                                         TextColor="{StaticResource PrimaryBlack}" />
+                                <Label FontFamily="Bold"
+                                         FontSize="12"
+                                         Text="{Binding Location.Address}"
+                                         TextColor="Gray" />
+                                <BoxView HeightRequest="0.5"
+                                      Color="LightGray"
+                                      Margin="0,3,0,0"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!--#endregion-->
+
+            </Grid>
+
+            <!--#region [ Button Add ]-->
+            <ImageButton x:Name="imgBtnAdd"
+                     Margin="0,0,20,10"
+                     Command="{Binding NavigateToAddShopCommand}"
+                     Source="icon_add.png"
+                     Style="{StaticResource PrimaryButtonAdd}"
+                     VerticalOptions="EndAndExpand" />
+
+            <!--#endregion-->
+        </Grid>
+    </StackLayout>
 </ContentPage>

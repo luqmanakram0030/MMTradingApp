@@ -3,20 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
              xmlns:vm="clr-namespace:MMAdmin.ViewModels.EmployeeManagement"
-             x:DataType="vm:EmployeesViewModel"
+             x:DataType="vm:AddEmployeeViewModel"
              x:Class="MMAdmin.Views.EmployeeManagement.AddEmployee"
              Title="AddEmployee" Shell.NavBarIsVisible="False">
-
-    
-
     <Grid Margin="20,10" RowDefinitions="*,Auto" RowSpacing="15">
         <ScrollView VerticalScrollBarVisibility="Never">
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15">
                 <Label x:Name="lblTitle"
                        FontFamily="Bold"
                        FontSize="20"
                        HorizontalOptions="StartAndExpand"
-                       Text="{x:Static res:AppResources.lblAddLeads}"
+                       Text="Add Employee"
                        TextColor="{StaticResource PrimaryBlack}"
                        VerticalOptions="StartAndExpand" />
 
@@ -25,7 +22,9 @@
                              HorizontalOptions="EndAndExpand"
                              Source="icon_menu.png"
                              VerticalOptions="CenterAndExpand"
-                             WidthRequest="20" />
+                             WidthRequest="20" 
+                             IsVisible="{Binding IsVisible, Mode=TwoWay}"
+                             Command="{Binding DeleteEmployeeCommand}"/>
 
                 <Border x:Name="brdFirstname" Grid.Row="1" Style="{StaticResource PrimaryBorder}">
                     <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
@@ -40,7 +39,7 @@
 
                 
 
-                <Border x:Name="brdTelephone" Grid.Row="3" Style="{StaticResource PrimaryBorder}">
+                <Border x:Name="brdTelephone" Grid.Row="2" Style="{StaticResource PrimaryBorder}">
                     <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
                         <Image Source="icon_call.png" Style="{StaticResource PrimaryImageEntry}" />
                         <Entry x:Name="txtTelephone"
@@ -52,7 +51,7 @@
                     </Grid>
                 </Border>
 
-                <Border x:Name="brdEmail" Grid.Row="4" Style="{StaticResource PrimaryBorder}">
+                <Border x:Name="brdEmail" Grid.Row="3" Style="{StaticResource PrimaryBorder}">
                     <Grid ColumnDefinitions="45,*">
                         <Image Margin="10"
                                Aspect="AspectFit"
@@ -66,32 +65,28 @@
                     </Grid>
                 </Border>
 
-                <Border x:Name="brdPassword" Grid.Row="5" Style="{StaticResource PrimaryBorder}">
+                <Border x:Name="brdPassword" Grid.Row="4" Style="{StaticResource PrimaryBorder}">
                     <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
                         <Image Source="icon_lock.png" Style="{StaticResource PrimaryImageEntry}" />
                         <Entry x:Name="txtPassword"
                                Grid.Column="1"
+                               IsPassword="True"
                                Placeholder="Password"
                                Style="{StaticResource PrimaryEntry}"
                                Text="{Binding SelectedEmployee.Password}" />
                     </Grid>
                 </Border>
-                 <Border x:Name="brdConfirmPassword" Grid.Row="6" Style="{StaticResource PrimaryBorder}">
+                <Border x:Name="brdConfirmPassword" Grid.Row="5" Style="{StaticResource PrimaryBorder}">
                     <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
                         <Image Source="icon_lock.png" Style="{StaticResource PrimaryImageEntry}" />
                         <Entry x:Name="txtConfirmPassword"
                                Grid.Column="1"
+                               IsPassword="True"
                                Placeholder="Confirm Password"
                                Style="{StaticResource PrimaryEntry}"
                                Text="{Binding SelectedEmployee.Password}" />
                     </Grid>
                 </Border>
-
-                
-
-                
-
-      
             </Grid>
         </ScrollView>
 

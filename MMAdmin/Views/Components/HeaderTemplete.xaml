@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.Components.HeaderTemplete" 
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Name="headerView">
+
+    <Border
+                Margin="{OnPlatform iOS='0,-5,0,0'}"
+                BackgroundColor="{StaticResource Primary}"
+                StrokeShape="{RoundRectangle CornerRadius='0,0,20,20'}"
+                StrokeThickness="0"
+                VerticalOptions="FillAndExpand">
+        <Grid
+                    Padding="{OnPlatform Android='20,10,20,0',
+                                         iOS='20,0,20,0'}"
+                    ColumnDefinitions="*,Auto"
+                    ColumnSpacing="10">
+
+            <!--#region [ image ]-->
+            <Image
+                        HeightRequest="80"
+                        HorizontalOptions="StartAndExpand"
+                        Source="logo_white.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="80" />
+            <!--#endregion-->
+
+            <!--#region [Profile]-->
+            <HorizontalStackLayout Grid.Column="1" Spacing="10" HorizontalOptions="EndAndExpand">
+                <Label x:Name="UserName"
+                       FontFamily="Medium"
+                       Margin="0,20,0,0"
+                       VerticalTextAlignment="Center"
+                       TextColor="White"/>
+                <Grid  RowSpacing="0" >
+                    <!--<Border
+                            Grid.Column="2"
+                            HeightRequest="42"
+                            StrokeShape="{RoundRectangle CornerRadius=21}"
+                            StrokeThickness="0"
+                            WidthRequest="42">
+                            <Image Aspect="AspectFill" Source="avatar.png" />
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="brdProfile_Tapped" />
+                            </Border.GestureRecognizers>
+                        </Border>-->
+                    <toolkit:AvatarView  BorderColor="{StaticResource PrimaryWhite}"  Margin="0,20,0,0"
+                                   BorderWidth="0" TextColor="{StaticResource PrimaryBlack}"
+                                   x:Name="ProfileImage" Grid.Column="2" 
+                                     ImageSource="{Binding SelectedImageSource, Mode=TwoWay}" 
+                                     HeightRequest="42"  BackgroundColor="{StaticResource PrimaryWhite}"
+                                      WidthRequest="42" 
+                                      CornerRadius="100" >
+                    </toolkit:AvatarView>
+                    <Border
+                            Margin="2,-10,0,8"
+                            BackgroundColor="{StaticResource PrimaryGreen}"
+                            HeightRequest="12"
+                            HorizontalOptions="StartAndExpand"
+                            StrokeShape="{RoundRectangle CornerRadius=6}"
+                            StrokeThickness="0"
+                            VerticalOptions="EndAndExpand"
+                            WidthRequest="12" />
+                </Grid>
+            </HorizontalStackLayout>
+            <!--#endregion-->
+
+        </Grid>
+    </Border>
+</ContentView>
+

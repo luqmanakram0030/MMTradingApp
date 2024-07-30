@@ -34,6 +34,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Controls.BusyIndic
 build_metadata.AdditionalFiles.TargetPath = Controls/BusyIndicator.xaml
 build_metadata.AdditionalFiles.RelativePath = Controls/BusyIndicator.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Drawables/CircularProgressBar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Drawables.CircularProgressBar.xaml
+build_metadata.AdditionalFiles.TargetPath = Drawables/CircularProgressBar.xaml
+build_metadata.AdditionalFiles.RelativePath = Drawables/CircularProgressBar.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.MainPage.xaml
@@ -70,6 +76,36 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.AdminUserMan
 build_metadata.AdditionalFiles.TargetPath = Views/AdminUserMangement/AdminRegisterView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/AdminUserMangement/AdminRegisterView.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/CategoryManagement/AddCategory.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.CategoryManagement.AddCategory.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CategoryManagement/AddCategory.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CategoryManagement/AddCategory.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/CategoryManagement/CategoryView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.CategoryManagement.CategoryView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CategoryManagement/CategoryView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CategoryManagement/CategoryView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Components/ActivityButtonsTemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Components.ActivityButtonsTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Components/ActivityButtonsTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Components/ActivityButtonsTemplate.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Components/HeaderTemplete.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Components.HeaderTemplete.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Components/HeaderTemplete.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Components/HeaderTemplete.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Components/StatisticsViewTemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Components.StatisticsViewTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Components/StatisticsViewTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Components/StatisticsViewTemplate.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/EmployeeManagement/AddEmployee.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.EmployeeManagement.AddEmployee.xaml
@@ -94,6 +130,24 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Home.Notific
 build_metadata.AdditionalFiles.TargetPath = Views/Home/NotificationView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Home/NotificationView.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/DeleteOnlyPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.DeleteOnlyPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Popup/DeleteOnlyPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Popup/DeleteOnlyPopup.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/LoadingView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.LoadingView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Popup/LoadingView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Popup/LoadingView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ProductManagement/AddProductView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ProductManagement.AddProductView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ProductManagement/AddProductView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ProductManagement/AddProductView.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ProductManagement/ProductView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ProductManagement.ProductView.xaml
@@ -105,6 +159,24 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.schedulerManagement.SchedulerView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/schedulerManagement/SchedulerView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/schedulerManagement/SchedulerView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ShopManagement/AddShop.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ShopManagement.AddShop.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ShopManagement/AddShop.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ShopManagement/AddShop.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ShopManagement/ShopDetailView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ShopManagement.ShopDetailView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ShopManagement/ShopDetailView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ShopManagement/ShopDetailView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ShopManagement/ShopMapView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ShopManagement.ShopMapView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ShopManagement/ShopMapView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ShopManagement/ShopMapView.xaml
 
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ShopManagement/ShopView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

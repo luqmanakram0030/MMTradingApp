@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopup:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.Popup.DeleteOnlyPopup"
+    xmlns:mopup="clr-namespace:Mopups.Pages;assembly=Mopups"
+    BackgroundColor="#70000000"
+    CloseWhenBackgroundIsClicked="True">
+    <Border
+    Margin="0,30,30,0"
+    Padding="0"
+    BackgroundColor="{StaticResource PrimaryWhite}"
+    HorizontalOptions="EndAndExpand"
+    StrokeShape="{RoundRectangle CornerRadius=8}"
+    StrokeThickness="0"
+    VerticalOptions="StartAndExpand"
+    WidthRequest="140">
+
+        <!--#region [ Delete ]-->
+
+        <Grid
+        Padding="10"
+        ClassId="Delete"
+        ColumnDefinitions="25,*"
+        ColumnSpacing="5"
+        VerticalOptions="CenterAndExpand">
+            <Image Source="icon_delete.png" Style="{StaticResource PrimaryImage20}" />
+            <Label
+            Grid.Column="1"
+            
+            FontFamily="Medium"
+            FontSize="13"
+            Text="Delete"
+            TextColor="{StaticResource PrimaryBlack}"
+            VerticalOptions="CenterAndExpand" />
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="grdDelete_Tapped" />
+            </Grid.GestureRecognizers>
+        </Grid>
+
+        <!--#endregion-->
+
+    </Border>
+</mopup:PopupPage>

@@ -37,7 +37,7 @@ public class CategoryService : ICategoryService
         return categories;
     }
 
-    public async Task<Category> GetCategoryByIdAsync(int id)
+    public async Task<Category> GetCategoryByIdAsync(Guid id)
     {
         var allCategories = await GetAllCategoriesAsync();
         return allCategories.FirstOrDefault(c => c.Id == id);
@@ -45,6 +45,7 @@ public class CategoryService : ICategoryService
 
     public async Task AddCategoryAsync(Category category)
     {
+        category.Id = Guid.NewGuid();
         await _firebaseClient
             .Child("Categories")
             .PostAsync(category);
@@ -63,7 +64,7 @@ public class CategoryService : ICategoryService
             .PutAsync(category);
     }
 
-    public async Task DeleteCategoryAsync(int id)
+    public async Task DeleteCategoryAsync(Guid id)
     {
         var toDeleteCategory = (await _firebaseClient
             .Child("Categories")

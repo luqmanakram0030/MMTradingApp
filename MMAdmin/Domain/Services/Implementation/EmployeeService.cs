@@ -40,6 +40,7 @@ public class EmployeeService : IEmployeeService
 
     public async Task AddEmployeeAsync(EmployeeModel employee)
     {
+        employee.UserId = Guid.NewGuid();
         await _firebaseClient
             .Child("Employees")
             .PostAsync(employee);

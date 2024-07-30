@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.ShopManagement.ShopMapView"
+             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+             xmlns:vm="clr-namespace:MMAdmin.ViewModels.ShopManagement"
+             x:DataType="vm:ShopMapViewModel"
+             xmlns:models="http://schemas.microsoft.com/dotnet/2021/maui/maps"
+             xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:maps="http://schemas.microsoft.com/dotnet/2021/maui/maps" 
+             Shell.TabBarIsVisible="False">
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+
+        <maps:Map ItemsSource="{Binding Pins}"
+                    x:Name="map" IsTrafficEnabled="True"
+                  IsZoomEnabled="True"
+                  MapType="Street"
+                    IsShowingUser="True"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+            <maps:Map.ItemTemplate>
+                <DataTemplate x:DataType="models:Pin">
+                    <maps:Pin Location="{Binding Location}"
+                              Label="{Binding Label}"
+                              Address="{Binding Address}"
+                              Type="Generic"/>
+                </DataTemplate>
+            </maps:Map.ItemTemplate>
+        </maps:Map>
+        <Frame BackgroundColor="#99ffffff"
+               Padding="5"
+               BorderColor="#99ffffff"
+               CornerRadius="8"
+               HasShadow="True"
+               VerticalOptions="StartAndExpand"
+               Margin="60,40,20,20">
+            <StackLayout>
+                <Label Text="{Binding Instructions, Mode=TwoWay}"
+                       TextColor="Black"
+                       FontSize="Subtitle"/>
+                <Label >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Distance: " TextColor="Black"/>
+                            <Span Text="{Binding Distance, Mode=TwoWay}" TextColor="Gray" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Duration: " TextColor="Black"/>
+                            <Span Text="{Binding Duration, Mode=TwoWay}" TextColor="Gray" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>

@@ -116,7 +116,7 @@ namespace MMAdmin
                 case 1:
                     return isSelected ? "selectedshop" : "shop";
                 case 2:
-                    return isSelected ? "icon_notification" : "icon_notification_black";
+                    return isSelected ? "selectedproduct" : "product";
                 case 3:
                     return isSelected ? "icon_leads" : "icon_leads_black";
                 case 4:

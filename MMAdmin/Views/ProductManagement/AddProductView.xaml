@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.ProductManagement.AddProductView"
+             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:vm="clr-namespace:MMAdmin.ViewModels.ProductManagement"
+             x:DataType="vm:AddProductViewModel" Shell.NavBarIsVisible="False">
+    <Grid Margin="20,10" RowDefinitions="*,Auto" RowSpacing="15">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15">
+                <StackLayout Orientation="Horizontal" >
+                    <Label x:Name="lblTitle"
+                   FontFamily="Bold"
+                   FontSize="20" 
+                   HorizontalOptions="StartAndExpand"
+                   Text="Add Product"
+                   TextColor="{StaticResource PrimaryBlack}"
+                   VerticalOptions="CenterAndExpand" />
+                    <Button Text="Add Category" Style="{StaticResource PrimaryButton}" HorizontalOptions="EndAndExpand"
+                            Command="{Binding NavigatetoCategoryCommand}"/>
+
+                </StackLayout>
+                
+
+                <ImageButton x:Name="imgBtnMenu"
+                         HeightRequest="20"
+                         HorizontalOptions="EndAndExpand"
+                         Source="icon_menu.png"
+                         VerticalOptions="CenterAndExpand"
+                         WidthRequest="20" 
+                         IsVisible="{Binding IsVisible, Mode=TwoWay}"
+                         Command="{Binding DeleteProductCommand}"/>
+
+                <!-- Image Section -->
+                <Grid Grid.Row="1"
+                      HeightRequest="{OnPlatform Android='200',iOS='200', WinUI='280'}">
+                    <!-- Image Label -->
+                    <Label Text="Add Image"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+                    <!-- Image Placeholder -->
+                    <Image Source="{Binding ProductImage, Mode=TwoWay}"
+                               HeightRequest="{OnPlatform Android='200',iOS='200', WinUI='280'}"
+                               Aspect="AspectFit"
+                               IsVisible="{Binding IsImageVisible, Mode=TwoWay}"
+                               VerticalOptions="StartAndExpand"
+                               HorizontalOptions="FillAndExpand"/>
+                    <!-- Camera Button -->
+                    <ImageButton Source="camera_icon.png"
+                                     HorizontalOptions="EndAndExpand"
+                                     VerticalOptions="EndAndExpand"
+                                     HeightRequest="20"
+                                     WidthRequest="20"
+                                     Margin="0,0,12,0"
+                                     Padding="0"
+                                     BackgroundColor="Transparent"
+                                     Command="{Binding AddImageCommand, Mode=TwoWay}">
+                    </ImageButton>
+                </Grid>
+
+
+                <Border x:Name="brdFirstname" Grid.Row="2" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry x:Name="txtFirstname"
+                           Grid.Column="1"
+                           Placeholder="Name"
+                           Style="{StaticResource PrimaryEntry}"
+                           Text="{Binding SelectedProduct.Name}" />
+                    </Grid>
+                </Border>
+
+                <Border x:Name="brdTelephone" Grid.Row="3" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_call.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry x:Name="txtTelephone"
+                           Grid.Column="1"
+                           Placeholder="Price"
+                           Style="{StaticResource PrimaryEntry}"
+                           Text="{Binding SelectedProduct.Price}" />
+                    </Grid>
+                </Border>
+
+                <Border x:Name="brdEmail" Grid.Row="4" Style="{StaticResource PrimaryBorder}">
+                    <Grid ColumnDefinitions="45,*">
+                        <Image Margin="10"
+                           Aspect="AspectFit"
+                           Source="icon_email.png" />
+                        <Entry x:Name="txtEmail"
+                           Grid.Column="1"
+                           Placeholder="Stock Quantity"
+                           Style="{StaticResource PrimaryEntry}"
+                           Text="{Binding SelectedProduct.StockQuantity}" />
+                    </Grid>
+                </Border>
+
+                <Border  Grid.Row="5" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_lock.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <editors:SfComboBox 
+                           Grid.Column="1"
+                            HeightRequest="40"
+                            DisplayMemberPath="Name"
+                           Placeholder="Select Category"
+                           Style="{StaticResource PrimaryEntry}"
+                            ItemsSource="{Binding Categories}"
+                           SelectedItem="{Binding SelectedCategory}" />
+                    </Grid>
+                </Border> 
+                <Border x:Name="brdPassword" Grid.Row="6" Style="{StaticResource PrimaryBorder}">
+                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        <Image Source="icon_lock.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Entry x:Name="txtPassword"
+                           Grid.Column="1"
+                           Placeholder="Desciption"
+                           Style="{StaticResource PrimaryEntry}"
+                           Text="{Binding SelectedProduct.Description}" />
+                    </Grid>
+                </Border>
+               
+            </Grid>
+        </ScrollView>
+
+        <Button x:Name="btnSave"
+            Grid.Row="1"
+            Margin="0"
+            Style="{StaticResource PrimaryButton}"
+            Text="Save"
+            Command="{Binding AddProductCommand}" />
+    </Grid>
+</ContentPage>

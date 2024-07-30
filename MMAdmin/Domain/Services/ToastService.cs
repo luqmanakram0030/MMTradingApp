@@ -1,14 +1,11 @@
-﻿
-   
-
-    public static class ToastService
+﻿public static class ToastService
+{
+    public static async Task ShowToastAsync(string message)
     {
-        public static async Task ShowToastAsync(string message)
-        {
-            var toast = Toast.Make(message, ToastDuration.Short, 14);
-            await toast.Show();
-        }
+        var toast = Toast.Make(message, ToastDuration.Short, 14);
+        await toast.Show();
     }
+}
 
 
 

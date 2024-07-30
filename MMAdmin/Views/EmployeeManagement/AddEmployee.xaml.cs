@@ -2,14 +2,14 @@
 
 public partial class AddEmployee : ContentPage
 {
-    EmployeesViewModel employeeViewModel;
-    public AddEmployee(EmployeesViewModel _employeeViewModel)
+    AddEmployeeViewModel addemployeeViewModel;
+    public AddEmployee(AddEmployeeViewModel _addemployeeViewModel)
     {
         try
         {
             InitializeComponent();
-            this.employeeViewModel = _employeeViewModel;
-            BindingContext = employeeViewModel;
+            this.addemployeeViewModel = _addemployeeViewModel;
+            BindingContext = addemployeeViewModel;
 
         }
         catch (Exception ex)

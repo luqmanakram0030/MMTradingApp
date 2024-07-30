@@ -29,8 +29,8 @@ namespace MMAdmin
                 const int firstTabbarItemIndex = 1;
                 const int secondTabbarItemIndex = 2;
 
-                _firstTabbarItem = controller.TabBar.Items?[firstTabbarItemIndex];
-                _secondTabbarItem = controller.TabBar.Items?[secondTabbarItemIndex];
+               // _firstTabbarItem = controller.TabBar.Items?[firstTabbarItemIndex];
+               // _secondTabbarItem = controller.TabBar.Items?[secondTabbarItemIndex];
 
                 if (_firstTabbarItem is not null && _secondTabbarItem is not null)
                 {
@@ -44,7 +44,7 @@ namespace MMAdmin
 
             UpdateTabIcons(controller);
         }
-
+        
         private void OnFirstBadgeCountChanged(object? sender, int newCount)
         {
             UpdateFirstBadge(newCount);
@@ -93,7 +93,7 @@ namespace MMAdmin
                 case 1:
                     return isSelected ? UIImage.FromBundle("selectedshop") : UIImage.FromBundle("shop");
                 case 2:
-                    return isSelected ? UIImage.FromBundle("icon_notification") : UIImage.FromBundle("icon_notification_black");
+                    return isSelected ? UIImage.FromBundle("selectedproduct") : UIImage.FromBundle("product");
                 case 3:
                     return isSelected ? UIImage.FromBundle("icon_leads") : UIImage.FromBundle("icon_leads_black");
                 case 4:

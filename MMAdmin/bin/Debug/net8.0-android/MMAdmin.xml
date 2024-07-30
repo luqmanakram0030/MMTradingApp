@@ -488,69 +488,181 @@
         <member name="P:MMAdmin.ViewModels.AdminViewModels.AdminRegisterViewModel.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.AdminViewModels.AdminRegisterViewModel.Login"/>.</summary>
         </member>
+        <member name="T:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.IsVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.isVisible"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.SelectedCategory">
+            <inheritdoc cref="F:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.selectedCategory"/>
+        </member>
+        <member name="T:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.Categories">
+            <inheritdoc cref="F:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.categories"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.navigateToAddCategoryCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.NavigateToAddCategoryCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.NavigateToAddCategoryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.NavigateToAddCategory(MMAdmin.Domain.Models.Category)"/>.</summary>
+        </member>
+        <member name="T:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.IsVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.isVisible"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.SelectedEmployee">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.selectedEmployee"/>
+        </member>
         <member name="T:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel">
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.EmployeeList">
-            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.employeeList"/>
-        </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.FilterDataList">
-            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.filterDataList"/>
-        </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.UnfilteredEmployeesList">
-            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.unfilteredEmployeesList"/>
-        </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.FilterIsVisible">
-            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.filterIsVisible"/>
-        </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SearchText">
-            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.searchText"/>
         </member>
         <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.Employees">
             <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.employees"/>
         </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SelectedEmployee">
-            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.selectedEmployee"/>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.navigateToAddEmployeeCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddEmployeeCommand"/>.</summary>
         </member>
-        <member name="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.OnSearchTextChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SearchText"/> just changed.</summary>
-            <param name="value">The new property value that was set.</param>
-            <remarks>This method is invoked right after the value of <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.SearchText"/> is changed.</remarks>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddEmployee(MMAdmin.Domain.Models.EmployeeModel)"/>.</summary>
         </member>
-        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.removeFilterDataCommand">
-            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.RemoveFilterDataCommand"/>.</summary>
+        <member name="T:MMAdmin.ViewModels.ProductManagement.AddProductViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.RemoveFilterDataCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.RemoveFilterData(System.String)"/>.</summary>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.IsVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.isVisible"/>
         </member>
-        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.toggleFilterVisibilityCommand">
-            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ToggleFilterVisibilityCommand"/>.</summary>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.IsImageVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.isImageVisible"/>
         </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ToggleFilterVisibilityCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ToggleFilterVisibility"/>.</summary>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.ProductImage">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.productImage"/>
         </member>
-        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.applyFilterCommand">
-            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ApplyFilterCommand"/>.</summary>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.SelectedProduct">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.selectedProduct"/>
         </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ApplyFilterCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.ApplyFilter(System.Object)"/>.</summary>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.SelectedCategory">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.selectedCategory"/>
         </member>
-        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.navigateToDetailCommand">
-            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToDetailCommand"/>.</summary>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.Categories">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.categories"/>
         </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToDetailCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToDetail"/>.</summary>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.addImageCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.AddImageCommand"/>.</summary>
         </member>
-        <member name="F:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.navigateToAddNewLeadCommand">
-            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddNewLeadCommand"/>.</summary>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.AddImageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.AddImage"/>.</summary>
         </member>
-        <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddNewLeadCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddNewLead(System.Object)"/>.</summary>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.navigatetoCategoryCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.NavigatetoCategoryCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.NavigatetoCategoryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.NavigatetoCategory"/>.</summary>
+        </member>
+        <member name="T:MMAdmin.ViewModels.ProductManagement.ProductViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductViewModel.Products">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductViewModel.products"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.ProductViewModel.navigateToAddProductCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductViewModel.NavigateToAddProductCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductViewModel.NavigateToAddProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.ProductViewModel.NavigateToAddProduct(MMAdmin.Domain.Models.Product)"/>.</summary>
+        </member>
+        <member name="T:MMAdmin.ViewModels.ShopManagement.AddShopViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.Places">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.places"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.SelectedPlaceDetails">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.selectedPlaceDetails"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.IsVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.isVisible"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.LocationIsVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.locationIsVisible"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.SelectedShop">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.selectedShop"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.editShopCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.EditShopCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.EditShopCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.EditShop"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.viewOnMapCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.ViewOnMapCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.ViewOnMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.ViewOnMap"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.selectLocationCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.SelectLocationCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.SelectLocationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.SelectLocation(MMAdmin.Domain.Models.Place)"/>.</summary>
+        </member>
+        <member name="T:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.Pins">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.pins"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.Instructions">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.instructions"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.Distance">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.distance"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.Duration">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.duration"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.SelectedShop">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.selectedShop"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.ShopMapViewModel.GoBack"/>.</summary>
+        </member>
+        <member name="T:MMAdmin.ViewModels.ShopManagement.ShopViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.Shops">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.ShopViewModel.shops"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.ShopViewModel.navigateToAddShopCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToAddShopCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToAddShopCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToAddShop(MMAdmin.Domain.Models.ShopModel)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.ShopViewModel.navigateToShopDetailCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToShopDetailCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToShopDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToShopDetail(MMAdmin.Domain.Models.ShopModel)"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
             <summary>
@@ -690,26 +802,59 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "User" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmployeeList">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmployeeList" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsVisible" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilterDataList">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilterDataList" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCategory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UnfilteredEmployeesList">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UnfilteredEmployeesList" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Categories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Categories" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilterIsVisible">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilterIsVisible" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Employees">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Employees" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedEmployee">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsImageVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsImageVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedProduct">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedProduct" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Products">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Products" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Places">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Places" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPlaceDetails">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPlaceDetails" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LocationIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LocationIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedShop">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedShop" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Pins">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Pins" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Instructions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Instructions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Distance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Distance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Duration">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Duration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Shops">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Shops" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -729,26 +874,59 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.User">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "User" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmployeeList">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmployeeList" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsVisible" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilterDataList">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilterDataList" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCategory">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCategory" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UnfilteredEmployeesList">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UnfilteredEmployeesList" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Categories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Categories" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilterIsVisible">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilterIsVisible" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Employees">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Employees" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedEmployee">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsImageVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsImageVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedProduct">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedProduct" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Products">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Products" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Places">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Places" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPlaceDetails">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPlaceDetails" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LocationIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LocationIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedShop">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedShop" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Pins">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Pins" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Instructions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Instructions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Distance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Distance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Duration">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Duration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Shops">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Shops" generated properties.</summary>
         </member>
     </members>
 </doc>

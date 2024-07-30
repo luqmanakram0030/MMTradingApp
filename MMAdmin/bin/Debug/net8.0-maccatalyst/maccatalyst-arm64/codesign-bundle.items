@@ -3,7 +3,7 @@
   <ItemGroup>
     <_CodesignBundle Include="MMAdmin.app">
       <CodesignSigningKey>-</CodesignSigningKey>
-      <CodesignEntitlements></CodesignEntitlements>
+      <CodesignEntitlements>/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent</CodesignEntitlements>
       <CodesignUseSecureTimestamp></CodesignUseSecureTimestamp>
       <CodesignAllocate>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate</CodesignAllocate>
       <RequireCodeSigning>false</RequireCodeSigning>

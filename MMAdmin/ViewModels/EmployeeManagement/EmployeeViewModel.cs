@@ -1,172 +1,89 @@
-﻿
+﻿using MMAdmin.Abstract;
+using MMAdmin.Views.Popup;
+using Mopups.Services;
+using System.Windows.Input;
 
 namespace MMAdmin.ViewModels.EmployeeManagement;
 public partial class EmployeesViewModel : ObservableObject
 {
-    [ObservableProperty]
-    private ObservableCollection<EmployeeModel> employeeList;
-
-    [ObservableProperty]
-    private ObservableCollection<string> filterDataList;
-
-    [ObservableProperty]
-    private ObservableCollection<EmployeeModel> unfilteredEmployeesList;
-
+    #region Fields
+    private ObservableCollection<EmployeeModel> _FilteredList;
+    private ObservableCollection<EmployeeModel> _UnfilteredList;
+    private string _searchText;
+    #endregion
+    #region Properties
+    public string SearchText
+    {
+        get => _searchText;
+        set
+        {
+            _searchText = value;
+            OnPropertyChanged();
+            SearchCommand.Execute(null);
+        }
+    }
+    #endregion
+    public ICommand SearchCommand { get; set; }
     public IAsyncRelayCommand LoadEmployeesCommand { get; }
-    public IAsyncRelayCommand AddEmployeeCommand { get; }
-    public IAsyncRelayCommand UpdateEmployeeCommand { get; }
-    public IAsyncRelayCommand DeleteEmployeeCommand { get; }
-
-
-    [ObservableProperty]
-    private bool filterIsVisible;
-
-    [ObservableProperty]
-    private string searchText;
-
-
-
-
+    private readonly ISharedService _sharedService;
     private readonly IEmployeeService _employeeService;
 
     [ObservableProperty]
     private ObservableCollection<EmployeeModel> employees;
 
-    [ObservableProperty]
-    private EmployeeModel selectedEmployee;
-
-    public EmployeesViewModel(IEmployeeService employeeService)
+    public EmployeesViewModel(ISharedService sharedService, IEmployeeService employeeService)
     {
         _employeeService = employeeService;
+        this._sharedService = sharedService;
         Employees = new ObservableCollection<EmployeeModel>();
-        SelectedEmployee = new EmployeeModel();
-            // Initialize commands
-            LoadEmployeesCommand = new AsyncRelayCommand(LoadEmployeesAsync);
-        AddEmployeeCommand = new AsyncRelayCommand(AddEmployeeAsync);
-        UpdateEmployeeCommand = new AsyncRelayCommand(UpdateEmployeeAsync);
-        DeleteEmployeeCommand = new AsyncRelayCommand(DeleteEmployeeAsync);
+        LoadEmployeesCommand = new AsyncRelayCommand(LoadEmployeesAsync);
+        SearchCommand = new Command(async () => await PerformSearch());
     }
-
-
-
-
     #region Methods
     public async Task LoadEmployeesAsync()
     {
-        Employees.Clear();
-        var employees = await _employeeService.GetAllEmployeesAsync();
-        foreach (var employee in employees)
-        {
-            Employees.Add(employee);
-        }
-    }
-
-    private async Task AddEmployeeAsync()
-    {
-        if (SelectedEmployee == null)
-            return;
-
-        await _employeeService.AddEmployeeAsync(SelectedEmployee);
-        await LoadEmployeesAsync();
-    }
-
-    private async Task UpdateEmployeeAsync()
-    {
-        if (SelectedEmployee == null)
-            return;
-
-        await _employeeService.UpdateEmployeeAsync(SelectedEmployee);
-        await LoadEmployeesAsync();
-    }
-
-    private async Task DeleteEmployeeAsync()
-    {
-        if (SelectedEmployee == null)
-            return;
-
-        await _employeeService.DeleteEmployeeAsync(SelectedEmployee.UserId);
-        await LoadEmployeesAsync();
-    }
-    public async Task GetAllData()
-    {
         try
         {
-           
+            Common.BusyIndicator(true);
+            Employees.Clear();
+            var employees = await _employeeService.GetAllEmployeesAsync();
+            foreach (var employee in employees)
+            {
+                Employees.Add(employee);
+            }
+            _UnfilteredList = Employees;
+            Common.BusyIndicator(false);
         }
         catch (Exception ex)
         {
-            Common.DisplayErrorMessage("GetLeadsData: " + ex.Message);
+            Common.BusyIndicator(false);
         }
     }
 
-    partial void OnSearchTextChanged(string value)
+    public async Task PerformSearch()
     {
-        try
+        if (string.IsNullOrWhiteSpace(this._searchText))
         {
-            FilterLeads();
+            Employees = _UnfilteredList;
         }
-        catch (Exception ex)
+        else
         {
-            Common.DisplayErrorMessage("SearchLeadsData: " + ex.Message);
+            string searchTextLower = _searchText.ToLower();
+            _FilteredList = new ObservableCollection<EmployeeModel>(
+                _UnfilteredList.Where(i =>
+                    i.FullName.ToLower().Contains(searchTextLower) ||
+                    i.Email.ToLower().Contains(searchTextLower)));
+
+            Employees = _FilteredList;
         }
     }
+
 
     [RelayCommand]
-    private void RemoveFilterData(string filterData)
+    private async Task NavigateToAddEmployee(EmployeeModel employee)
     {
-        if (FilterDataList.Contains(filterData))
-        {
-            FilterDataList.Remove(filterData);
-            FilterLeads();
-        }
-    }
-
-    [RelayCommand]
-    public void ToggleFilterVisibility()
-    {
-        try
-        {
-            FilterIsVisible = !FilterIsVisible;
-        }
-        catch (Exception ex)
-        {
-            Common.DisplayErrorMessage("ToggleFilterVisibility: " + ex.Message);
-        }
-    }
-
-    [RelayCommand]
-    public async Task ApplyFilter(object obj)
-    {
-        await Common.ControlBounceEffect(obj);
-        try
-        {
-           
-
-            FilterLeads();
-        }
-        catch (Exception ex)
-        {
-            Common.DisplayErrorMessage("ApplyFilter: " + ex.Message);
-        }
-    }
-
-    private void FilterLeads()
-    {
-      
-    }
-    [RelayCommand]
-    private async Task NavigateToDetail()
-    {
-        
-             
-    }
-    [RelayCommand]
-    private async Task NavigateToAddNewLead(Object obj)
-    {
-
-
+        _sharedService.Add<EmployeeModel>("SelectedEmployee", employee);
         await Shell.Current.GoToAsync(nameof(AddEmployee));
-
     }
     #endregion
 }
