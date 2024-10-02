@@ -81,6 +81,17 @@ namespace MMAdmin.Utility
         }
         #endregion
 
+        public static T DeepCopy<T>(this T self)
+        {
+            if (self == null)
+            {
+                throw new ArgumentNullException(nameof(self), "Object cannot be null");
+            }
+
+            // Serialize the object to JSON and then deserialize it back
+            var serialized = JsonConvert.SerializeObject(self);
+            return JsonConvert.DeserializeObject<T>(serialized); // Specify the type T here
+        }
         public static bool IsValidEmail(this string value)
         {
             try

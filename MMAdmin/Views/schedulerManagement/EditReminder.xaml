@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMAdmin.Views.schedulerManagement.EditReminder"
+             Title="EditReminder" xmlns:ext="clr-namespace:MMAdmin.Extension"
+             Shell.NavBarIsVisible="False"
+             x:Name="editReminder"
+             xmlns:components="clr-namespace:MMAdmin.Views.Components">
+     <StackLayout>
+      
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout
+            Margin="20,10"
+           
+            Spacing="20">
+
+                <!--#region [ Main Grid ]-->
+               
+                <StackLayout Orientation="Horizontal">
+
+                     <!--#region [ Text Edit Reminder ]-->
+                    <Label
+                    FontFamily="Bold"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding LblTitle}"
+                    TextColor="{StaticResource PrimaryBlack}"
+                    VerticalOptions="StartAndExpand" />
+                    <!--#endregion-->
+
+                    <!--#region [ Menu Button ]-->
+
+                    <ImageButton IsVisible="{Binding MenuIsVisible}"
+                    x:Name="imgBtnMenu"
+                    Command="{Binding MenuCommand}"
+                    HeightRequest="20"
+                    HorizontalOptions="EndAndExpand"
+                    Source="icon_menu.png"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="20" />
+
+                    <!--#endregion-->
+
+                </StackLayout>
+                    
+
+                    <!--#region [ Row 1 [ Title ]-->
+                    <StackLayout Grid.Row="1">
+                        <Border
+                    x:Name="brdTitle"
+                    Style="{StaticResource PrimaryBorder}">
+                            <Grid
+                        Padding="10,0"
+                        ColumnDefinitions="25,*"
+                        ColumnSpacing="5">
+                                <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
+                                <Entry
+                            x:Name="txtTitle"
+                            Text="{Binding Schedule.Title,Mode=TwoWay}"
+                            Grid.Column="1"
+                            Placeholder="Title"
+                            Style="{StaticResource PrimaryEntry}" />
+                            </Grid>
+                        </Border>
+
+                        <Label x:Name="Schedule_TitleError" IsVisible="False" TextColor="Red" />
+                    </StackLayout>
+
+                    <!--#endregion-->
+
+
+                    <!--#region [ Row 4 [ Date ]-->
+                    <Border
+                    x:Name="brdDate"
+                    Grid.Row="4"
+                    Style="{StaticResource PrimaryBorder}">
+                        <Grid
+                        Padding="10,0"
+                        ColumnDefinitions="25,*"
+                        ColumnSpacing="5">
+                            <Image Source="icon_calendar.png" Style="{StaticResource PrimaryImageEntry}" />
+                            <ext:ExtDatePicker
+                            TextColor="Black"
+                            Date="{Binding  Schedule.DateStart, Mode=TwoWay}"
+                            x:Name="txtDate"
+                            Grid.Column="1"
+                            NullText="Date" />
+                        </Grid>
+                    </Border>
+                    <!--#endregion-->
+
+                    <!--#region [ Row 5 Hour ]-->
+                    <Border
+                    x:Name="brdStartTime"
+                    Grid.Row="5"
+                    Style="{StaticResource PrimaryBorder}">
+                    <Grid
+                        Padding="10,0"
+                        ColumnDefinitions="25,*"
+                        ColumnSpacing="5">
+                        <Image Source="icon_clock.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <ext:ExtTimePicker
+                            x:Name="txtStartTime"
+                            Grid.Column="1"
+                            FontFamily="Medium"
+                            Time="{Binding StartTime, Mode=TwoWay}"
+                            NullableTime="{Binding StartTime, Mode=TwoWay}"
+                            NullText="Start Time" />
+                    </Grid>
+                </Border>
+                   
+                    
+
+                    <!--#endregion-->
+
+                    <!--#region [ Row 7 Notes ]-->
+                     <Border
+                    x:Name="brdNotes"
+                    Grid.Row="7"
+                    MinimumHeightRequest="100"
+                    Style="{StaticResource PrimaryBorder}">
+                    <Grid
+                        Padding="10,0"
+                        ColumnDefinitions="25,*"
+                        ColumnSpacing="5">
+                        <Image
+                            Margin="0,10,0,0"
+                            Source="icon_note.png"
+                            Style="{StaticResource PrimaryImageEntry}"
+                            VerticalOptions="StartAndExpand" />
+                        <Editor 
+                            x:Name="txtNotes"
+                            Grid.Column="1"
+                            FontFamily="Medium" Text="{Binding Schedule.Description}"
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Note"
+                            PlaceholderColor="{StaticResource PrimaryBlack35}"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Start" />
+                    </Grid>
+                </Border>
+                    <!--#endregion-->
+
+               
+                <!--#endregion-->
+
+                <!--#region [ Save Button ]-->
+                <Button
+                x:Name="btnSave"
+                Grid.Row="1"
+                Command="{Binding SaveEventCommand}"
+                Style="{StaticResource PrimaryButton}"
+                Text="Save" 
+                 CommandParameter="{Binding Source={x:Reference editReminder}}"/>
+                <!--#endregion-->
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

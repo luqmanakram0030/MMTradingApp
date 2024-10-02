@@ -664,6 +664,107 @@
         <member name="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToShopDetailCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToShopDetail(MMAdmin.Domain.Models.ShopModel)"/>.</summary>
         </member>
+        <member name="T:MMAdmin.Views.schedulerManagement.ScheduleViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.Month">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.month"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.EventCount">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.eventCount"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.SelectDate">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.selectDate"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.StartDate">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.startDate"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.Year">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.year"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.Schedule">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.schedule"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.ScheduleList">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.scheduleList"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.AppointmentList">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.appointmentList"/>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.Events">
+            <inheritdoc cref="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.events"/>
+        </member>
+        <member name="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.addEventCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.AddEventCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.AddEventCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.Views.schedulerManagement.ScheduleViewModel.AddEvent(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.selectedDateCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.SelectedDateCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.SelectedDateCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.Views.schedulerManagement.ScheduleViewModel.SelectedDate(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.Views.schedulerManagement.ScheduleViewModel.eventSelectedCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.EventSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.Views.schedulerManagement.ScheduleViewModel.EventSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.Views.schedulerManagement.ScheduleViewModel.EventSelected(MMAdmin.Models.Schedule)"/>.</summary>
+        </member>
+        <member name="T:MMEmployee.Views.schedulerManagement.EditReminderViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.Schedule">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.schedule"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.LblTitle">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.lblTitle"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.SelectedLead">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.selectedLead"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.MenuIsVisible">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.menuIsVisible"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.LeadDetailIsVisible">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.leadDetailIsVisible"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.SelectedUser">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.selectedUser"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.StartTime">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.startTime"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.Username">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.username"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.SelectedNotifyType">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.selectedNotifyType"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.Leads">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.leads"/>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.Users">
+            <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.users"/>
+        </member>
+        <member name="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.saveEventCommand">
+            <summary>The backing field for <see cref="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.SaveEventCommand"/>.</summary>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.SaveEventCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMEmployee.Views.schedulerManagement.EditReminderViewModel.SaveEvent(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.menuCommand">
+            <summary>The backing field for <see cref="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.MenuCommand"/>.</summary>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.MenuCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMEmployee.Views.schedulerManagement.EditReminderViewModel.Menu"/>.</summary>
+        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
@@ -856,6 +957,63 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Shops">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Shops" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Schedule">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Schedule" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LblTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LblTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedLead">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedLead" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MenuIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MenuIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LeadDetailIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LeadDetailIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartTime">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartTime" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedNotifyType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedNotifyType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Leads">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Leads" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Users">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Users" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Month">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Month" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EventCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EventCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Year">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Year" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ScheduleList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ScheduleList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AppointmentList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AppointmentList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Events">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Events" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -927,6 +1085,63 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Shops">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Shops" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Schedule">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Schedule" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LblTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LblTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedLead">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedLead" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MenuIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MenuIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LeadDetailIsVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LeadDetailIsVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartTime">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartTime" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedNotifyType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedNotifyType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Leads">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Leads" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Users">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Users" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Month">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Month" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EventCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EventCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Year">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Year" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ScheduleList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ScheduleList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AppointmentList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AppointmentList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Events">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Events" generated properties.</summary>
         </member>
     </members>
 </doc>

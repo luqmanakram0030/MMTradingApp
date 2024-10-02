@@ -1,37 +1,65 @@
 ﻿<Properties StartupConfiguration="{BB304A3F-654C-417B-BAF4-BEAB72A09C45}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.17138375-956F-41B1-A4CA-7174C6B625B6" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Domain/Services/Implementation/EmployeeService.cs" relfile="MMAdmin/Domain/Services/Implementation/EmployeeService.cs" line="42" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MMAdmin PreferredExecutionTarget="Android.pixel_6_-_api_33_1" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.85" />
-  <MonoDevelop.Ide.ItemProperties.MMAdmin PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.17138375-956F-41B1-A4CA-7174C6B625B6" Xamarin.HotReload.DebuggerTimeoutException.MMAdmin.HideInfoBar="True" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MMAdmin/Platforms/iOS/TabbarBadgeRenderer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MMAdmin/Views/schedulerManagement/EditReminder.xaml">
     <Files>
-      <File FileName="MMAdmin/Platforms/iOS/TabbarBadgeRenderer.cs" Line="47" Column="9" />
+      <File FileName="MMAdmin/ViewModels/ProductManagement/AddProductViewModel.cs" />
+      <File FileName="MMAdmin/Domain/Services/Implementation/ProductService.cs" />
+      <File FileName="MMAdmin/Views/Home/DashboardView.xaml" />
+      <File FileName="MMAdmin/Domain/Services/Implementation/EmployeeService.cs" />
+      <File FileName="MMAdmin/Resources/Styles/Styles.xaml" />
+      <File FileName="MMAdmin/AppShell.xaml" />
+      <File FileName="MMAdmin/AppShell.xaml.cs" />
+      <File FileName="MMAdmin/Views/schedulerManagement/ScheduleViewModel.cs" Line="1" Column="1" />
+      <File FileName="MMAdmin/Models/Schedule.cs" />
+      <File FileName="MMAdmin/Views/schedulerManagement/ScheduleService.cs" Line="1" Column="1" />
+      <File FileName="MMAdmin/Views/schedulerManagement/IScheduleService.cs" />
+      <File FileName="MMAdmin/Views/schedulerManagement/SchedulerView.xaml" Line="8" Column="159" />
+      <File FileName="MMAdmin/MauiProgram.cs" />
+      <File FileName="MMAdmin/Views/Popup/AddSchedulePopup.xaml" />
+      <File FileName="MMAdmin/Views/Popup/AddSchedulePopup.xaml.cs" />
+      <File FileName="MMAdmin/Views/schedulerManagement/EditReminder.xaml" Line="81" Column="29" />
+      <File FileName="MMAdmin/Views/schedulerManagement/EditReminder.xaml.cs" Line="1" Column="18" />
+      <File FileName="MMAdmin/Views/schedulerManagement/EditReminderViewModel.cs" Line="1" Column="1" />
+      <File FileName="MMAdmin/Views/Popup/DeleteOnlySchedulePopup.xaml" />
+      <File FileName="MMAdmin/Views/Popup/DeleteOnlySchedulePopup.xaml.cs" />
+      <File FileName="MMAdmin/Utility/Common.cs" />
+      <File FileName="MMAdmin/Views/Popup/DeleteOnlyPopup.xaml" />
+      <File FileName="MMAdmin/Views/Popup/DeleteOnlyPopup.xaml.cs" />
+      <File FileName="MMAdmin/Converters/InverseBooleanConverter.cs" />
+      <File FileName="MMAdmin/Converters/MonthNameFromNumber.cs" />
+      <File FileName="MMAdmin/Views/schedulerManagement/SchedulerView.xaml.cs" Line="1" Column="1" />
+      <File FileName="MMAdmin/Extension/ExtDatePicker.cs" Line="63" Column="6" />
+      <File FileName="MMAdmin/Extension/ExtTimePicker.cs" Line="79" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MMAdmin">
+          <Node name="MMAdmin" expanded="True">
             <Node name="MMAdmin">
-              <Node name="Platforms" expanded="True">
-                <Node name="iOS" expanded="True">
-                  <Node name="TabbarBadgeRenderer.cs" selected="True" />
+              <Node name="Extension" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="ProductManagement" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="schedulerManagement" expanded="True">
+                  <Node name="EditReminder.xaml" expanded="True" selected="True" />
+                  <Node name="SchedulerView.xaml" expanded="True" />
                 </Node>
               </Node>
-              <Node name="ViewModels" expanded="True">
-                <Node name="ShopManagement" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Domain/Services/Implementation/EmployeeService.cs" relfile="MMAdmin/Domain/Services/Implementation/EmployeeService.cs" line="42" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33_1" />
 </Properties>

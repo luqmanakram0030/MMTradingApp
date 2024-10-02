@@ -14,6 +14,7 @@ Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
 Microsoft.Maui.Maps.dll
 Mopups.dll
+Plugin.Maui.Calendar.dll
 Syncfusion.Maui.Core.dll
 Syncfusion.Maui.DataSource.dll
 Syncfusion.Maui.GridCommon.dll

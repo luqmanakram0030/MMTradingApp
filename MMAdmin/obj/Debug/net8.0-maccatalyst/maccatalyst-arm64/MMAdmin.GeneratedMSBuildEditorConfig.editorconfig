@@ -130,11 +130,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Home.Notific
 build_metadata.AdditionalFiles.TargetPath = Views/Home/NotificationView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Home/NotificationView.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/AddSchedulePopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.AddSchedulePopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Popup/AddSchedulePopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Popup/AddSchedulePopup.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/DeleteOnlyPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.DeleteOnlyPopup.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/Popup/DeleteOnlyPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Popup/DeleteOnlyPopup.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/DeleteOnlySchedulePopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.DeleteOnlySchedulePopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Popup/DeleteOnlySchedulePopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Popup/DeleteOnlySchedulePopup.xaml
 
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/LoadingView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -153,6 +165,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ProductManagement.ProductView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/ProductManagement/ProductView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/ProductManagement/ProductView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/schedulerManagement/EditReminder.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.schedulerManagement.EditReminder.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/schedulerManagement/EditReminder.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/schedulerManagement/EditReminder.xaml
 
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/schedulerManagement/SchedulerView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
