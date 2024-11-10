@@ -11,51 +11,104 @@ namespace MMAdmin.ViewModels.EmployeeManagement
 {
     public partial class AddEmployeeViewModel : ObservableObject
     {
-        public IAsyncRelayCommand AddEmployeeCommand { get; }
+        
         public IAsyncRelayCommand DeleteEmployeeCommand { get; }
 
         private readonly ISharedService _sharedService;
 
         [ObservableProperty]
         private bool isVisible;
+        [ObservableProperty]
+        private string confirmPassword;
 
         private readonly IEmployeeService _employeeService;
-
+        [ObservableProperty]
+        private bool isPasswordVisible;
         [ObservableProperty]
         private EmployeeModel selectedEmployee;
+
         public AddEmployeeViewModel(ISharedService sharedService, IEmployeeService employeeService)
         {
             _employeeService = employeeService;
             this._sharedService = sharedService;
-            
-             SelectedEmployee = _sharedService.GetValue<EmployeeModel>("SelectedEmployee");
+
+            SelectedEmployee = _sharedService.GetValue<EmployeeModel>("SelectedEmployee");
             if (SelectedEmployee != null)
-                IsVisible = true;
-            else
             {
+                ConfirmPassword=SelectedEmployee.Password;
+            IsVisible = true;
+        }
+        else
+
+        {
                 SelectedEmployee = new EmployeeModel();
                 IsVisible = false;
+                
             }
             // Initialize commands
-            AddEmployeeCommand = new AsyncRelayCommand(AddEmployeeAsync);
+          
             DeleteEmployeeCommand = new AsyncRelayCommand(DeleteEmployeeAsync);
         }
-        private async Task AddEmployeeAsync()
+        [RelayCommand]
+        private async Task TogglePasswordVisibility()
+        {
+            IsPasswordVisible = !IsPasswordVisible;
+        }
+        [RelayCommand]
+        private async Task AddEmployeeAsync(Object obj)
         {
             try
             {
-
-                Common.BusyIndicator(true);
-                if (SelectedEmployee == null)
-                    return;
-                if (SelectedEmployee.UserId != Guid.Empty)
+                
+                var page = obj as AddEmployee;
+                var btnAddEmployee = page.FindByName("btnAddEmployee");
+                if (!ValidationHelper.IsFormValid(SelectedEmployee, page))
                 {
-                    await _employeeService.UpdateEmployeeAsync(SelectedEmployee);
+                    return;
+                }
+
+                await Common.ControlBounceEffect(btnAddEmployee);
+                if (SelectedEmployee.Password == ConfirmPassword)
+                {
+
+
+                    Common.BusyIndicator(true);
+                    if (SelectedEmployee == null)
+                        return;
+                    if (SelectedEmployee.UserId != Guid.Empty)
+                    {
+                        await _employeeService.UpdateEmployeeAsync(SelectedEmployee);
+                    }
+                    else
+                        await _employeeService.AddEmployeeAsync(SelectedEmployee);
+
+                    await Shell.Current.GoToAsync("..");
+                    Common.BusyIndicator(false);
                 }
                 else
-                    await _employeeService.AddEmployeeAsync(SelectedEmployee);
-
+                {
+                  Application.Current.MainPage.DisplayAlert("Error",  "Password and Confirm Password do not match", "OK");
+                }
+            }
+            catch(Exception ex)
+            {
                 Common.BusyIndicator(false);
+            }
+        }
+
+        [RelayCommand]
+        private async Task GoBackAsync(Object obj)
+        {
+            try
+            {
+                var page = obj as AddEmployee;
+                var btnAddEmployee = page.FindByName("btngoback");
+                
+
+                await Common.ControlBounceEffect(btnAddEmployee);
+
+                await Shell.Current.GoToAsync("..");
+                
             }
             catch(Exception ex)
             {
@@ -71,6 +124,7 @@ namespace MMAdmin.ViewModels.EmployeeManagement
                 if (sender == "Delete")
                 {
                     await _employeeService.DeleteEmployeeAsync(SelectedEmployee.UserId);
+                    await Shell.Current.GoToAsync("..");
                     
                 }
                 MessagingCenter.Unsubscribe<string>(this, "Delete");

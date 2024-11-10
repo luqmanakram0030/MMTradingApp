@@ -197,7 +197,6 @@
 	  <Folder Include="Views\AdminUserMangement\" />
 	  <Folder Include="ViewModels\AdminViewModels\" />
 	  <Folder Include="Controls\" />
-	  <Folder Include="Converters\" />
 	  <Folder Include="Extension\" />
 	</ItemGroup>
 	<ItemGroup>
@@ -211,7 +210,6 @@
 	  <BundleResource Include="Resources\Images\avatar.png" />
 	  <BundleResource Include="Resources\Images\emoji_smile.png" />
 	  <BundleResource Include="Resources\Images\emoji.png" />
-	  <BundleResource Include="Resources\Images\icon_add.png" />
 	  <BundleResource Include="Resources\Images\icon_alarm.png" />
 	  <BundleResource Include="Resources\Images\icon_alert.png" />
 	  <BundleResource Include="Resources\Images\icon_archive.png" />

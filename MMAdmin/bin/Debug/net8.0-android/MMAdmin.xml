@@ -512,12 +512,39 @@
         </member>
         <member name="T:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel">
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.IsVisible">
             <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.isVisible"/>
         </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.ConfirmPassword">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.confirmPassword"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.IsPasswordVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.isPasswordVisible"/>
+        </member>
         <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.SelectedEmployee">
             <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.selectedEmployee"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.togglePasswordVisibilityCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.TogglePasswordVisibilityCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.TogglePasswordVisibilityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.TogglePasswordVisibility"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.addEmployeeCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.AddEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.AddEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.AddEmployeeAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.GoBackAsync(System.Object)"/>.</summary>
         </member>
         <member name="T:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel">
             <inheritdoc/>
@@ -912,6 +939,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Categories">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Categories" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPasswordVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPasswordVisible" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedEmployee">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
         </member>
@@ -1040,6 +1070,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Categories">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Categories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPasswordVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPasswordVisible" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedEmployee">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>

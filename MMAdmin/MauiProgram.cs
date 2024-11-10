@@ -6,13 +6,16 @@ global using Windows.Graphics;
 #endif
 
 
+using Microsoft.Maui.Handlers;
 using MMAdmin.Abstract;
 using MMAdmin.ViewModels.CategoryManagement;
 using MMAdmin.ViewModels.ProductManagement;
 using MMAdmin.ViewModels.ShopManagement;
 using MMAdmin.Views.CategoryManagement;
 using MMAdmin.Views.ProductManagement;
+using MMAdmin.Views.schedulerManagement;
 using MMAdmin.Views.ShopManagement;
+using MMEmployee.Views.schedulerManagement;
 using Mopups.Hosting;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -27,6 +30,42 @@ public static class MauiProgram
 			.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
             .ConfigureSyncfusionCore()
+			.ConfigureMauiHandlers(handlers =>
+			{
+				handlers.AddHandler<Entry, EntryHandler>();
+				handlers.AddHandler<Editor, EditorHandler>();
+				handlers.AddHandler<Picker, PickerHandler>();
+
+				Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("MyCustomization", (handler, view) =>
+				{
+#if IOS
+                    if (handler.PlatformView is UIKit.UITextField textField)
+                    {
+                        textField.BorderStyle = UIKit.UITextBorderStyle.None;
+                    }
+#endif
+				});
+
+				Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("MyCustomization", (handler, view) =>
+				{
+#if IOS
+                    if (handler.PlatformView is UIKit.UITextView textView)
+                    {
+                        textView.Layer.BorderWidth = 0;
+                    }
+#endif
+				});
+
+				Microsoft.Maui.Handlers.PickerHandler.Mapper.AppendToMapping("MyCustomization", (handler, view) =>
+				{
+#if IOS
+                    if (handler.PlatformView is UIKit.UITextField textField)
+                    {
+                        textField.BorderStyle = UIKit.UITextBorderStyle.None;
+                    }
+#endif
+				});
+			})
             .ConfigureMopups()
 #if !WINDOWS
             .UseMauiMaps()
@@ -52,6 +91,8 @@ public static class MauiProgram
         builder.Services.AddTransient<IProductService, ProductService>();
         builder.Services.AddTransient<ICategoryService, CategoryService>();
         builder.Services.AddTransient<IEmployeeService, EmployeeService>();
+        builder.Services.AddTransient<IScheduleService, ScheduleService>();
+        
         builder.Services.AddTransient<IAdminUser, AdminUserService>();
         builder.Services.AddTransient<EmployeesViewModel>();
         builder.Services.AddTransient<EmployeeView>();
@@ -72,11 +113,19 @@ public static class MauiProgram
         builder.Services.AddTransient<AddCategory>();
         builder.Services.AddTransient<ProductViewModel>();
         builder.Services.AddTransient<ProductView>();
-        builder.Services.AddTransient<AddProductView>();
+      
         builder.Services.AddTransient<AddProductViewModel>();
+        builder.Services.AddTransient<AddProductView>();
         builder.Services.AddTransient<ShopDetailView>();
         builder.Services.AddTransient<ShopMapViewModel>();
         builder.Services.AddTransient<ShopMapView>();
+        builder.Services.AddTransient<SchedulerView>();
+        builder.Services.AddTransient<ScheduleViewModel>();   
+        builder.Services.AddTransient<EditReminder>();
+        builder.Services.AddTransient<EditReminderViewModel>();
+        builder.Services.AddTransient<ProductDetailView>();
+        builder.Services.AddTransient<ProductDetailViewModel>();
+
 
 #if DEBUG
         builder.Logging.AddDebug();

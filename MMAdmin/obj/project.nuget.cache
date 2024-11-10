@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A7qDEa1VRZoVsy+E6blv3kzczrFw2Qae/Bi1KAJQXaiiurd3wzFEkGVAKfaS5fMIRKzejsT3xmjAm3LkzNVY+w==",
+  "dgSpecHash": "KNe3sHETZIc=",
   "success": true,
   "projectFilePath": "/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/MMAdmin.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "/Users/luqmanakram/.nuget/packages/microsoft.maui.graphics/8.0.90/microsoft.maui.graphics.8.0.90.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.maui.maps/8.0.14/microsoft.maui.maps.8.0.14.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.maui.resizetizer/8.0.90/microsoft.maui.resizetizer.8.0.90.nupkg.sha512",
-    "/Users/luqmanakram/.nuget/packages/microsoft.net.illink.tasks/8.0.3/microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.net.illink.tasks/8.0.10/microsoft.net.illink.tasks.8.0.10.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",

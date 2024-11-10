@@ -25,3 +25,4 @@ global using Controls.UserDialogs.Maui;
 global using MMAdmin.Views.Popup;
 global using Mopups.Services;
 global using System.Text.RegularExpressions;
+global using MMAdmin.Abstract;

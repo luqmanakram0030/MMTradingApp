@@ -14,7 +14,7 @@ namespace MMAdmin.ViewModels.ProductManagement
     public partial class AddProductViewModel : ObservableObject
     {
         public IAsyncRelayCommand AddProductCommand { get; }
-        public IAsyncRelayCommand DeleteProductCommand { get; }
+       
 
         private readonly ISharedService _sharedService;
 
@@ -61,7 +61,7 @@ namespace MMAdmin.ViewModels.ProductManagement
             }
             // Initialize commands
             AddProductCommand = new AsyncRelayCommand(AddProductAsync);
-            DeleteProductCommand = new AsyncRelayCommand(DeleteProductAsync);
+           
         }
         public async Task LoadCategoryAsync()
         {
@@ -91,19 +91,7 @@ namespace MMAdmin.ViewModels.ProductManagement
             else
                 await _productService.AddProductAsync(SelectedProduct);
         }
-        private async Task DeleteProductAsync()
-        {
-            await MopupService.Instance.PushAsync(new DeleteOnlyPopup(SelectedProduct.Id));
-            MessagingCenter.Subscribe<string>(this, SelectedProduct.Id.ToString(), async (sender) =>
-            {
-                if (sender == "Delete")
-                {
-                    await _productService.DeleteProductAsync(SelectedProduct.Id);
-
-                }
-                MessagingCenter.Unsubscribe<string>(this, "Delete");
-            });
-        }
+        
         [RelayCommand]
         public async Task AddImage()
         {

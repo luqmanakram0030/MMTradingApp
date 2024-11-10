@@ -88,12 +88,35 @@ namespace MMAdmin.ViewModels.ProductManagement
             }
         }
 
-
+        [RelayCommand]
+        private async Task NavigateToProductDetail(Product product)
+        {
+            try
+            {
+                _sharedService.Add<Product>("SelectedProduct", product);
+                await Shell.Current.GoToAsync(nameof(ProductDetailView));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
+        }
         [RelayCommand]
         private async Task NavigateToAddProduct(Product product)
         {
-            _sharedService.Add<Product>("SelectedProduct", product);
-            await Shell.Current.GoToAsync(nameof(AddProductView));
+            try
+            {
+                _sharedService.Add<Product>("SelectedProduct", product);
+                await Shell.Current.GoToAsync(nameof(AddProductView));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }
         #endregion
     }

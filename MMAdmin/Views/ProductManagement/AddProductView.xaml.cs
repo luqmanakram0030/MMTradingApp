@@ -7,13 +7,22 @@ public partial class AddProductView : ContentPage
     AddProductViewModel addProductViewModel;
     public AddProductView(AddProductViewModel _addProductViewModel)
 	{
-		InitializeComponent();
-		addProductViewModel = _addProductViewModel;
-		BindingContext = addProductViewModel;
+		try
+		{
+			InitializeComponent();
+			addProductViewModel = _addProductViewModel;
+			BindingContext = addProductViewModel;
+		}
+		catch (Exception e)
+		{
+			Console.WriteLine(e);
+			//throw;
+		}
+		
 	}
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await addProductViewModel.LoadCategoryAsync();
+       await addProductViewModel.LoadCategoryAsync();
     }
 }

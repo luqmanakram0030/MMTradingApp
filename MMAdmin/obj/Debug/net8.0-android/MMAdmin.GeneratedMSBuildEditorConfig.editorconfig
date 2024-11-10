@@ -154,11 +154,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.Loadin
 build_metadata.AdditionalFiles.TargetPath = Views/Popup/LoadingView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Popup/LoadingView.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/MoreMenuForProduct.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.MoreMenuForProduct.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Popup/MoreMenuForProduct.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Popup/MoreMenuForProduct.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ProductManagement/AddProductView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ProductManagement.AddProductView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/ProductManagement/AddProductView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/ProductManagement/AddProductView.xaml
+
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ProductManagement/ProductDetailView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.ProductManagement.ProductDetailView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ProductManagement/ProductDetailView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ProductManagement/ProductDetailView.xaml
 
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/ProductManagement/ProductView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
