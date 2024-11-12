@@ -8,7 +8,6 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:behaviors="clr-namespace:MMAdmin.Behaviors"
     xmlns:converters="clr-namespace:MMAdmin.Converters"
-    xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
     xmlns:vm="clr-namespace:MMAdmin.ViewModels.EmployeeManagement"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Resources>
@@ -54,7 +53,7 @@
                         FontFamily="Bold"
                         FontSize="20"
                         HorizontalOptions="CenterAndExpand"
-                        Text="Add Employee"
+                        Text="{Binding PageTitle}"
                         TextColor="{StaticResource PrimaryBlack}"
                         VerticalOptions="StartAndExpand"
                         VerticalTextAlignment="Center"

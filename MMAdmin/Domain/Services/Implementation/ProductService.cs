@@ -52,7 +52,7 @@ public class ProductService : IProductService
             .Child("Products")
             .OnceAsync<Product>())
             .FirstOrDefault(a => a.Object.Id == product.Id);
-
+   string ImageUrl=  await   UploadImageAsync(product.ProductImageSource, product.Id.ToString());
         await _firebaseClient
             .Child("Products")
             .Child(toUpdateProduct.Key)
@@ -238,5 +238,34 @@ public class ProductService : IProductService
     {
         ToastService.ShowToastAsync(message);
     }
+    
+
+    public async Task<string> UploadImageAsync(Stream imageStream, string fileName)
+    {
+        // Firebase Storage URL
+        var storageUrl = $"https://firebasestorage.googleapis.com/v0/b/mmtrading-e6263.appspot.com/o/{fileName}?uploadType=media";
+
+        using var httpClient = new HttpClient();
+
+        // Retrieve the token from Preferences
+        var authToken = Preferences.Get("FirebaseToken", string.Empty);
+        httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", authToken);
+
+        var content = new StreamContent(imageStream);
+        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
+
+        var response = await httpClient.PostAsync(storageUrl, content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadAsStringAsync();
+            var json = JsonConvert.DeserializeObject<dynamic>(result);
+            string downloadUrl = json["mediaLink"];
+            return downloadUrl;
+        }
+
+        return null;
+    }
+
 }
 

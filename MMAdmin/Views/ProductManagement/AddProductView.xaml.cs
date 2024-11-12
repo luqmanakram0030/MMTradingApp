@@ -23,6 +23,6 @@ public partial class AddProductView : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-       await addProductViewModel.LoadCategoryAsync();
+      // await addProductViewModel.LoadCategoryAsync();
     }
 }

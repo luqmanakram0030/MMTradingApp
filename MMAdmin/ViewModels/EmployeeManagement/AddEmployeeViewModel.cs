@@ -20,7 +20,8 @@ namespace MMAdmin.ViewModels.EmployeeManagement
         private bool isVisible;
         [ObservableProperty]
         private string confirmPassword;
-
+        [ObservableProperty]
+        private string pageTitle;
         private readonly IEmployeeService _employeeService;
         [ObservableProperty]
         private bool isPasswordVisible;
@@ -37,11 +38,13 @@ namespace MMAdmin.ViewModels.EmployeeManagement
             {
                 ConfirmPassword=SelectedEmployee.Password;
             IsVisible = true;
+            PageTitle="Edit Employee";
         }
         else
 
         {
                 SelectedEmployee = new EmployeeModel();
+                PageTitle="Add Employee";
                 IsVisible = false;
                 
             }

@@ -1,4 +1,7 @@
 ﻿<Properties>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.85" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="MMAdmin/Views/schedulerManagement/ScheduleViewModel.cs">
     <Files>
       <File FileName="MMAdmin/ViewModels/ProductManagement/AddProductViewModel.cs" />
@@ -33,19 +36,16 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MMAdmin" expanded="True" />
+          <Node name="MMAdmin" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33_1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Domain/Services/Implementation/EmployeeService.cs" relfile="MMAdmin/Domain/Services/Implementation/EmployeeService.cs" line="42" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="34.0.85" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_6_-_api_33_1" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

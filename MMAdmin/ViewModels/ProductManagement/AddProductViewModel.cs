@@ -13,7 +13,7 @@ namespace MMAdmin.ViewModels.ProductManagement
 {
     public partial class AddProductViewModel : ObservableObject
     {
-        public IAsyncRelayCommand AddProductCommand { get; }
+       
        
 
         private readonly ISharedService _sharedService;
@@ -32,6 +32,12 @@ namespace MMAdmin.ViewModels.ProductManagement
         private Product selectedProduct;
         [ObservableProperty]
         private Category selectedCategory;
+        partial void OnSelectedCategoryChanged(Category value)
+        {
+            // Logic to set SelectedProduct based on SelectedCategory
+            if(SelectedCategory.Name!=null)
+            SelectedProduct.Category = SelectedCategory.Name;
+        }
         [ObservableProperty]
         private ObservableCollection<Category> categories;
         public AddProductViewModel(ISharedService sharedService, IProductService productService, ICategoryService categoryService)
@@ -41,6 +47,7 @@ namespace MMAdmin.ViewModels.ProductManagement
             this._sharedService = sharedService;
             SelectedCategory = new Category();
             Categories = new ObservableCollection<Category>();
+            _=LoadCategoryAsync();
             SelectedProduct = _sharedService.GetValue<Product>("SelectedProduct");
             if (SelectedProduct != null)
             {
@@ -60,8 +67,27 @@ namespace MMAdmin.ViewModels.ProductManagement
                 IsImageVisible = false;
             }
             // Initialize commands
-            AddProductCommand = new AsyncRelayCommand(AddProductAsync);
            
+        }
+        
+        [RelayCommand]
+        private async Task GoBackAsync(Object obj)
+        {
+            try
+            {
+                var page = obj as AddProductView;
+                var btnAddEmployee = page.FindByName("btngoback");
+                
+
+                await Common.ControlBounceEffect(btnAddEmployee);
+
+                await Shell.Current.GoToAsync("..");
+                
+            }
+            catch(Exception ex)
+            {
+                Common.BusyIndicator(false);
+            }
         }
         public async Task LoadCategoryAsync()
         {
@@ -79,17 +105,40 @@ namespace MMAdmin.ViewModels.ProductManagement
 
             }
         }
-        private async Task AddProductAsync()
+        [RelayCommand]
+        private async Task AddProductAsync(Object obj)
         {
-            if (SelectedProduct == null)
-                return;
-            SelectedProduct.Category = SelectedCategory.Name;
-            if (SelectedProduct.Id != Guid.Empty)
+            try
             {
-                await _productService.UpdateProductAsync(SelectedProduct);
+                var page = obj as AddProductView;
+                var btnAddProduct = page.FindByName("btnAddProduct");
+                if (!ValidationHelper.IsFormValid(SelectedProduct, page))
+                {
+                    return;
+                }
+
+                await Common.ControlBounceEffect(btnAddProduct);
+                if (SelectedProduct == null)
+                    return;
+                SelectedProduct.Category = SelectedCategory.Name;
+                if (SelectedProduct.Id.ToString() != "00000000-0000-0000-0000-000000000000")
+                {
+                    await _productService.UpdateProductAsync(SelectedProduct);
+                    await Shell.Current.GoToAsync("..");
+                }
+                else
+                {
+                    await _productService.AddProductAsync(SelectedProduct);
+                    await Shell.Current.GoToAsync("..");
+                }
+                   
             }
-            else
-                await _productService.AddProductAsync(SelectedProduct);
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                
+            }
+           
         }
         
         [RelayCommand]
@@ -108,6 +157,14 @@ namespace MMAdmin.ViewModels.ProductManagement
             if (!string.IsNullOrWhiteSpace(SelectedProduct.ImageUrl))
             {
                 byte[] base64Stream = Convert.FromBase64String(SelectedProduct.ImageUrl);
+                // Get the image content as a byte array
+               
+
+                // Create a stream from the byte array
+                var imageStream = new MemoryStream(base64Stream);
+                SelectedProduct.ProductImageSource = imageStream;
+                // Set the ImageSource
+               
                 ProductImage = ImageSource.FromStream(() => new MemoryStream(base64Stream));
                 IsImageVisible = true;
             }

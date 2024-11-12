@@ -30,7 +30,7 @@ namespace MMAdmin.ViewModels.AdminViewModels
             }
         #endregion
 
-        #region Methods
+
         [RelayCommand]
         public async Task Login()
         {
@@ -67,6 +67,7 @@ namespace MMAdmin.ViewModels.AdminViewModels
                     var serializedcontnet = JsonConvert.SerializeObject(content);
 
                     Preferences.Set("Email", Email.Trim().ToLower());
+                    Preferences.Set("FirebaseToken", content.RefreshToken);
                     Preferences.Set("isloggedin", true);
                     
                     Preferences.Set("Name", response.FullName.Trim());
@@ -105,7 +106,7 @@ namespace MMAdmin.ViewModels.AdminViewModels
             
             await ToastService.ShowToastAsync(message);
         }
-        #endregion
+      
       
 	}
 }

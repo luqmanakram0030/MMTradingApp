@@ -2,15 +2,17 @@
 <ContentPage
     Shell.NavBarIsVisible="False"
     x:Class="MMAdmin.Views.ProductManagement.AddProductView"
+    x:DataType="vm:AddProductViewModel"
     x:Name="addproductview"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:vm="clr-namespace:MMAdmin.ViewModels.ProductManagement"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Grid
         Margin="20,10"
         RowDefinitions="*,Auto"
         RowSpacing="15">
         <ScrollView VerticalScrollBarVisibility="Never">
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="5">
                 <StackLayout Orientation="Horizontal">
                     <Frame
                         BorderColor="Gray"
@@ -18,6 +20,7 @@
                         Padding="0"
                         VerticalOptions="Start">
                         <ImageButton
+                            Command="{Binding GoBackCommand}"
                             CommandParameter="{Binding Source={x:Reference addproductview}}"
                             HeightRequest="30"
                             HorizontalOptions="Start"
@@ -100,9 +103,13 @@
                             x:Name="txtFirstname" />
                     </Grid>
                 </Border>
-
-                <Border
+                <Label
                     Grid.Row="3"
+                    IsVisible="False"
+                    TextColor="Red"
+                    x:Name="Product_NameError" />
+                <Border
+                    Grid.Row="4"
                     Style="{StaticResource PrimaryBorder}"
                     x:Name="brdTelephone">
                     <Grid
@@ -118,9 +125,13 @@
                             x:Name="txtTelephone" />
                     </Grid>
                 </Border>
-
+                <Label
+                    Grid.Row="5"
+                    IsVisible="False"
+                    TextColor="Red"
+                    x:Name="Product_PriceError" />
                 <Border
-                    Grid.Row="4"
+                    Grid.Row="6"
                     Style="{StaticResource PrimaryBorder}"
                     x:Name="brdEmail">
                     <Grid ColumnDefinitions="45,*">
@@ -136,13 +147,24 @@
                             x:Name="txtEmail" />
                     </Grid>
                 </Border>
-
-                <Border Grid.Row="5" Style="{StaticResource PrimaryBorder}">
+                <Label
+                    Grid.Row="7"
+                    IsVisible="False"
+                    TextColor="Red"
+                    x:Name="Product_StockQuantityError" />
+                <Border Grid.Row="8" Style="{StaticResource PrimaryBorder}">
                     <Grid
                         ColumnDefinitions="25,*"
                         ColumnSpacing="5"
                         Padding="10,0,0,0">
                         <Image Source="category.png" Style="{StaticResource PrimaryImageEntry}" />
+                        <Picker
+                            Grid.Column="1"
+                            ItemDisplayBinding="{Binding Name}"
+                            ItemsSource="{Binding Categories}"
+                            SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                            Title="Select Category"
+                            x:Name="pkFunralStep" />
                         <!--  <editors:SfComboBox  -->
                         <!--  Grid.Column="1"  -->
                         <!--  HeightRequest="40"  -->
@@ -160,8 +182,13 @@
                             Text="Add New" />
                     </Grid>
                 </Border>
+                <Label
+                    Grid.Row="9"
+                    IsVisible="False"
+                    TextColor="Red"
+                    x:Name="Product_CategoryError" />
                 <Border
-                    Grid.Row="6"
+                    Grid.Row="10"
                     Style="{StaticResource PrimaryBorder}"
                     x:Name="brdPassword">
                     <Grid
@@ -177,16 +204,22 @@
                             x:Name="txtPassword" />
                     </Grid>
                 </Border>
+                <Label
+                    Grid.Row="11"
+                    IsVisible="False"
+                    TextColor="Red"
+                    x:Name="Product_DescriptionError" />
 
             </Grid>
         </ScrollView>
 
         <Button
             Command="{Binding AddProductCommand}"
+            CommandParameter="{Binding Source={x:Reference addproductview}}"
             Grid.Row="1"
             Margin="0"
             Style="{StaticResource PrimaryButton}"
             Text="Save"
-            x:Name="btnSave" />
+            x:Name="btnAddProduct" />
     </Grid>
 </ContentPage>
