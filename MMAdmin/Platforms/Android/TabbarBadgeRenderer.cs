@@ -21,10 +21,11 @@ namespace MMAdmin
 
     class BadgeShellBottomNavViewAppearanceTracker : ShellBottomNavViewAppearanceTracker
     {
-        private BadgeDrawable? firstBadgeDrawable;
-        private BadgeDrawable? secondBadgeDrawable;
+        private BadgeDrawable? _firstBadgeDrawable;
+        private BadgeDrawable? _secondBadgeDrawable;
 
-        public BadgeShellBottomNavViewAppearanceTracker(IShellContext shellContext, ShellItem shellItem) : base(shellContext, shellItem)
+        public BadgeShellBottomNavViewAppearanceTracker(IShellContext shellContext, ShellItem shellItem) 
+            : base(shellContext, shellItem)
         {
         }
 
@@ -32,17 +33,21 @@ namespace MMAdmin
         {
             base.SetAppearance(bottomView, appearance);
 
-            InitializeBadges(bottomView);
+            if (_firstBadgeDrawable == null || _secondBadgeDrawable == null)
+            {
+                InitializeBadges(bottomView);
+            }
+
             UpdateTabIcons(bottomView);
         }
 
         private void InitializeBadges(BottomNavigationView bottomView)
         {
-            const int firstTabbarItemIndex = 1; // Index of the first tab you want to show a badge on
-            const int secondTabbarItemIndex = 2; // Index of the second tab you want to show a badge on
+            const int firstTabbarItemIndex = 1; // Index of the first tab to show badge
+            const int secondTabbarItemIndex = 2; // Index of the second tab to show badge
 
-            firstBadgeDrawable = bottomView.GetOrCreateBadge(firstTabbarItemIndex);
-            secondBadgeDrawable = bottomView.GetOrCreateBadge(secondTabbarItemIndex);
+            _firstBadgeDrawable = bottomView.GetOrCreateBadge(firstTabbarItemIndex);
+            _secondBadgeDrawable = bottomView.GetOrCreateBadge(secondTabbarItemIndex);
 
             BadgeCounterService.CountChanged += OnFirstBadgeCountChanged;
             BadgeCounterService.SecondCountChanged += OnSecondBadgeCountChanged;
@@ -63,29 +68,23 @@ namespace MMAdmin
 
         private void UpdateFirstBadge(int count)
         {
-            if (firstBadgeDrawable is not null)
+            if (_firstBadgeDrawable is not null)
             {
-                firstBadgeDrawable.SetVisible(count > 0);
-                if (count > 0)
-                {
-                    firstBadgeDrawable.Number = count;
-                    firstBadgeDrawable.BackgroundColor = Colors.Red.ToPlatform();
-                    firstBadgeDrawable.BadgeTextColor = Colors.White.ToPlatform();
-                }
+                _firstBadgeDrawable.SetVisible(count > 0);
+                _firstBadgeDrawable.Number = count > 0 ? count : 0;
+                _firstBadgeDrawable.BackgroundColor = Colors.Red.ToPlatform();
+                _firstBadgeDrawable.BadgeTextColor = Colors.White.ToPlatform();
             }
         }
 
         private void UpdateSecondBadge(int count)
         {
-            if (secondBadgeDrawable is not null)
+            if (_secondBadgeDrawable is not null)
             {
-                secondBadgeDrawable.SetVisible(count > 0);
-                if (count > 0)
-                {
-                    secondBadgeDrawable.Number = count;
-                    secondBadgeDrawable.BackgroundColor = Colors.Red.ToPlatform(); // Same color as the first badge
-                    secondBadgeDrawable.BadgeTextColor = Colors.White.ToPlatform();
-                }
+                _secondBadgeDrawable.SetVisible(count > 0);
+                _secondBadgeDrawable.Number = count > 0 ? count : 0;
+                _secondBadgeDrawable.BackgroundColor = Colors.Blue.ToPlatform(); // Customizable color
+                _secondBadgeDrawable.BadgeTextColor = Colors.White.ToPlatform();
             }
         }
 
@@ -96,7 +95,9 @@ namespace MMAdmin
             {
                 var menuItem = bottomView.Menu.GetItem(i);
                 bool isSelected = bottomView.SelectedItemId == menuItem.ItemId;
-                menuItem.SetIcon(GetTabIcon(context, i, isSelected));
+
+                var drawable = GetTabIcon(context, i, isSelected);
+                menuItem.SetIcon(drawable);
             }
         }
 
@@ -104,33 +105,34 @@ namespace MMAdmin
         {
             string resourceName = GetResourceName(index, isSelected);
             int resourceId = context.Resources.GetIdentifier(resourceName, "drawable", context.PackageName);
-            return ContextCompat.GetDrawable(context, resourceId);
+
+            return resourceId != 0 
+                ? ContextCompat.GetDrawable(context, resourceId) 
+                : ContextCompat.GetDrawable(context, Resource.Drawable.design_fab_background)!;
         }
 
         private string GetResourceName(int index, bool isSelected)
         {
-            switch (index)
+            return index switch
             {
-                case 0:
-                    return isSelected ? "icon_dashboard" : "icon_dashboard_black";
-                case 1:
-                    return isSelected ? "selectedshop" : "shop";
-                case 2:
-                    return isSelected ? "selectedproduct" : "product";
-                case 3:
-                    return isSelected ? "icon_leads" : "icon_leads_black";
-                case 4:
-                    return isSelected ? "icon_schedule" : "icon_schedule_black";
-                default:
-                    return "default_icon";
-            }
+                0 => isSelected ? "icon_dashboard" : "icon_dashboard_black",
+                1 => isSelected ? "selectedshop" : "shop",
+                2 => isSelected ? "selectedproduct" : "product",
+                3 => isSelected ? "icon_leads" : "icon_leads_black",
+                4 => isSelected ? "icon_schedule" : "icon_schedule_black",
+                _ => "default_icon",
+            };
         }
 
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
-            BadgeCounterService.CountChanged -= OnFirstBadgeCountChanged;
-            BadgeCounterService.SecondCountChanged -= OnSecondBadgeCountChanged;
+
+            if (disposing)
+            {
+                BadgeCounterService.CountChanged -= OnFirstBadgeCountChanged;
+                BadgeCounterService.SecondCountChanged -= OnSecondBadgeCountChanged;
+            }
         }
     }
 }

@@ -70,7 +70,16 @@
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateToProductDetailCommand, Source={x:Reference lstEmployees}}" CommandParameter="{Binding .}" />
                                 </Grid.GestureRecognizers>
-                                <toolkit:AvatarView ImageSource="{Binding ProductImage}" />
+                                <Frame
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    IsClippedToBounds="True"
+                                    Padding="0"
+                                    VerticalOptions="Center"
+                                    WidthRequest="100">
+                                    <Image Aspect="AspectFit" Source="{Binding ProductImage}" />
+                                </Frame>
+
                                 <StackLayout Grid.Column="1">
 
                                     <Label

@@ -49,7 +49,30 @@ namespace MMEmployee.Views.schedulerManagement
 
             LoadDefaultData();
         }
+        [RelayCommand]
+        private async Task GoBackAsync(Object obj)
+        {
+            try
+            {
+                var page = obj as EditReminder;
+                var btnAddEmployee = page.FindByName("btngoback");
+                
 
+                await Common.ControlBounceEffect(btnAddEmployee);
+                // await Shell.Current.GoToAsync("../");
+                await Shell.Current.GoToAsync("../..");
+                //  await Shell.Current.GoToAsync($"//{nameof(AddShop)}");
+            }
+            catch(Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", 
+                    $"Failed to navigate: {ex.Message}", "OK");
+            }
+            finally
+            {
+                Common.BusyIndicator(false);
+            }
+        }
         private async void LoadDefaultData()
         {
             try
@@ -66,7 +89,7 @@ namespace MMEmployee.Views.schedulerManagement
                     SelectedUser = new User();
                     LblTitle = "Edit";
 
-                    StartTime = Schedule.DateStart.Date.TimeOfDay;
+                    StartTime = Schedule.DateStart.TimeOfDay;
 
                     MenuIsVisible = true;
                 }
@@ -106,7 +129,7 @@ namespace MMEmployee.Views.schedulerManagement
                     {
                         //  Common.DisplaySuccessMessage("successfully Saved!");
                         Schedule = null;
-                        await Shell.Current.GoToAsync("..");
+                        await Shell.Current.GoToAsync("../..");
                     }
                     else
                     {
@@ -121,7 +144,7 @@ namespace MMEmployee.Views.schedulerManagement
                     {
                         //  Common.DisplaySuccessMessage("successfully Saved!");
                         Schedule = null;
-                        await Shell.Current.GoToAsync("..");
+                        await Shell.Current.GoToAsync("../..");
                     }
                     else
                     {

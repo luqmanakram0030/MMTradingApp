@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mmtrading-e6263",
+  "private_key_id": "23069ce4ab44dfd126a961a537011dac8db157e0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDLGnLST83OaGeA\nSjfITVjS/XmdQ1ELL/u6y4JxJiFGpwHilhIlPB4FgIaxKMIbnpJr90AHZ5ITwqHC\nk1QiGGGQY3cXhvUe+HtosBwOQOvNiDF6cfmIodvjTe9ACl74GEjdEnNgRVPlF4oV\n22qiac14HlsQ0EGr69+5Bg/8ZA629YqfcbUW0CPHiED2eXF8i90eYhfDKbVZmFVt\nz6NTdDmwiIcypeXsX5YEkYUyZODdoJXVLI7OGWfBwsYWjkNoxVdUSBIfTE9shssP\n0q2Rt8zguoOmxl04KM7yOLvht2p111goEshXWf8sKI1sXhzJ7FTnAOx/piWWGoeV\n/Qp+cS7TAgMBAAECggEAAQo0rINfolTpiIQroAdJb2+d/HEn8Xau9dMcYXoKZpMX\n+fuAiclfA9ofdLw7mPcuuVAlYwOlEYqRfxrjcUEZaFY/2AJFwqm4/mOFnnjU7RRw\n0zCjmRXkidvkWUJSUC/o3TGHesI22MjaWQQfJjq/qGDBubWXVs0URaVvcSYvcy9+\nsRjOnVz2qhpx/Z1K0BZqAW6/bLhJZSXEKtd6B/iLsTEW6r9uDiPpEpYdmsaTAKXH\nEPVGmF3KhC6JK2QwEU9QiwoPc6TXacgsZwi9HbmtOAYBCQcguNn7oqzuM+5uHudL\nwvX0UjyIczvKTuZs+CZQMp5vN8wrPO12IUlAqUJ6QQKBgQD7h4RurjckO063Edi7\n/YvmqbIImjNKAmrkKtrdCQvORh/Kgi/E2fIT8AsEoMYVwLyObgWp9CwqjtVBuEra\nPf6BK/GmRLr5Gtegjlia1v5OqB220B/0ggDtXDyr+6VYsNF/sAbEBABPejjyvUxV\nyHDI5jT4zLcYMLg++Vi8K2XBwQKBgQDOtpaKGr7oVdsDsJRy7TFSiiqEKw7ZpvqV\nNMm6pUOgLMHSfjxoe3SHiR/ULZgm/7ikmjy2sncA/sZe+rEHb403yxxz0DFfFEDY\nGAz3REj1CiXVFxAL+jTjqlx0XhGQWkIUolBe0Vr8SsZt+YHJ9Lfztf7cRKqNjqz6\n6nWZBPQtkwKBgFNYcFWMfNEQpeCblUmVlkn0aP3Yuq4HZwv791HOsY7ERbyArvt3\njHN20u/RplGG7/PyGQZb1lazxY5lVshCSpbazNPfamUos9KL2GhWXSYLJu1wwWXv\nvgbozWHfnMZqsMCyv0ssWD39rekhOK4kINsxDNR0YScu3Z5gWTrg1nMBAoGBALAM\ncyNFagenbzKyRYunlNUOFO2hWjFl8431ekT6kSCuXZguqLX3RqRT1Ya4GhhEu/V7\n4m9aiN2RHlMvwGtrxuKYmi/MRPAL6LnhqdFBF72RmezkimcY/chThBAbOWwuYo7+\nOeK2/H1YFaz9zVq5j50BCACCfpq2w32jBup+fJL/AoGADu/iGPI1pswAdaIC8onD\nOKMDzN/uzdzUIh4CV+FFsbi+UoFkbtzP2d5dzkTSiNirX014/NUMD6uL6yTSzRe1\nVPEtdJo24vZ0WTZ2LLB8S+nIudN729FHv4JH0lXRmoougP5W+p3OzcXqB3EHES8s\nyL4SJ4xOcV98WCWul7MuhvQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mmtradingapp@mmtrading-e6263.iam.gserviceaccount.com",
+  "client_id": "115952546229572354823",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mmtradingapp%40mmtrading-e6263.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -47,6 +47,25 @@ namespace MMAdmin.ViewModels.ShopManagement
             SearchCommand = new Command(async () => await PerformSearch());
         }
         #region Methods
+        [RelayCommand]
+        private async Task GoBackAsync(Object obj)
+        {
+            try
+            {
+                var page = obj as AddShop;
+                var btnAddEmployee = page.FindByName("btngoback");
+                
+
+                await Common.ControlBounceEffect(btnAddEmployee);
+                await Shell.Current.GoToAsync("..");
+                // await Shell.Current.GoToAsync("..");
+                
+            }
+            catch(Exception ex)
+            {
+                Common.BusyIndicator(false);
+            }
+        }
         public async Task LoadShopsAsync()
         {
             try

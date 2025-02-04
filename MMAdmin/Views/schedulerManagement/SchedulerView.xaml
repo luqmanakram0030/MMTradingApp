@@ -1,38 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MMAdmin.Views.SchedulerView"
-             
+<ContentPage
+    Shell.NavBarIsVisible="False"
+    Title="SchedulerView"
+    x:Class="MMAdmin.Views.SchedulerView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:components="clr-namespace:MMAdmin.Views.Components"
     xmlns:controls="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
-   
-    xmlns:components="clr-namespace:MMAdmin.Views.Components" xmlns:converter="clr-namespace:MMAdmin.Converters" xmlns:schedule="clr-namespace:MMAdmin.Models" xmlns:schedule1="clr-namespace:MMAdmin.Models"
-             Title="SchedulerView" Shell.NavBarIsVisible="False">
+    xmlns:converter="clr-namespace:MMAdmin.Converters"
+    xmlns:schedule="clr-namespace:MMAdmin.Models"
+    xmlns:schedule1="clr-namespace:MMAdmin.Models"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout>
-        <components:HeaderTemplete />
+        <!-- <components:HeaderTemplete /> -->
+        <Label
+            FontFamily="Bold"
+            FontSize="20"
+            HorizontalOptions="Start"
+            Margin="20,0"
+            Text="Scheduler"
+            TextColor="{StaticResource PrimaryBlack}"
+            VerticalOptions="Start" />
         <Grid Margin="20,0,20,10" VerticalOptions="FillAndExpand">
 
             <!--#region [ Grid Row 0 ]-->
 
-            
 
-                <StackLayout>
-                    <!--#region [ Calendar ]-->
-                    <controls:Calendar
-                    Events="{Binding Events}"
-                    DayTappedCommand="{Binding SelectedDateCommand }"
-                    x:Name="calendar"
-                        SelectedDate="{Binding SelectDate}"
+
+            <StackLayout>
+                <!--#region [ Calendar ]-->
+                <controls:Calendar
                     AnimateCalendar="True"
+                    DayTappedCommand="{Binding SelectedDateCommand}"
                     DayViewFontSize="Caption"
                     DaysTitleLabelFirstUpperRestLower="True"
                     DaysTitleWeekendColor="{StaticResource PrimaryRed}"
                     EventIndicatorColor="{StaticResource PrimaryBlue}"
+                    Events="{Binding Events}"
                     EventsScrollViewVisible="False"
                     FooterArrowVisible="False"
                     FooterSectionVisible="True"
                     HorizontalOptions="Fill"
                     MonthLabelColor="{StaticResource PrimaryBlack}"
                     OtherMonthDayIsVisible="False"
+                    SelectedDate="{Binding SelectDate}"
                     SelectedDateColor="{StaticResource PrimaryWhite}"
                     SelectedDayBackgroundColor="{StaticResource Primary}"
                     SwipeToChangeMonthEnabled="True"
@@ -42,108 +52,123 @@
                     TodayTextColor="{StaticResource PrimaryBlack}"
                     VerticalOptions="Fill"
                     WeekendDayColor="{StaticResource PrimaryRed}"
-                    YearLabelColor="{StaticResource PrimaryBlack}">
+                    YearLabelColor="{StaticResource PrimaryBlack}"
+                    x:Name="calendar">
 
-                        <controls:Calendar.HeaderSectionTemplate>
-                            <DataTemplate>
-                                <Grid Margin="0,0,0,10" ColumnDefinitions="25,*,25">
+                    <controls:Calendar.HeaderSectionTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="25,*,25" Margin="0,0,0,10">
 
-                                    <Border Stroke="{StaticResource PrimaryBlack35}" StrokeShape="{RoundRectangle CornerRadius=5}">
-                                        <Image
-                                    x:Name="imgBtnPrevious"
-                                    HeightRequest="12"
-                                    Source="icon_arrow_left_black.png"
-                                    Style="{StaticResource PrimaryImage20}"
-                                    WidthRequest="12" />
-                                        <Border.GestureRecognizers>
-                                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="brdPrevious_Tapped" />
-                                        </Border.GestureRecognizers>
-                                    </Border>
+                                <Border Stroke="{StaticResource PrimaryBlack35}" StrokeShape="{RoundRectangle CornerRadius=5}">
+                                    <Image
+                                        HeightRequest="12"
+                                        Source="icon_arrow_left_black.png"
+                                        Style="{StaticResource PrimaryImage20}"
+                                        WidthRequest="12"
+                                        x:Name="imgBtnPrevious" />
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="brdPrevious_Tapped" />
+                                    </Border.GestureRecognizers>
+                                </Border>
 
-                                    <HorizontalStackLayout
-                                Grid.Column="1"
-                                HorizontalOptions="CenterAndExpand"
-                                Spacing="5">
-                                        <Label
-                                    FontFamily="Bold"
-                                    FontSize="18"
+                                <HorizontalStackLayout
+                                    Grid.Column="1"
                                     HorizontalOptions="CenterAndExpand"
-                                    Text="{Binding Month, Converter={converter:MonthNameFromNumber}}"
-                                    TextColor="{StaticResource PrimaryBlack}" />
-                                        <Label
-                                    FontFamily="Bold"
-                                    FontSize="18"
-                                    HorizontalOptions="CenterAndExpand"
-                                    Text="{Binding Year}"
-                                    TextColor="{StaticResource PrimaryBlack}" />
-                                    </HorizontalStackLayout>
+                                    Spacing="5">
+                                    <Label
+                                        FontFamily="Bold"
+                                        FontSize="18"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Text="{Binding Month, Converter={converter:MonthNameFromNumber}}"
+                                        TextColor="{StaticResource PrimaryBlack}" />
+                                    <Label
+                                        FontFamily="Bold"
+                                        FontSize="18"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Text="{Binding Year}"
+                                        TextColor="{StaticResource PrimaryBlack}" />
+                                </HorizontalStackLayout>
 
-                                    <Border
-                                Grid.Column="2"
-                                Stroke="{StaticResource PrimaryBlack35}"
-                                StrokeShape="{RoundRectangle CornerRadius=5}">
-                                        <Image
-                                    x:Name="imgBtnNext"
-                                    HeightRequest="12"
-                                    Source="icon_arrow_right_black.png"
-                                    Style="{StaticResource PrimaryImage20}"
-                                    WidthRequest="12" />
-                                        <Border.GestureRecognizers>
-                                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="brdNext_Tapped" />
-                                        </Border.GestureRecognizers>
-                                    </Border>
-                                </Grid>
-                            </DataTemplate>
-                        </controls:Calendar.HeaderSectionTemplate>
+                                <Border
+                                    Grid.Column="2"
+                                    Stroke="{StaticResource PrimaryBlack35}"
+                                    StrokeShape="{RoundRectangle CornerRadius=5}">
+                                    <Image
+                                        HeightRequest="12"
+                                        Source="icon_arrow_right_black.png"
+                                        Style="{StaticResource PrimaryImage20}"
+                                        WidthRequest="12"
+                                        x:Name="imgBtnNext" />
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="brdNext_Tapped" />
+                                    </Border.GestureRecognizers>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </controls:Calendar.HeaderSectionTemplate>
 
-                    </controls:Calendar>
-                    <!--#endregion-->
-                     <ScrollView VerticalScrollBarVisibility="Never" HeightRequest="200">
+                </controls:Calendar>
+                <!--#endregion-->
+                <ScrollView HeightRequest="250" VerticalScrollBarVisibility="Never">
                     <!--#region [ Appointment List ]-->
-                    <CollectionView x:Name="appiintmentList"
-                                    SelectionMode="None"
-                                    SelectionChangedCommand="{Binding EventSelectedCommand}"
-                                    ItemsSource="{Binding AppointmentList, Mode=TwoWay}">
+                    <CollectionView
+                        ItemsSource="{Binding AppointmentList, Mode=TwoWay}"
+                        SelectionChangedCommand="{Binding EventSelectedCommand}"
+                        SelectionMode="None"
+                        x:Name="appiintmentList">
                         <CollectionView.ItemsLayout>
-                            <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="10"/>
+                            <GridItemsLayout
+                                Orientation="Vertical"
+                                Span="1"
+                                VerticalItemSpacing="10" />
                         </CollectionView.ItemsLayout>
                         <CollectionView.EmptyView>
-                            <Label Text="No appointments."
-                                   TextColor="Black"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalTextAlignment="Center"/>
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                Text="No appointments."
+                                TextColor="Black"
+                                VerticalTextAlignment="Center" />
                         </CollectionView.EmptyView>
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="schedule:Schedule">
-                                <Border Style="{StaticResource SecondaryBorder}"
-                                         Padding="10">
+                                <Border Padding="10" Style="{StaticResource SecondaryBorder}">
                                     <Border.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.EventSelectedCommand, Source={x:Reference appiintmentList}}" CommandParameter="{Binding .}"/>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.EventSelectedCommand, Source={x:Reference appiintmentList}}" CommandParameter="{Binding .}" />
                                     </Border.GestureRecognizers>
                                     <StackLayout>
-                                        <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
-                                        <Label Text="{Binding Description}" MaxLines="1" LineBreakMode="TailTruncation" FontSize="12" TextColor="Gray"/>
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="16"
+                                            Text="{Binding Title}"
+                                            TextColor="Black" />
+                                        <Label
+                                            FontSize="12"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="1"
+                                            Text="{Binding Description}"
+                                            TextColor="Gray" />
                                     </StackLayout>
                                 </Border>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                          </ScrollView>
-                </StackLayout>
-                
-          
+                </ScrollView>
+            </StackLayout>
+
+
 
             <!--#endregion-->
 
             <!--#region [ Add Button ]-->
 
             <ImageButton
-            x:Name="imgBtnAdd"
-            Margin="0" VerticalOptions="EndAndExpand"
-            Command="{Binding AddEventCommand}"
-            Source="icon_add.png"
-            Style="{StaticResource PrimaryButtonAdd}" 
-                 CommandParameter="{Binding Source={x:Reference imgBtnAdd}}"/>
+                Command="{Binding AddEventCommand}"
+                CommandParameter="{Binding Source={x:Reference imgBtnAdd}}"
+                Margin="0"
+                Source="icon_add.png"
+                Style="{StaticResource PrimaryButtonAdd}"
+                VerticalOptions="EndAndExpand"
+                x:Name="imgBtnAdd" />
 
             <!--#endregion-->
 

@@ -94,7 +94,7 @@ namespace MMAdmin.ViewModels.ProductManagement
             try
             {
                 _sharedService.Add<Product>("SelectedProduct", product);
-                await Shell.Current.GoToAsync(nameof(ProductDetailView));
+                await Shell.Current.GoToAsync("product/details");
             }
             catch (Exception e)
             {

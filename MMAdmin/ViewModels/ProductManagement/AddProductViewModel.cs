@@ -80,8 +80,8 @@ namespace MMAdmin.ViewModels.ProductManagement
                 
 
                 await Common.ControlBounceEffect(btnAddEmployee);
-
-                await Shell.Current.GoToAsync("..");
+                await Shell.Current.GoToAsync("../..");
+               // await Shell.Current.GoToAsync("..");
                 
             }
             catch(Exception ex)
@@ -124,12 +124,12 @@ namespace MMAdmin.ViewModels.ProductManagement
                 if (SelectedProduct.Id.ToString() != "00000000-0000-0000-0000-000000000000")
                 {
                     await _productService.UpdateProductAsync(SelectedProduct);
-                    await Shell.Current.GoToAsync("..");
+                    await Shell.Current.GoToAsync("../..");
                 }
                 else
                 {
                     await _productService.AddProductAsync(SelectedProduct);
-                    await Shell.Current.GoToAsync("..");
+                    await Shell.Current.GoToAsync("../..");
                 }
                    
             }
@@ -160,10 +160,7 @@ namespace MMAdmin.ViewModels.ProductManagement
                 // Get the image content as a byte array
                
 
-                // Create a stream from the byte array
-                var imageStream = new MemoryStream(base64Stream);
-                SelectedProduct.ProductImageSource = imageStream;
-                // Set the ImageSource
+               
                
                 ProductImage = ImageSource.FromStream(() => new MemoryStream(base64Stream));
                 IsImageVisible = true;

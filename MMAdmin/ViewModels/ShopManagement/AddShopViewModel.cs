@@ -12,7 +12,7 @@ namespace MMAdmin.ViewModels.ShopManagement
 {
     public partial class AddShopViewModel : ObservableObject
     {
-        public IAsyncRelayCommand AddShopCommand { get; }
+        
         public IAsyncRelayCommand DeleteShopCommand { get; }
 
         private readonly ISharedService _sharedService;
@@ -65,28 +65,66 @@ namespace MMAdmin.ViewModels.ShopManagement
                 IsVisible = false;
             }
             // Initialize commands
-            AddShopCommand = new AsyncRelayCommand(AddShopAsync);
+            
             DeleteShopCommand = new AsyncRelayCommand(DeleteShopAsync);
         }
-        private async Task AddShopAsync()
+        [RelayCommand]
+        private async Task GoBackAsync(Object obj)
         {
             try
             {
-                Common.BusyIndicator(true);
-                if (SelectedShop == null || string.IsNullOrEmpty(SelectedPlaceDetails.Address))
+                var page = obj as AddShop;
+                var btnAddEmployee = page.FindByName("btngoback");
+                
+
+               await Common.ControlBounceEffect(btnAddEmployee);
+               // await Shell.Current.GoToAsync("../");
+                await Shell.Current.GoToAsync("../..");
+              //  await Shell.Current.GoToAsync($"//{nameof(AddShop)}");
+            }
+            catch(Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", 
+                    $"Failed to navigate: {ex.Message}", "OK");
+            }
+            finally
+            {
+                Common.BusyIndicator(false);
+            }
+        }
+        [RelayCommand]
+        private async Task AddShopAsync(object obj)
+        {
+            try
+            {
+                var page = obj as AddShop;
+                var btnAddEmployee = page.FindByName("btnSave");
+                if (!ValidationHelper.IsFormValid(SelectedShop, page))
                 {
-                    await Application.Current.MainPage.DisplayAlert("", "Select a location first", "Ok");
                     return;
                 }
-                SelectedShop.Location = SelectedPlaceDetails;
-                if (SelectedShop.ShopId != Guid.Empty)
-                {
-                    await _shopService.UpdateShopAsync(SelectedShop);
-                }
-                else
-                    await _shopService.AddShopAsync(SelectedShop);
 
-                Common.BusyIndicator(false);
+                await Common.ControlBounceEffect(btnAddEmployee);
+                
+                    Common.BusyIndicator(true);
+                    if (SelectedShop == null || string.IsNullOrEmpty(SelectedPlaceDetails.Address))
+                    {
+                        Common.BusyIndicator(false);
+                        await Application.Current.MainPage.DisplayAlert("", "Select a location first", "Ok");
+                       
+                        return;
+                    }
+
+                    SelectedShop.Location = SelectedPlaceDetails;
+                    if (SelectedShop.ShopId != Guid.Empty)
+                    {
+                        await _shopService.UpdateShopAsync(SelectedShop);
+                    }
+                    else
+                        await _shopService.AddShopAsync(SelectedShop);
+
+                    Common.BusyIndicator(false);
+                    await Shell.Current.GoToAsync("../..");
             }
             catch(Exception ex)
             {

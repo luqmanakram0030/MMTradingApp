@@ -51,7 +51,7 @@ namespace MMAdmin.Domain.Services.Implementation
                ShopId = item.Object.ShopId,
                Name = item.Object.Name,
                OwnerName = item.Object.OwnerName,
-               PhoneNo = item.Object.PhoneNo,
+               PhoneNumber = item.Object.PhoneNumber,
                Location = item.Object.Location
            }).ToList();
 

@@ -1,17 +1,38 @@
 ﻿
 
 
+using System.Reflection;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Drive.v3;
+using Google.Apis.Services;
+
 namespace MMAdmin.Domain.Services.Implementation;
 
 
 public class ProductService : IProductService
 {
     private readonly FirebaseClient _firebaseClient;
+    DriveService service = new DriveService();
     public ProductService()
     {
         _firebaseClient = new FirebaseClient(FirebaseWebApi.DatabaseLink, new FirebaseOptions
         {
             AuthTokenAsyncFactory = () => Task.FromResult(FirebaseWebApi.DatabaseSecret)
+        });
+        var jsonFileName = "MMAdmin.File.MMTrading.json";
+        var assembly = IntrospectionExtensions.GetTypeInfo(typeof(ProductService)).Assembly;
+        Stream stream = assembly.GetManifestResourceStream(jsonFileName);
+        string jsonString = "";
+        using (var reader = new System.IO.StreamReader(stream))
+        {
+            jsonString = reader.ReadToEnd();
+        }
+        var credential = GoogleCredential.FromJson(jsonString)
+            .CreateScoped(DriveService.ScopeConstants.Drive);
+        service = new DriveService(new BaseClientService.Initializer()
+        {
+            HttpClientInitializer = credential,
+            ApplicationName = "MMTrading",
         });
     }
 
@@ -49,16 +70,29 @@ public class ProductService : IProductService
     public async Task UpdateProductAsync(Product product)
     {
         var toUpdateProduct = (await _firebaseClient
-            .Child("Products")
-            .OnceAsync<Product>())
+                .Child("Products")
+                .OnceAsync<Product>())
             .FirstOrDefault(a => a.Object.Id == product.Id);
-   string ImageUrl=  await   UploadImageAsync(product.ProductImageSource, product.Id.ToString());
-        await _firebaseClient
-            .Child("Products")
-            .Child(toUpdateProduct.Key)
-            .PutAsync(product);
-    }
 
+        if (toUpdateProduct != null)
+        {
+            var updates = new Dictionary<string, object>();
+
+            // Update only the properties you need
+            updates["Name"] = product.Name;
+            updates["Description"] = product.Description;
+            updates["Price"] = product.Price;
+            updates["StockQuantity"] = product.StockQuantity;
+            updates["Category"] = product.Category;
+            updates["ImageUrl"] = product.ImageUrl;
+
+            // Perform the update in Firebase
+            await _firebaseClient
+                .Child("Products")
+                .Child(toUpdateProduct.Key)
+                .PatchAsync(updates);
+        }
+    }
     public async Task DeleteProductAsync(Guid id)
     {
         var toDeleteProduct = (await _firebaseClient
@@ -240,31 +274,61 @@ public class ProductService : IProductService
     }
     
 
-    public async Task<string> UploadImageAsync(Stream imageStream, string fileName)
+    // public async Task<string> UploadImageAsync(Stream imageStream, string fileName)
+    // {
+    //     // Firebase Storage URL
+    //     var storageUrl = $"https://firebasestorage.googleapis.com/v0/b/mmtrading-e6263.appspot.com/o/{fileName}?uploadType=media";
+    //
+    //     using var httpClient = new HttpClient();
+    //
+    //     // Retrieve the token from Preferences
+    //     var authToken = Preferences.Get("FirebaseToken", string.Empty);
+    //     httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", authToken);
+    //
+    //     var content = new StreamContent(imageStream);
+    //     content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
+    //
+    //     var response = await httpClient.PostAsync(storageUrl, content);
+    //
+    //     if (response.IsSuccessStatusCode)
+    //     {
+    //         var result = await response.Content.ReadAsStringAsync();
+    //         var json = JsonConvert.DeserializeObject<dynamic>(result);
+    //         string downloadUrl = json["mediaLink"];
+    //         return downloadUrl;
+    //     }
+    //
+    //     return null;
+    // }
+    public async Task<bool> UploadImageAsync(Stream stream,string fileName)
     {
-        // Firebase Storage URL
-        var storageUrl = $"https://firebasestorage.googleapis.com/v0/b/mmtrading-e6263.appspot.com/o/{fileName}?uploadType=media";
-
-        using var httpClient = new HttpClient();
-
-        // Retrieve the token from Preferences
-        var authToken = Preferences.Get("FirebaseToken", string.Empty);
-        httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", authToken);
-
-        var content = new StreamContent(imageStream);
-        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
-
-        var response = await httpClient.PostAsync(storageUrl, content);
-
-        if (response.IsSuccessStatusCode)
+        var response = false;
+        try
         {
-            var result = await response.Content.ReadAsStringAsync();
-            var json = JsonConvert.DeserializeObject<dynamic>(result);
-            string downloadUrl = json["mediaLink"];
-            return downloadUrl;
+          fileName=  fileName + ".jpeg";
+            string folderId = "1GJ9rKtDEWKVcExYeSidZr81K24SwDZ6c";
+            DateTime date = DateTime.Now;
+            var dateString = date.ToString("dd.MM.yyyy");
+            
+            var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+            {
+                Name = Path.GetFileName(fileName),
+                Parents = new List<string>() { folderId }
+            };
+           
+            FilesResource.CreateMediaUpload request;
+            request = service.Files.Create(fileMetadata, stream, "");
+            request.Fields = "id";
+        var result =    request.Upload();
+            var responceBody = request.ResponseBody;
+            response = true;
         }
-
-        return null;
+        catch (Exception ex)
+        {
+            response = false;
+        }
+            
+        return response;
     }
 
 }

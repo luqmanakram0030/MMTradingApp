@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MMAdmin.Views.CategoryManagement;
 
 namespace MMAdmin.ViewModels.CategoryManagement
 {
@@ -50,9 +51,11 @@ namespace MMAdmin.ViewModels.CategoryManagement
                 if (SelectedCategory.Id != Guid.Empty)
                 {
                     await _categoryService.UpdateCategoryAsync(SelectedCategory);
+                    await Shell.Current.GoToAsync("..");
                 }
                 else
                     await _categoryService.AddCategoryAsync(SelectedCategory);
+                await Shell.Current.GoToAsync("..");
                 Common.BusyIndicator(false);
             }
             catch (Exception ex)
@@ -61,7 +64,25 @@ namespace MMAdmin.ViewModels.CategoryManagement
             }
             
         }
+        [RelayCommand]
+        private async Task GoBackAsync(Object obj)
+        {
+            try
+            {
+                var page = obj as AddCategory;
+                var btnAddEmployee = page.FindByName("btngoback");
+                
 
+                await Common.ControlBounceEffect(btnAddEmployee);
+                await Shell.Current.GoToAsync("..");
+                // await Shell.Current.GoToAsync("..");
+                
+            }
+            catch(Exception ex)
+            {
+                Common.BusyIndicator(false);
+            }
+        }
         private async Task DeleteCategoryAsync()
         {
             try
@@ -72,7 +93,7 @@ namespace MMAdmin.ViewModels.CategoryManagement
                     if (sender == "Delete")
                     {
                         await _categoryService.DeleteCategoryAsync(SelectedCategory.Id);
-
+                        await Shell.Current.GoToAsync("..");
                     }
                     MessagingCenter.Unsubscribe<string>(this, "Delete");
                 });

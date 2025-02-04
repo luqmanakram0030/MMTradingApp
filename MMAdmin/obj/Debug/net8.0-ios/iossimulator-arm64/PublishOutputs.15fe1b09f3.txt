@@ -45,6 +45,10 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Controls.UserDialogs.Maui.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Firebase.Auth.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Firebase.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Google.Apis.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Google.Apis.Auth.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Google.Apis.Core.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Google.Apis.Drive.v3.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/LiteDB.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Microsoft.Extensions.Configuration.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Microsoft.Extensions.Configuration.Abstractions.dll
@@ -72,6 +76,8 @@
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Syncfusion.Maui.GridCommon.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Syncfusion.Maui.Inputs.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/Syncfusion.Maui.ListView.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/System.CodeDom.dll
+/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/System.Management.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/System.Reactive.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/System.Runtime.InteropServices.WindowsRuntime.dll
 /Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../MMAdmin.app/MMAdmin.dll

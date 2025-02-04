@@ -37,7 +37,7 @@ namespace MMAdmin.Domain.Models
 
         // Image Source for the product
         public object ProductImage { get; set; }
-        public Stream ProductImageSource { get; set; }
+       
         // Constructor to initialize the product
         public Product()
         {

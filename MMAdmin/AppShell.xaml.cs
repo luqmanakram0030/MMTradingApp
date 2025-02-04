@@ -29,13 +29,13 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(AddShop), typeof(AddShop));
         Routing.RegisterRoute(nameof(ShopMapView), typeof(ShopMapView));
         Routing.RegisterRoute(nameof(AdminForgetPasswordView), typeof(AdminForgetPasswordView));
-        Routing.RegisterRoute(nameof(ProductDetailView), typeof(ProductDetailView));
-     
+        
+        Routing.RegisterRoute("product/details", typeof(ProductDetailView));
     }
     private void CheckLoginAndSetCurrentItem()
     {
         bool isloggedin = Preferences.Get("isloggedin", false);
-        CurrentItem = isloggedin ? DashboardView : Login;
+        CurrentItem = isloggedin ? DashboardViewTab : Login;
     }
    
 }

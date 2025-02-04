@@ -1,64 +1,113 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MMAdmin.Views.CategoryManagement.AddCategory"
-             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
-             xmlns:vm="clr-namespace:MMAdmin.ViewModels.CategoryManagement"
-             x:DataType="vm:AddCategoryViewModel"
-             Shell.NavBarIsVisible="False">
-    <Grid Margin="20,10" RowDefinitions="*,Auto" RowSpacing="15">
+<ContentPage
+    Shell.NavBarIsVisible="False"
+    x:Class="MMAdmin.Views.CategoryManagement.AddCategory"
+    x:DataType="vm:AddCategoryViewModel"
+    x:Name="addCategoryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+    xmlns:vm="clr-namespace:MMAdmin.ViewModels.CategoryManagement"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid
+        Margin="20,10"
+        RowDefinitions="*,Auto"
+        RowSpacing="15">
+
         <ScrollView VerticalScrollBarVisibility="Never">
             <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="15">
-                <Label x:Name="lblTitle"
-                   FontFamily="Bold"
-                   FontSize="20"
-                   HorizontalOptions="StartAndExpand"
-                   Text="Add Category"
-                   TextColor="{StaticResource PrimaryBlack}"
-                   VerticalOptions="StartAndExpand" />
+                <StackLayout Orientation="Horizontal">
+                    <Frame
+                        BorderColor="Gray"
+                        HorizontalOptions="Start"
+                        Padding="0"
+                        VerticalOptions="Start">
+                        <ImageButton
+                            Command="{Binding GoBackCommand}"
+                            CommandParameter="{Binding Source={x:Reference addCategoryPage}}"
+                            HeightRequest="30"
+                            HorizontalOptions="Start"
+                            Padding="{OnPlatform Android=0,
+                                                 iOS=0}"
+                            VerticalOptions="Start"
+                            x:Name="btngoback">
+                            <ImageButton.Source>
+                                <FontImageSource
+                                    Color="{StaticResource PrimaryBlack}"
+                                    FontFamily="FontIcons"
+                                    Glyph="&#xf0141;"
+                                    Size="40" />
 
-                <ImageButton x:Name="imgBtnMenu"
-                         HeightRequest="20"
-                         HorizontalOptions="EndAndExpand"
-                         Source="icon_menu.png"
-                         VerticalOptions="CenterAndExpand"
-                         WidthRequest="20" 
-                         IsVisible="{Binding IsVisible, Mode=TwoWay}"
-                         Command="{Binding DeleteCategoryCommand}"/>
+                            </ImageButton.Source>
 
-                <Border x:Name="brdFirstname" Grid.Row="1" Style="{StaticResource PrimaryBorder}">
-                    <Grid Padding="10,0" ColumnDefinitions="25,*" ColumnSpacing="5">
+                        </ImageButton>
+                    </Frame>
+                    <Label
+                        FontFamily="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Add Category"
+                        TextColor="{StaticResource PrimaryBlack}"
+                        VerticalOptions="CenterAndExpand"
+                        x:Name="lblTitle" />
+
+
+                </StackLayout>
+                <ImageButton
+                    Command="{Binding DeleteCategoryCommand}"
+                    HeightRequest="20"
+                    HorizontalOptions="EndAndExpand"
+                    IsVisible="{Binding IsVisible, Mode=TwoWay}"
+                    Source="icon_menu.png"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="20"
+                    x:Name="imgBtnMenu" />
+
+                <Border
+                    Grid.Row="1"
+                    Style="{StaticResource PrimaryBorder}"
+                    x:Name="brdFirstname">
+                    <Grid
+                        ColumnDefinitions="25,*"
+                        ColumnSpacing="5"
+                        Padding="10,0">
                         <Image Source="icon_profile.png" Style="{StaticResource PrimaryImageEntry}" />
-                        <Entry x:Name="txtFirstname"
-                           Grid.Column="1"
-                           Placeholder="Name"
-                           Style="{StaticResource PrimaryEntry}"
-                           Text="{Binding SelectedCategory.Name}" />
+                        <Entry
+                            Grid.Column="1"
+                            Placeholder="Name"
+                            Style="{StaticResource PrimaryEntry}"
+                            Text="{Binding SelectedCategory.Name}"
+                            x:Name="txtFirstname" />
                     </Grid>
                 </Border>
 
-                <Border x:Name="brdEmail" Grid.Row="2" Style="{StaticResource PrimaryBorder}">
+                <Border
+                    Grid.Row="2"
+                    Style="{StaticResource PrimaryBorder}"
+                    x:Name="brdEmail">
                     <Grid ColumnDefinitions="45,*">
-                        <Image Margin="10"
-                           Aspect="AspectFit"
-                           Source="icon_email.png" />
-                        <Entry x:Name="txtEmail"
-                           Grid.Column="1"
-                           Placeholder="Description"
-                           Style="{StaticResource PrimaryEntry}"
-                           Text="{Binding SelectedCategory.Description}" />
+                        <Image
+                            Aspect="AspectFit"
+                            Margin="10"
+                            Source="icon_email.png" />
+                        <Entry
+                            Grid.Column="1"
+                            Placeholder="Description"
+                            Style="{StaticResource PrimaryEntry}"
+                            Text="{Binding SelectedCategory.Description}"
+                            x:Name="txtEmail" />
                     </Grid>
                 </Border>
 
-                
+
             </Grid>
         </ScrollView>
 
-        <Button x:Name="btnSave"
+        <Button
+            Command="{Binding AddCategoryCommand}"
             Grid.Row="1"
             Margin="0"
             Style="{StaticResource PrimaryButton}"
             Text="Save"
-            Command="{Binding AddCategoryCommand}" />
+            x:Name="btnSave" />
     </Grid>
 </ContentPage>
