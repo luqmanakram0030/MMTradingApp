@@ -1,28 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MMAdmin.Views.Components.ActivityButtonsTemplate"
-             x:Name="activityButton">
-    <Frame CornerRadius="8"
-       HasShadow="False" Padding="20,30"
-       BorderColor="{StaticResource PrimaryLightGray}"
-       BackgroundColor="{StaticResource PrimaryLightGray}">
+<ContentView
+    x:Class="MMAdmin.Views.Components.ActivityButtonsTemplate"
+    x:Name="activityButton"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Frame
+        BackgroundColor="{StaticResource PrimaryLightGray}"
+        BorderColor="{StaticResource PrimaryLightGray}"
+        CornerRadius="8"
+        HasShadow="False"
+        Padding="20,30">
         <Frame.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding Source={x:Reference activityButton}, Path=Command}"/>
+            <TapGestureRecognizer Command="{Binding Source={x:Reference activityButton}, Path=Command}" CommandParameter="{Binding Source={x:Reference activityButton}, Path=CommandParameter}" />
         </Frame.GestureRecognizers>
         <StackLayout HorizontalOptions="CenterAndExpand">
-
-            <Label FontFamily="Bold"
-                    FontSize="16"
-                    x:Name="activity"
-                    HorizontalTextAlignment="Center"
-                    TextColor="Black" />
-
-            <Label FontFamily="Medium"
-                    FontSize="12"
-                    HorizontalTextAlignment="Center"
-                    x:Name="text"
-                    TextColor="Black" />
+            <Label
+                FontFamily="Bold"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                TextColor="Black"
+                x:Name="activity" />
+            <Label
+                FontFamily="Medium"
+                FontSize="12"
+                HorizontalTextAlignment="Center"
+                TextColor="Black"
+                x:Name="text" />
         </StackLayout>
     </Frame>
 </ContentView>

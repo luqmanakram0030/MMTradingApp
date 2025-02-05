@@ -130,6 +130,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Home.Notific
 build_metadata.AdditionalFiles.TargetPath = Views/Home/NotificationView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Home/NotificationView.xaml
 
+[/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Home/OrdersView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Home.OrdersView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Home/OrdersView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Home/OrdersView.xaml
+
 [/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/Views/Popup/AddSchedulePopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MMAdmin.Views.Popup.AddSchedulePopup.xaml

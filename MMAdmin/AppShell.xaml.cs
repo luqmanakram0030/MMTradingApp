@@ -1,4 +1,5 @@
 ﻿using MMAdmin.Views.CategoryManagement;
+using MMAdmin.Views.Home;
 using MMAdmin.Views.ProductManagement;
 using MMAdmin.Views.schedulerManagement;
 using MMAdmin.Views.ShopManagement;
@@ -27,6 +28,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(ProductView), typeof(ProductView));
         Routing.RegisterRoute(nameof(ShopDetailView), typeof(ShopDetailView));
         Routing.RegisterRoute(nameof(AddShop), typeof(AddShop));
+        Routing.RegisterRoute(nameof(OrdersView), typeof(OrdersView));
         Routing.RegisterRoute(nameof(ShopMapView), typeof(ShopMapView));
         Routing.RegisterRoute(nameof(AdminForgetPasswordView), typeof(AdminForgetPasswordView));
         

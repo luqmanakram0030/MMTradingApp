@@ -4,6 +4,7 @@ namespace MMAdmin.Views.Components;
 
 public partial class ActivityButtonsTemplate : ContentView
 {
+    // Existing Text property...
     public static readonly BindableProperty TextProperty = BindableProperty.Create(
           nameof(Text),
           typeof(string),
@@ -20,16 +21,15 @@ public partial class ActivityButtonsTemplate : ContentView
 
     public string Text
     {
-        get
-        {
-            return base.GetValue(TextProperty)?.ToString();
-        }
-
+        get => base.GetValue(TextProperty)?.ToString();
         set
         {
-            base.SetValue(TextProperty, value); OnPropertyChanged();
+            base.SetValue(TextProperty, value);
+            OnPropertyChanged();
         }
     }
+
+    // Existing Activities property...
     public static readonly BindableProperty ActivitiesProperty = BindableProperty.Create(
                                                propertyName: nameof(Activities),
                                                returnType: typeof(string),
@@ -38,11 +38,12 @@ public partial class ActivityButtonsTemplate : ContentView
                                                defaultBindingMode: BindingMode.TwoWay);
     public string Activities
     {
-        get { return GetValue(ActivitiesProperty)?.ToString(); }
-        set { SetValue(ActivitiesProperty, value); }
+        get => GetValue(ActivitiesProperty)?.ToString();
+        set => SetValue(ActivitiesProperty, value);
     }
 
-    public static BindableProperty CommandProperty = BindableProperty.Create(
+    // Existing Command property...
+    public static readonly BindableProperty CommandProperty = BindableProperty.Create(
           nameof(Command),
           typeof(ICommand),
           typeof(ActivityButtonsTemplate),
@@ -54,9 +55,24 @@ public partial class ActivityButtonsTemplate : ContentView
         set => SetValue(CommandProperty, value);
     }
 
+    // New CommandParameter property
+    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(
+          nameof(CommandParameter),
+          typeof(object),
+          typeof(ActivityButtonsTemplate),
+          defaultValue: null,
+          defaultBindingMode: BindingMode.TwoWay);
+
+    public object CommandParameter
+    {
+        get => GetValue(CommandParameterProperty);
+        set => SetValue(CommandParameterProperty, value);
+    }
+
     public ActivityButtonsTemplate()
-	{
-		InitializeComponent(); 
+    {
+        InitializeComponent(); 
+        // Bind the 'Activities' property to the label named 'activity'
         this.activity.SetBinding(Label.TextProperty, new Binding(nameof(Activities), source: this));
     }
 }
