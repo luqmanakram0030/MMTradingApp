@@ -122,7 +122,7 @@ namespace MMAdmin
                 case 4:
                     return isSelected ? "icon_schedule" : "icon_schedule_black";
                 default:
-                    return "default_icon";
+                    return "icon_dashboard";
             }
         }
 

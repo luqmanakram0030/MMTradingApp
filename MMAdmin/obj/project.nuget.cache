@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KNe3sHETZIc=",
+  "dgSpecHash": "MQmmuCozfJE=",
   "success": true,
   "projectFilePath": "/Users/luqmanakram/Downloads/Projects/Luqman Akram/MMTradingApp/MMAdmin/MMAdmin.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "/Users/luqmanakram/.nuget/packages/microsoft.maui.graphics/8.0.90/microsoft.maui.graphics.8.0.90.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.maui.maps/8.0.14/microsoft.maui.maps.8.0.14.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.maui.resizetizer/8.0.90/microsoft.maui.resizetizer.8.0.90.nupkg.sha512",
-    "/Users/luqmanakram/.nuget/packages/microsoft.net.illink.tasks/8.0.10/microsoft.net.illink.tasks.8.0.10.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.net.illink.tasks/8.0.13/microsoft.net.illink.tasks.8.0.13.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
@@ -239,7 +239,16 @@
     "/Users/luqmanakram/.nuget/packages/xamarin.kotlin.stdlib.jdk7/1.9.0.1/xamarin.kotlin.stdlib.jdk7.1.9.0.1.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/xamarin.kotlin.stdlib.jdk8/1.9.0.1/xamarin.kotlin.stdlib.jdk8.1.9.0.1.nupkg.sha512",
     "/Users/luqmanakram/.nuget/packages/xamarin.kotlinx.coroutines.android/1.7.2.1/xamarin.kotlinx.coroutines.android.1.7.2.1.nupkg.sha512",
-    "/Users/luqmanakram/.nuget/packages/xamarin.kotlinx.coroutines.core.jvm/1.7.2.1/xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512"
+    "/Users/luqmanakram/.nuget/packages/xamarin.kotlinx.coroutines.core.jvm/1.7.2.1/xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.android.ref.34/34.0.147/microsoft.android.ref.34.34.0.147.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.android.runtime.34.android-arm/34.0.147/microsoft.android.runtime.34.android-arm.34.0.147.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.android.runtime.34.android-arm64/34.0.147/microsoft.android.runtime.34.android-arm64.34.0.147.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.android.runtime.34.android-x86/34.0.147/microsoft.android.runtime.34.android-x86.34.0.147.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.android.runtime.34.android-x64/34.0.147/microsoft.android.runtime.34.android-x64.34.0.147.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.ios.ref.net8.0_18.0/18.0.8319/microsoft.ios.ref.net8.0_18.0.18.0.8319.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.ios.runtime.iossimulator-arm64.net8.0_18.0/18.0.8319/microsoft.ios.runtime.iossimulator-arm64.net8.0_18.0.18.0.8319.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.maccatalyst.ref.net8.0_18.0/18.0.8319/microsoft.maccatalyst.ref.net8.0_18.0.18.0.8319.nupkg.sha512",
+    "/Users/luqmanakram/.nuget/packages/microsoft.maccatalyst.runtime.maccatalyst-arm64.net8.0_18.0/18.0.8319/microsoft.maccatalyst.runtime.maccatalyst-arm64.net8.0_18.0.18.0.8319.nupkg.sha512"
   ],
   "logs": []
 }

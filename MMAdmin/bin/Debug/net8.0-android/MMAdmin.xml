@@ -522,6 +522,9 @@
         <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.ConfirmPassword">
             <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.confirmPassword"/>
         </member>
+        <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.PageTitle">
+            <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.pageTitle"/>
+        </member>
         <member name="P:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.IsPasswordVisible">
             <inheritdoc cref="F:MMAdmin.ViewModels.EmployeeManagement.AddEmployeeViewModel.isPasswordVisible"/>
         </member>
@@ -563,6 +566,8 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.IsVisible">
             <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.isVisible"/>
@@ -582,6 +587,23 @@
         <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.Categories">
             <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.categories"/>
         </member>
+        <member name="M:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.OnSelectedCategoryChanged(MMAdmin.Domain.Models.Category)">
+            <summary>Executes the logic for when <see cref="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.SelectedCategory"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.SelectedCategory"/> is changed.</remarks>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.GoBackAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.addProductCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.AddProductCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.AddProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.AddProductAsync(System.Object)"/>.</summary>
+        </member>
         <member name="F:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.addImageCommand">
             <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.AddImageCommand"/>.</summary>
         </member>
@@ -594,12 +616,54 @@
         <member name="P:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.NavigatetoCategoryCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.AddProductViewModel.NavigatetoCategory"/>.</summary>
         </member>
+        <member name="T:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.IsVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.isVisible"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.IsImageVisible">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.isImageVisible"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.ProductImage">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.productImage"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.SelectedProduct">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.selectedProduct"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.SelectedCategory">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.selectedCategory"/>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.Categories">
+            <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.categories"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.GoBackAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.editProductCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.EditProductCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.EditProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.EditProductAsync(System.Object)"/>.</summary>
+        </member>
         <member name="T:MMAdmin.ViewModels.ProductManagement.ProductViewModel">
+            <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.ProductManagement.ProductViewModel.Products">
             <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductViewModel.products"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.ProductViewModel.navigateToProductDetailCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductViewModel.NavigateToProductDetailCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductViewModel.NavigateToProductDetailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.ProductViewModel.NavigateToProductDetail(MMAdmin.Domain.Models.Product)"/>.</summary>
         </member>
         <member name="F:MMAdmin.ViewModels.ProductManagement.ProductViewModel.navigateToAddProductCommand">
             <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductViewModel.NavigateToAddProductCommand"/>.</summary>
@@ -939,6 +1003,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Categories">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Categories" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PageTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PageTitle" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPasswordVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPasswordVisible" generated properties.</summary>
         </member>
@@ -1070,6 +1137,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Categories">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Categories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PageTitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PageTitle" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPasswordVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPasswordVisible" generated properties.</summary>
