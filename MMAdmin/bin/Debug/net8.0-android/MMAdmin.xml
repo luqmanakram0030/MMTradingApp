@@ -490,6 +490,7 @@
         </member>
         <member name="T:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel">
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.IsVisible">
             <inheritdoc cref="F:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.isVisible"/>
@@ -497,12 +498,25 @@
         <member name="P:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.SelectedCategory">
             <inheritdoc cref="F:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.selectedCategory"/>
         </member>
+        <member name="F:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.CategoryManagement.AddCategoryViewModel.GoBackAsync(System.Object)"/>.</summary>
+        </member>
         <member name="T:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel">
+            <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.Categories">
             <inheritdoc cref="F:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.categories"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.GoBackAsync(System.Object)"/>.</summary>
         </member>
         <member name="F:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.navigateToAddCategoryCommand">
             <summary>The backing field for <see cref="P:MMAdmin.ViewModels.CategoryManagement.CategoryViewModel.NavigateToAddCategoryCommand"/>.</summary>
@@ -561,6 +575,15 @@
         </member>
         <member name="P:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddEmployeeCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.EmployeeManagement.EmployeesViewModel.NavigateToAddEmployee(MMAdmin.Domain.Models.EmployeeModel)"/>.</summary>
+        </member>
+        <member name="T:MMAdmin.ViewModels.Home.DashboardViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.Home.DashboardViewModel.navigateOrderPageCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.Home.DashboardViewModel.NavigateOrderPageCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.Home.DashboardViewModel.NavigateOrderPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.Home.DashboardViewModel.NavigateOrderPageAsync(System.Object)"/>.</summary>
         </member>
         <member name="T:MMAdmin.ViewModels.ProductManagement.AddProductViewModel">
             <inheritdoc/>
@@ -676,6 +699,8 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.Places">
             <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.places"/>
@@ -691,6 +716,18 @@
         </member>
         <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.SelectedShop">
             <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.selectedShop"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.GoBackAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.addShopCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.AddShopCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.AddShopCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.AddShopAsync(System.Object)"/>.</summary>
         </member>
         <member name="F:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.editShopCommand">
             <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.AddShopViewModel.EditShopCommand"/>.</summary>
@@ -739,9 +776,16 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.Shops">
             <inheritdoc cref="F:MMAdmin.ViewModels.ShopManagement.ShopViewModel.shops"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ShopManagement.ShopViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ShopManagement.ShopViewModel.GoBackAsync(System.Object)"/>.</summary>
         </member>
         <member name="F:MMAdmin.ViewModels.ShopManagement.ShopViewModel.navigateToAddShopCommand">
             <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ShopManagement.ShopViewModel.NavigateToAddShopCommand"/>.</summary>
@@ -810,6 +854,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.Schedule">
             <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.schedule"/>
@@ -843,6 +888,12 @@
         </member>
         <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.Users">
             <inheritdoc cref="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.users"/>
+        </member>
+        <member name="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MMEmployee.Views.schedulerManagement.EditReminderViewModel.GoBackAsync(System.Object)"/>.</summary>
         </member>
         <member name="F:MMEmployee.Views.schedulerManagement.EditReminderViewModel.saveEventCommand">
             <summary>The backing field for <see cref="P:MMEmployee.Views.schedulerManagement.EditReminderViewModel.SaveEventCommand"/>.</summary>
