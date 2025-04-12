@@ -3,6 +3,90 @@
 <ContentPage
     x:Class="MMAdmin.Views.Home.OrdersView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <ContentPage.Content />
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F8F8F8">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="7">
+                <ListView
+                    x:Name="List"
+                    HasUnevenRows="True"
+                    ItemTapped="List_ItemTapped"
+                    SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="7">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        FontAttributes="Bold"
+                                        FontSize="17"
+                                        Text="{Binding Name}"
+                                        TextColor="Black" />
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        FontSize="14"
+                                        Text="{Binding Date}"
+                                        TextColor="Gray" />
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Padding="82,0,0,0"
+                                        FontAttributes="Bold"
+                                        FontSize="14"
+                                        Text="{Binding OrderId}"
+                                        TextColor="Gray" />
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        HorizontalOptions="End"
+                                        Text="{Binding TotalPrice}"
+                                        TextColor="Gray" />
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        FontSize="15"
+                                        HorizontalOptions="End"
+                                        Text="{Binding PaymentStatus}">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding PaymentStatus}"
+                                                TargetType="Label"
+                                                Value="Paid">
+                                                <Setter Property="TextColor" Value="Green" />
+                                            </DataTrigger>
+                                            <DataTrigger
+                                                Binding="{Binding PaymentStatus}"
+                                                TargetType="Label"
+                                                Value="Unpaid">
+                                                <Setter Property="TextColor" Value="Red" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

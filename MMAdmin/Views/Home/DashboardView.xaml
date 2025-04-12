@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    BackgroundColor="{StaticResource PrimaryLightGray}"
-    Shell.NavBarIsVisible="False"
     x:Class="MMAdmin.Views.Home.DashboardView"
-    x:DataType="viewmodel:DashboardViewModel"
-    x:Name="dashboardPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:components="clr-namespace:MMAdmin.Views.Components"
     xmlns:controls="clr-namespace:MMAdmin.Drawables"
     xmlns:viewmodel="clr-namespace:MMAdmin.ViewModels.Home"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    x:Name="dashboardPage"
+    x:DataType="viewmodel:DashboardViewModel"
+    BackgroundColor="{StaticResource PrimaryLightGray}"
+    Shell.NavBarIsVisible="False">
     <Grid RowDefinitions="Auto,*">
         <!-- <components:HeaderTemplete Grid.Row="0" /> -->
         <Label
+            Grid.Row="0"
+            Margin="20,20"
             FontFamily="Bold"
             FontSize="20"
-            Grid.Row="0"
             HorizontalOptions="CenterAndExpand"
-            Margin="20,20"
             Text="Dashboard"
             TextColor="{StaticResource PrimaryBlack}"
             VerticalOptions="CenterAndExpand" />
@@ -26,19 +26,19 @@
             <StackLayout Margin="10" Spacing="15">
 
                 <Frame
+                    Padding="20,30"
                     BackgroundColor="White"
                     BorderColor="White"
-                    CornerRadius="8"
-                    Padding="20,30">
+                    CornerRadius="8">
                     <StackLayout>
                         <!--#region [ Welcome Section]-->
                         <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto">
                             <Label
+                                x:Name="lblUser"
                                 FontFamily="Bold"
                                 FontSize="16"
                                 Text="Welcome To MMTrading"
-                                TextColor="{StaticResource PrimaryBlack}"
-                                x:Name="lblUser" />
+                                TextColor="{StaticResource PrimaryBlack}" />
                             <HorizontalStackLayout Grid.Row="1" Spacing="5">
                                 <Image
                                     Aspect="AspectFit"
@@ -53,9 +53,9 @@
                             </HorizontalStackLayout>
 
                             <Label
+                                Grid.Column="1"
                                 FontFamily="Bold"
                                 FontSize="11"
-                                Grid.Column="1"
                                 HorizontalTextAlignment="End"
                                 Text="This Month"
                                 TextColor="{StaticResource PrimaryDarkGray}" />
@@ -63,7 +63,7 @@
                         <!--#endregion-->
                         <!--#region [ Statistics Section ]-->
 
-                        <Grid ColumnDefinitions="*,*" Grid.Row="1">
+                        <Grid Grid.Row="1" ColumnDefinitions="*,*">
 
                             <VerticalStackLayout
                                 HorizontalOptions="StartAndExpand"
@@ -101,10 +101,10 @@
                             </VerticalStackLayout>
 
                             <controls:CircularProgressBar
-                                Fontsize="18"
                                 Grid.Column="1"
-                                HorizontalOptions="EndAndExpand"
                                 Padding="0"
+                                Fontsize="18"
+                                HorizontalOptions="EndAndExpand"
                                 Progress="80"
                                 ProgressColor="{StaticResource Primary}"
                                 ProgressLeftColor="{StaticResource PrimaryLightGray}"
@@ -120,100 +120,124 @@
                 </Frame>
                 <!--#region [ Activity Section]-->
                 <Frame
+                    Padding="10"
                     BackgroundColor="White"
                     BorderColor="White"
-                    CornerRadius="8"
-                    Padding="10">
+                    CornerRadius="8">
+
                     <Grid
                         ColumnDefinitions="*,*"
                         ColumnSpacing="10"
                         RowDefinitions="Auto,Auto,Auto"
                         RowSpacing="10">
+
+                        <!--  Header Labels  -->
                         <Label
+                            Grid.Column="0"
+                            Margin="0,10,0,0"
                             FontFamily="Bold"
                             FontSize="16"
-                            Margin="0,10,0,0"
-                            Text="Latest Actitvity"
+                            Text="Latest Activity"
                             TextColor="{StaticResource PrimaryBlack}" />
+
                         <Label
+                            Grid.Column="1"
                             FontFamily="Bold"
                             FontSize="11"
-                            Grid.Column="1"
                             HorizontalTextAlignment="End"
                             Text="This Month"
                             TextColor="{StaticResource PrimaryDarkGray}"
-                            VerticalTextAlignment="Center" />
+                            VerticalTextAlignment="Center"
+                            Margin="0,10,0,0"/>
 
-                        <components:ActivityButtonsTemplate
-                            Activities="5"
-                            Command="{Binding NavigateOrderPageCommand}"
-                            CommandParameter="{Binding Source={x:Reference dashboardPage}}"
-                            Grid.Column="0"
+                        <!--  Activity Buttons Grid  -->
+                        <Grid
                             Grid.Row="1"
-                            Text="Pending Orders"
-                            x:Name="btnOrder" />
+                            Grid.ColumnSpan="2"
+                            ColumnSpacing="7"
+                            RowSpacing="6">
 
-                        <components:ActivityButtonsTemplate
-                            Activities="10"
-                            Command="{Binding .}"
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            Text="Appointments" />
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
 
-                        <components:ActivityButtonsTemplate
-                            Activities="5"
-                            Command="{Binding .}"
-                            Grid.Column="0"
-                            Grid.Row="2"
-                            Text="Meetings" />
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
 
-                        <components:ActivityButtonsTemplate
-                            Activities="3"
-                            Command="{Binding .}"
-                            Grid.Column="1"
-                            Grid.Row="2"
-                            Text="Reminders" />
+                            <components:ActivityButtonsTemplate
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                CustomBg="#87CEFA"
+                                OrderCount="9"
+                                OrderStatus="New Orders" />
+
+                            <components:ActivityButtonsTemplate
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                CustomBg="#DA70D6"
+                                OrderCount="8"
+                                OrderStatus="Pending Orders" />
+
+                            <components:ActivityButtonsTemplate
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                CustomBg="#FFA500"
+                                OrderCount="12"
+                                OrderStatus="'In Process' Orders" />
+
+                            <components:ActivityButtonsTemplate
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                CustomBg="#28A745"
+                                OrderCount="10"
+                                OrderStatus="Completed Orders" />
+
+                        </Grid>
                     </Grid>
                 </Frame>
+
 
                 <!--#endregion-->
                 <!--#region [ Statistics Section]-->
                 <Frame
+                    Padding="20,30"
                     BackgroundColor="White"
                     BorderColor="White"
-                    CornerRadius="8"
-                    Padding="20,30">
+                    CornerRadius="8">
                     <Grid
                         ColumnDefinitions="*,*"
                         ColumnSpacing="10"
                         RowDefinitions="Auto,Auto"
                         RowSpacing="10">
                         <Label
+                            Margin="0,10,0,0"
                             FontFamily="Bold"
                             FontSize="16"
-                            Margin="0,10,0,0"
                             Text="Statistics"
                             TextColor="{StaticResource PrimaryBlack}" />
                         <Label
+                            Grid.Column="1"
                             FontAttributes="Bold"
                             FontSize="11"
-                            Grid.Column="1"
                             HorizontalTextAlignment="End"
                             Text="This Month"
                             TextColor="{StaticResource PrimaryDarkGray}"
                             VerticalTextAlignment="Center" />
 
                         <components:StatisticsViewTemplate
-                            Grid.Column="0"
                             Grid.Row="1"
+                            Grid.Column="0"
                             Icon="graph_down.png"
                             Text="Conversion rate"
                             TextColor="Red"
                             TitleText="10%" />
 
                         <components:StatisticsViewTemplate
-                            Grid.Column="1"
                             Grid.Row="1"
+                            Grid.Column="1"
                             Icon="graph_up.png"
                             Text="Reply time"
                             TextColor="Green"

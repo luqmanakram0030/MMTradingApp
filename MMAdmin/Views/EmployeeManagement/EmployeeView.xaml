@@ -1,100 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MMAdmin.Views.EmployeeView"
-             xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
-              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             Shell.TabBarIsVisible="True" Shell.NavBarIsVisible="False"
-              xmlns:vm="clr-namespace:MMAdmin.ViewModels.EmployeeManagement"
-             xmlns:models="clr-namespace:MMAdmin.Domain.Models"
-             x:DataType="vm:EmployeesViewModel">
-   <StackLayout>
-       
-        <Grid VerticalOptions="FillAndExpand">
+<ContentPage
+    x:Class="MMAdmin.Views.EmployeeView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MMAdmin.Domain.Models"
+    xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:MMAdmin.ViewModels.EmployeeManagement"
+    x:DataType="vm:EmployeesViewModel"
+    BackgroundColor="#FAFAFA"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="True">
 
-            <Grid
-            Margin="0,10"
-            RowDefinitions="Auto,Auto,*"
-            RowSpacing="10">
-
-                <!--#region [ Row 0 [Text Employees] ]-->
-
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <VerticalStackLayout Padding="10">
                 <Label
-                Margin="20,0"
-                
-                FontFamily="Bold"
-                FontSize="20"
-                HorizontalOptions="StartAndExpand"
-                Text="Employees"
-                TextColor="{StaticResource PrimaryBlack}"
-                VerticalOptions="CenterAndExpand" />
+                    Margin="0,3,0,0"
+                    FontAttributes="Bold"
+                    FontSize="24"
+                    HorizontalOptions="Center"
+                    Text="Employees"
+                    TextColor="Black" />
 
-                <!--#endregion-->
-
-                <!--#region [ Search Bar ]-->
-
-                <Border Style="{StaticResource PrimaryBorder}"
-                        Grid.Row="1"
-                        Margin="20">
-                    <Grid Padding="10,0" ColumnDefinitions="*,25">
-                        <Entry Text="{Binding SearchText}" Placeholder="Search " Style="{StaticResource PrimaryEntry}" />
+                <Border
+                    Margin="15"
+                    Padding="8,0,8,0"
+                    Style="{StaticResource PrimaryBorder}">
+                    <Grid ColumnDefinitions="*,*">
+                        <Entry
+                            Grid.Column="0"
+                            Placeholder="Search"
+                            PlaceholderColor="{StaticResource PrimaryBlack35}"
+                            Text="{Binding SearchText}"
+                            TextColor="Black" />
                         <Image
                             Grid.Column="1"
-                            Source="icon_search.png"
-                            Style="{StaticResource PrimaryImageEntry}" />
+                            HeightRequest="25"
+                            HorizontalOptions="End"
+                            Source="searchicon.png"
+                            WidthRequest="25" />
                     </Grid>
                 </Border>
 
-                <!--#endregion-->
-
-                <!--#region [ Employee List ]-->
-                <CollectionView ItemsSource="{Binding Employees}"
-                                x:Name="lstEmployees"
-                                Grid.Row="2"
-                                Margin="20,0"
-                                BackgroundColor="{StaticResource PrimaryWhite}"
-                                SelectionMode="None"
-                                VerticalScrollBarVisibility="Never">
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout VerticalItemSpacing="10"
-                                         Orientation="Vertical"/>
-                    </CollectionView.ItemsLayout>
+                <CollectionView
+                    x:Name="lstEmployees"
+                    Margin="5"
+                    ItemsSource="{Binding Employees}"
+                    SelectionMode="None">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="models:EmployeeModel">
-                            <StackLayout>
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateToAddEmployeeCommand, Source={x:Reference lstEmployees}}" 
-                                                          CommandParameter="{Binding .}"/>
-                                </StackLayout.GestureRecognizers>
-                                <Label FontFamily="Bold"
-                                            FontSize="15"
-                                            Text="{Binding FullName}"
-                                            TextColor="{StaticResource PrimaryBlack}" />
-                                <Label FontFamily="Bold"
-                                            FontSize="12"
-                                            Text="{Binding Email}"
-                                            TextColor="{StaticResource PrimaryDarkGray80}" />
-                                <BoxView HeightRequest="0.5"
-                                         Color="LightGray"
-                                         Margin="0,3,0,0"/>
-                            </StackLayout>
+                            <Grid
+                                Margin="0,4"
+                                Padding="9"
+                                BackgroundColor="White"
+                                ColumnDefinitions="Auto,*"
+                                HeightRequest="80"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Center">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateToAddEmployeeCommand, Source={x:Reference lstEmployees}}" CommandParameter="{Binding .}" />
+                                </Grid.GestureRecognizers>
+
+                                <!--  Image  -->
+                                <Image
+                                    Grid.Column="0"
+                                    Aspect="AspectFill"
+                                    HeightRequest="50"
+                                    Source="user2.png"
+                                    WidthRequest="50" />
+
+                                <!--  Information  -->
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <Label
+                                        Margin="30,5,0,0"
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        Text="{Binding FullName}"
+                                        TextColor="Black" />
+
+                                    <Label
+                                        Margin="30,2,0,0"
+                                        FontSize="14"
+                                        Text="{Binding Email}"
+                                        TextColor="#888" />
+                                </VerticalStackLayout>
+                            </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
 
-                <!--#endregion-->
-
-            </Grid>
-            
-            <!--#region [ Button Add ]-->
+            <!--Add Button-->
             <ImageButton x:Name="imgBtnAdd"
-                        Margin="0,0,20,10"
-                        Command="{Binding NavigateToAddEmployeeCommand}"
-                        Source="icon_add.png"
-                        Style="{StaticResource PrimaryButtonAdd}"
-                        VerticalOptions="EndAndExpand" />
-
-            <!--#endregion-->
-        </Grid>
-    </StackLayout>
+             Margin="0,8,13,10"
+             Command="{Binding NavigateToAddEmployeeCommand}"
+             Source="icon_add.png"
+             Style="{StaticResource PrimaryButtonAdd}"
+             VerticalOptions="EndAndExpand" />
+                
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

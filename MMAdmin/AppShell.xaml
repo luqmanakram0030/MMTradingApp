@@ -1,65 +1,65 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    Shell.FlyoutBehavior="Disabled"
-    Title="Oportia"
     x:Class="MMAdmin.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:Employee="clr-namespace:MMAdmin.Views.EmployeeManagement"
     xmlns:Home="clr-namespace:MMAdmin.Views.Home"
     xmlns:Shop="clr-namespace:MMAdmin.Views"
     xmlns:login="clr-namespace:MMAdmin.Views.AdminUserMangement"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    Title="Oportia"
+    Shell.FlyoutBehavior="Disabled">
 
 
 
     <Shell.Resources>
         <ResourceDictionary>
-            <Style TargetType="Element" x:Key="BaseStyle">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource PrimarySmokyWhite}" />
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource NavigationBar}" />
                 <Setter Property="Shell.NavBarHasShadow" Value="True" />
-                <Setter Property="Shell.ForegroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="Shell.TitleColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource TitleBar}" />
+                <Setter Property="Shell.TitleColor" Value="{StaticResource TitleBar}" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource PrimarySmokyWhite}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource PrimaryBlack}" />
-                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource NavigationBar}" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource TabbarUnselected}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource NavigationBar}" />
             </Style>
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />
         </ResourceDictionary>
     </Shell.Resources>
 
-    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" x:Name="MyTabbar">
+    <FlyoutItem x:Name="MyTabbar" FlyoutDisplayOptions="AsSingleItem">
         <ShellContent
-            ContentTemplate="{DataTemplate Home:DashboardView}"
-            Route="DashboardView"
+            x:Name="DashboardViewTab"
             Title="Dashboard"
-            x:Name="DashboardViewTab" />
+            ContentTemplate="{DataTemplate Home:DashboardView}"
+            Route="DashboardView" />
 
         <ShellContent
-            ContentTemplate="{DataTemplate Shop:ShopView}"
-            Route="ShopView"
+            x:Name="ShopViewTab"
             Title="Shops"
-            x:Name="ShopViewTab" />
+            ContentTemplate="{DataTemplate Shop:ShopView}"
+            Route="ShopView" />
 
         <ShellContent
-            ContentTemplate="{DataTemplate Shop:ProductView}"
-            Route="ProductView"
+            x:Name="ProductViewTag"
             Title="Products"
-            x:Name="ProductViewTag" />
+            ContentTemplate="{DataTemplate Shop:ProductView}"
+            Route="ProductView" />
 
         <ShellContent
-            ContentTemplate="{DataTemplate Shop:EmployeeView}"
-            Route="EmployeeView"
+            x:Name="EmployeeViewTab"
             Title="Employee"
-            x:Name="EmployeeViewTab" />
+            ContentTemplate="{DataTemplate Shop:EmployeeView}"
+            Route="EmployeeView" />
 
         <ShellContent
+            Title="Schedule"
             ContentTemplate="{DataTemplate Shop:SchedulerView}"
-            Route="ScheduleViewTab"
-            Title="Schedule" />
+            Route="ScheduleViewTab" />
 
         <!--<ShellContent x:Name="NotificationsView" Route="NotificationsView" Title="Notifications"  ContentTemplate="{DataTemplate Home:NotificationView}"/>-->
 
@@ -67,11 +67,11 @@
     </FlyoutItem>
 
     <ShellContent
+        x:Name="Login"
         ContentTemplate="{DataTemplate login:AdminLoginView}"
         Route="LoginPage"
         Shell.FlyoutBehavior="Disabled"
-        Shell.FlyoutItemIsVisible="False"
-        x:Name="Login" />
+        Shell.FlyoutItemIsVisible="False" />
 
 
 
@@ -82,19 +82,19 @@
             <ContentView BackgroundColor="White">
                 <!--  Bindable Properties: Title, Icon  -->
                 <Grid
-                    ColumnDefinitions="2,*"
                     Padding="0,25,0,2"
+                    ColumnDefinitions="2,*"
                     RowDefinitions="auto,1">
                     <Image
                         HeightRequest="28"
                         Source="{Binding Icon}"
                         VerticalOptions="Center" />
                     <Label
+                        Grid.Column="1"
+                        Margin="10,5,0,0"
                         FontFamily="SemiBold"
                         FontSize="16"
-                        Grid.Column="1"
                         HorizontalTextAlignment="Start"
-                        Margin="10,5,0,0"
                         Text="{Binding Title}"
                         TextColor="Black"
                         VerticalTextAlignment="Center" />
@@ -113,8 +113,8 @@
             <ContentView BackgroundColor="White">
                 <!--  Bindable Properties: Text, Icon  -->
                 <Grid
-                    ColumnDefinitions="30,*"
                     Padding="20,10,0,0"
+                    ColumnDefinitions="30,*"
                     RowDefinitions="auto,10"
                     RowSpacing="0">
                     <Image
@@ -122,21 +122,21 @@
                         Source="{Binding Icon}"
                         VerticalOptions="Center" />
                     <Label
+                        Grid.Column="1"
+                        Margin="10,5,0,0"
                         FontFamily="SemiBold"
                         FontSize="16"
-                        Grid.Column="1"
                         HorizontalTextAlignment="Start"
-                        Margin="10,5,0,0"
                         Text="{Binding Title}"
                         TextColor="Black"
                         VerticalTextAlignment="Center" />
                     <BoxView
-                        BackgroundColor="#757575"
-                        Grid.ColumnSpan="2"
                         Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Margin="-70,0,0,0"
+                        BackgroundColor="#757575"
                         HeightRequest="0.5"
                         HorizontalOptions="FillAndExpand"
-                        Margin="-70,0,0,0"
                         Opacity="0.8"
                         VerticalOptions="EndAndExpand" />
                 </Grid>

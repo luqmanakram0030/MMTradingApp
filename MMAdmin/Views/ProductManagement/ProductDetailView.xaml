@@ -1,148 +1,93 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <ContentPage
-    Shell.NavBarHasShadow="False"
-    Shell.NavBarIsVisible="False"
     x:Class="MMAdmin.Views.ProductManagement.ProductDetailView"
-    x:DataType="vm:ProductDetailViewModel"
-    x:Name="productdetailpage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:MMAdmin.ViewModels.ProductManagement"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    x:Name="productdetailpage"
+    Title="Product Details"
+    x:DataType="vm:ProductDetailViewModel"
+    BackgroundColor="#FAFAFA"
+    Shell.NavBarHasShadow="False"
+    Shell.NavBarIsVisible="True">
     <ContentPage.Content>
-        <Grid
-            Margin="20,10"
-            RowDefinitions="*,Auto"
-            RowSpacing="15">
-            <ScrollView VerticalScrollBarVisibility="Never">
-                <StackLayout Padding="20">
-                    <StackLayout Orientation="Horizontal">
-                        <Frame
-                            BorderColor="Gray"
-                            HorizontalOptions="Start"
-                            Padding="0"
-                            VerticalOptions="Start">
-                            <ImageButton
-                                Command="{Binding GoBackCommand}"
-                                CommandParameter="{Binding Source={x:Reference productdetailpage}}"
-                                HeightRequest="30"
-                                HorizontalOptions="Start"
-                                Padding="{OnPlatform Android=0,
-                                                     iOS=0}"
-                                VerticalOptions="Start"
-                                x:Name="btngoback">
-                                <ImageButton.Source>
-                                    <FontImageSource
-                                        Color="{StaticResource PrimaryBlack}"
-                                        FontFamily="FontIcons"
-                                        Glyph="&#xf0141;"
-                                        Size="40" />
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <!--  Product Image  -->
+                <Image
+                    Aspect="AspectFill"
+                    HeightRequest="300"
+                    Source="{Binding SelectedProduct.ProductImage}" />
 
-                                </ImageButton.Source>
+                <!--  Category  -->
+                <Label
+                    FontAttributes="Italic"
+                    FontSize="14"
+                    Text="{Binding SelectedProduct.Category}"
+                    TextColor="{StaticResource PrimaryBlack60}" />
 
-                            </ImageButton>
-                        </Frame>
-                        <Label
-                            FontFamily="Bold"
-                            FontSize="20"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="Product Detail"
-                            TextColor="{StaticResource PrimaryBlack}"
-                            VerticalOptions="StartAndExpand"
-                            VerticalTextAlignment="Center"
-                            x:Name="lblTitle" />
-                        <Frame
-                            BorderColor="Transparent"
-                            HasShadow="False"
-                            HorizontalOptions="Start"
-                            Padding="0"
-                            VerticalOptions="Start">
-                            <ImageButton
-                                HeightRequest="25"
-                                HorizontalOptions="EndAndExpand"
-                                Source="icon_menu.png"
-                                VerticalOptions="Start"
-                                WidthRequest="25"
-                                x:Name="imgBtnMenu" />
-                        </Frame>
-                    </StackLayout>
-                    <Frame
-                        BorderColor="Gray"
-                        HorizontalOptions="CenterAndExpand"
-                        Margin="0,30,0,10"
-                        Padding="0"
-                        VerticalOptions="Start">
-                        <Image
-                            Aspect="AspectFit"
-                            BackgroundColor="{StaticResource Primary}"
-                            HeightRequest="200"
-                            HorizontalOptions="CenterAndExpand"
-                            IsVisible="{Binding IsImageVisible}"
-                            Source="{Binding ProductImage}" />
-                    </Frame>
-                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                        <Label
-                            FontAttributes="Bold"
-                            FontSize="14"
-                            HorizontalOptions="StartAndExpand"
-                            Text="{Binding SelectedProduct.Name}"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            FontSize="12"
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding SelectedProduct.Price, StringFormat='PKR {0:N2}'}"
-                            VerticalTextAlignment="Center" />
-                    </StackLayout>
-                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                        <Label
-                            FontSize="12"
-                            HorizontalOptions="StartAndExpand"
-                            Text="{Binding SelectedProduct.Category, StringFormat='Category: {0}'}"
-                            VerticalTextAlignment="Center" />
+                <!--  Product Name  -->
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="24"
+                    Text="{Binding SelectedProduct.Name}"
+                    TextColor="{StaticResource PrimaryBlack}" />
 
-                        <Label
-                            FontSize="12"
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding SelectedProduct.StockQuantity, StringFormat='Stock: {0}'}"
-                            VerticalTextAlignment="Center" />
-
-                    </StackLayout>
+                <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
-                        FontSize="14"
-                        HorizontalOptions="StartAndExpand"
-                        Text="About the Product:"
-                        VerticalTextAlignment="Center" />
-                    <Label FontSize="12" Text="{Binding SelectedProduct.Description}" />
+                        FontSize="20"
+                        Text="Qty: "
+                        TextColor="{StaticResource PrimaryBlack60}" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        Text="{Binding SelectedProduct.StockQuantity, StringFormat='x{0}'}"
+                        TextColor="{StaticResource PrimaryBlack60}" />
+                </HorizontalStackLayout>
 
+                <!--  Price  -->
+                <Label
+                    FontSize="28"
+                    Text="{Binding SelectedProduct.Price, StringFormat='${0}'}"
+                    TextColor="Green" />
 
+                <!--  Description  -->
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="22"
+                    Text="Description"
+                    TextColor="{StaticResource PrimaryBlack}" />
 
-                    <!-- <Button Command="{Binding UpdateProductCommand}" Text="Update Product" /> -->
+                <Label
+                    FontSize="16"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding SelectedProduct.Description}"
+                    TextColor="Black" />
 
+                <!--  Action Buttons  -->
+                <HorizontalStackLayout
+                    Margin="0,30"
+                    HorizontalOptions="Center"
+                    Spacing="20">
                     <Button
-                        BackgroundColor="{StaticResource Primary}"
+                        BackgroundColor="#3F51B5"
                         Command="{Binding EditProductCommand}"
                         CommandParameter="{Binding Source={x:Reference productdetailpage}}"
-                        CornerRadius="5"
-                        Margin="0,20,0,0"
-                        Text="Edit Product"
-                        TextColor="{StaticResource PrimaryBlack}"
-                        x:Name="btnedit" />
+                        Text="Edit"
+                        TextColor="White"
+                        WidthRequest="120" />
+
                     <Button
-                        BackgroundColor="{StaticResource PrimaryRed}"
+                        BackgroundColor="#CE2029"
                         Command="{Binding DeleteProductCommand}"
-                        CornerRadius="5"
-                        Margin="0,20,0,0"
                         Text="Delete"
-                        TextColor="{StaticResource PrimaryBlack}" />
-                    <!-- <Button Command="{Binding AddImageCommand}" Text="Add Image" /> -->
-                    <!-- <Button Command="{Binding NavigateToCategoryCommand}" Text="Navigate to Category" /> -->
-                </StackLayout>
-
-
-
-            </ScrollView>
-        </Grid>
-
+                        TextColor="White"
+                        WidthRequest="120" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
+

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MMAdmin.Views.Home.OrderDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Order Details"
+    BackgroundColor="#F8F8F8">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+
+            <!--  Order Summary  -->
+            <Frame
+                Padding="15"
+                BackgroundColor="White"
+                CornerRadius="10"
+                HasShadow="True">
+                <VerticalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Text="Order Summary"
+                        TextColor="#333" />
+                    <Label Text="{Binding OrderId, StringFormat='Order ID: {0}'}" TextColor="#555" />
+                    <Label Text="{Binding Date, StringFormat='Date: {0}'}" TextColor="#555" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--  Customer Info  -->
+            <Frame
+                Padding="15"
+                BackgroundColor="White"
+                CornerRadius="10"
+                HasShadow="True">
+                <VerticalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Text="Customer Info"
+                        TextColor="#333" />
+                    <Label Text="{Binding Name, StringFormat='Name: {0}'}" TextColor="#555" />
+                    <Label Text="{Binding PhoneNo, StringFormat='Phone: {0}'}" TextColor="#555" />
+                    <Label Text="{Binding ShippingAddress, StringFormat='Shipping Address: {0}'}" TextColor="#555" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--  Payment Details  -->
+            <Frame
+                Padding="15"
+                BackgroundColor="White"
+                CornerRadius="10"
+                HasShadow="True">
+                <VerticalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Text="Payment Method"
+                        TextColor="#333" />
+                    <Label Text="{Binding PaymentMethod, StringFormat='Payment Method: {0}'}" TextColor="#555" />
+
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Status:" TextColor="#333" />
+                        <Label FontAttributes="Bold" Text="{Binding PaymentStatus}">
+                            <Label.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding PaymentStatus}"
+                                    TargetType="Label"
+                                    Value="Unpaid">
+                                    <Setter Property="TextColor" Value="Red" />
+                                </DataTrigger>
+                                <DataTrigger
+                                    Binding="{Binding PaymentStatus}"
+                                    TargetType="Label"
+                                    Value="Paid">
+                                    <Setter Property="TextColor" Value="Green" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--  Inventory  -->
+            <Frame
+                Padding="15"
+                BackgroundColor="White"
+                CornerRadius="10"
+                HasShadow="True">
+                <VerticalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Text="Inventory"
+                        TextColor="#333" />
+                    <CollectionView ItemsSource="{Binding Products}">
+                        <CollectionView.Header>
+                            <HorizontalStackLayout Padding="10" BackgroundColor="#E0E0E0">
+                                <Label
+                                    FontAttributes="Bold"
+                                    Text="Item"
+                                    TextColor="#333"
+                                    WidthRequest="120" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    Text="Qty"
+                                    TextColor="#333"
+                                    WidthRequest="50" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    Text="Price"
+                                    TextColor="#333" />
+                            </HorizontalStackLayout>
+                        </CollectionView.Header>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <HorizontalStackLayout Padding="10">
+                                    <Label
+                                        FontSize="16"
+                                        Text="{Binding ProductDetails}"
+                                        TextColor="#555"
+                                        WidthRequest="120" />
+                                    <Label
+                                        FontSize="16"
+                                        Text="{Binding Quantity}"
+                                        TextColor="#555"
+                                        WidthRequest="50" />
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        Text="{Binding Price, StringFormat='₹{0:F2}'}"
+                                        TextColor="#333" />
+                                </HorizontalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--  Total Summary  -->
+            <Frame
+                Padding="15"
+                BackgroundColor="White"
+                CornerRadius="10"
+                HasShadow="True">
+                <VerticalStackLayout Spacing="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Shipping Cost:"
+                            TextColor="#333" />
+                        <Label
+                            FontSize="16"
+                            Text="{Binding ShippingCost, StringFormat='₹{0:F2}'}"
+                            TextColor="#555" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="Total Cost:"
+                            TextColor="#333" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="{Binding TotalPrice, StringFormat='₹{0:F2}'}"
+                            TextColor="Green" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

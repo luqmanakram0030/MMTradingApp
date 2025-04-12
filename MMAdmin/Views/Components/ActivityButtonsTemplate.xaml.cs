@@ -1,78 +1,44 @@
+using System.Threading.Tasks;
 using System.Windows.Input;
+using MMAdmin.Views;
+using MMAdmin.Views.Home;
 
 namespace MMAdmin.Views.Components;
 
 public partial class ActivityButtonsTemplate : ContentView
 {
-    // Existing Text property...
-    public static readonly BindableProperty TextProperty = BindableProperty.Create(
-          nameof(Text),
-          typeof(string),
-          typeof(ActivityButtonsTemplate),
-          defaultValue: string.Empty,
-          defaultBindingMode: BindingMode.TwoWay,
-          propertyChanged: TextPropertyChanged);
+    public static readonly BindableProperty OrderCountProperty = BindableProperty.Create(nameof(OrderCount), typeof(string), typeof(ActivityButtonsTemplate), "0");
+    public static readonly BindableProperty OrderStatusProperty = BindableProperty.Create(nameof(OrderStatus), typeof(string), typeof(ActivityButtonsTemplate), "No Process");
+    public static readonly BindableProperty CustomBgProperty = BindableProperty.Create(nameof(CustomBg), typeof(Color), typeof(ActivityButtonsTemplate));
 
-    private static void TextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+    public string OrderCount
     {
-        var control = (ActivityButtonsTemplate)bindable;
-        control.text.Text = newValue?.ToString();
+        get => (string)GetValue(OrderCountProperty);
+        set => SetValue(OrderCountProperty, value);
     }
 
-    public string Text
+    public string OrderStatus
     {
-        get => base.GetValue(TextProperty)?.ToString();
-        set
-        {
-            base.SetValue(TextProperty, value);
-            OnPropertyChanged();
-        }
+        get => (string)GetValue(OrderStatusProperty);
+        set => SetValue(OrderStatusProperty, value);
     }
 
-    // Existing Activities property...
-    public static readonly BindableProperty ActivitiesProperty = BindableProperty.Create(
-                                               propertyName: nameof(Activities),
-                                               returnType: typeof(string),
-                                               declaringType: typeof(ActivityButtonsTemplate),
-                                               defaultValue: null,
-                                               defaultBindingMode: BindingMode.TwoWay);
-    public string Activities
+    public Color CustomBg
     {
-        get => GetValue(ActivitiesProperty)?.ToString();
-        set => SetValue(ActivitiesProperty, value);
+        get => (Color)GetValue(CustomBgProperty);
+        set => SetValue(CustomBgProperty, value);
     }
-
-    // Existing Command property...
-    public static readonly BindableProperty CommandProperty = BindableProperty.Create(
-          nameof(Command),
-          typeof(ICommand),
-          typeof(ActivityButtonsTemplate),
-          defaultBindingMode: BindingMode.TwoWay);
-
-    public ICommand Command
-    {
-        get => (ICommand)GetValue(CommandProperty);
-        set => SetValue(CommandProperty, value);
-    }
-
-    // New CommandParameter property
-    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(
-          nameof(CommandParameter),
-          typeof(object),
-          typeof(ActivityButtonsTemplate),
-          defaultValue: null,
-          defaultBindingMode: BindingMode.TwoWay);
-
-    public object CommandParameter
-    {
-        get => GetValue(CommandParameterProperty);
-        set => SetValue(CommandParameterProperty, value);
-    }
-
     public ActivityButtonsTemplate()
     {
-        InitializeComponent(); 
-        // Bind the 'Activities' property to the label named 'activity'
-        this.activity.SetBinding(Label.TextProperty, new Binding(nameof(Activities), source: this));
+        InitializeComponent();
+        BindingContext = this;
+        
+    }
+
+    private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        string orderCount = OrderCount;
+        string orderStatus = OrderStatus;
+        await Navigation.PushAsync(new OrdersView(orderCount, orderStatus));
     }
 }

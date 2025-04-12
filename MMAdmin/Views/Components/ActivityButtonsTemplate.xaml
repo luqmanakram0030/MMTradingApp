@@ -1,31 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView
     x:Class="MMAdmin.Views.Components.ActivityButtonsTemplate"
-    x:Name="activityButton"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="activityButton">
+
     <Frame
-        BackgroundColor="{StaticResource PrimaryLightGray}"
-        BorderColor="{StaticResource PrimaryLightGray}"
-        CornerRadius="8"
-        HasShadow="False"
-        Padding="20,30">
+        Padding="10"
+        BackgroundColor="{Binding CustomBg}"
+        CornerRadius="6"
+        HasShadow="True">
         <Frame.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding Source={x:Reference activityButton}, Path=Command}" CommandParameter="{Binding Source={x:Reference activityButton}, Path=CommandParameter}" />
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
         </Frame.GestureRecognizers>
-        <StackLayout HorizontalOptions="CenterAndExpand">
+        <VerticalStackLayout>
             <Label
-                FontFamily="Bold"
-                FontSize="16"
-                HorizontalTextAlignment="Center"
-                TextColor="Black"
-                x:Name="activity" />
+                FontAttributes="Bold"
+                FontSize="24"
+                Text="{Binding OrderCount}"
+                TextColor="White" />
             <Label
-                FontFamily="Medium"
-                FontSize="12"
-                HorizontalTextAlignment="Center"
-                TextColor="Black"
-                x:Name="text" />
-        </StackLayout>
+                FontSize="15"
+                Text="{Binding OrderStatus}"
+                TextColor="{StaticResource PrimaryBlack}" />
+        </VerticalStackLayout>
     </Frame>
 </ContentView>

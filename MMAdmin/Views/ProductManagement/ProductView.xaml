@@ -1,145 +1,257 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    Shell.NavBarIsVisible="False"
-    Shell.TabBarIsVisible="True"
     x:Class="MMAdmin.Views.ProductView"
-    x:DataType="vm:ProductViewModel"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:models="clr-namespace:MMAdmin.Domain.Models"
     xmlns:res="clr-namespace:MMAdmin.Resources.Languages"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:MMAdmin.ViewModels.ProductManagement"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout>
-
-        <Grid VerticalOptions="FillAndExpand">
-
-            <Grid
-                Margin="0,10"
-                RowDefinitions="Auto,Auto,*"
-                RowSpacing="10">
-
-                <!--#region [ Row 0 [Text Employees] ]-->
-
+    x:DataType="vm:ProductViewModel"
+    BackgroundColor="#FAFAFA"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="True">
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <VerticalStackLayout Padding="10">
                 <Label
-                    FontFamily="Bold"
-                    FontSize="20"
-                    HorizontalOptions="StartAndExpand"
-                    Margin="20,0"
+                    Padding="0,5,0,0"
+                    FontAttributes="Bold"
+                    FontSize="24"
+                    HorizontalOptions="Center"
                     Text="Products"
-                    TextColor="{StaticResource PrimaryBlack}"
-                    VerticalOptions="CenterAndExpand" />
-
-                <!--#endregion-->
-
-                <!--#region [ Search Bar ]-->
+                    TextColor="{StaticResource PrimaryBlack}" />
 
                 <Border
-                    Grid.Row="1"
-                    Margin="20"
+                    Margin="12"
+                    Padding="7,0,8,0"
                     Style="{StaticResource PrimaryBorder}">
-                    <Grid ColumnDefinitions="*,25" Padding="10,0">
+                    <Grid ColumnDefinitions="*,*">
                         <Entry
-                            Placeholder="Search "
-                            Style="{StaticResource PrimaryEntry}"
-                            Text="{Binding SearchText}" />
+                            Grid.Column="0"
+                            FontSize="16"
+                            Placeholder="Search"
+                            PlaceholderColor="{StaticResource PrimaryBlack35}"
+                            Text="{Binding SearchText}"
+                            TextColor="Black" />
                         <Image
                             Grid.Column="1"
-                            Source="icon_search.png"
-                            Style="{StaticResource PrimaryImageEntry}" />
+                            HeightRequest="24"
+                            HorizontalOptions="End"
+                            Source="searchicon.png"
+                            WidthRequest="24" />
                     </Grid>
                 </Border>
 
-                <!--#endregion-->
-
-                <!--#region [ Employee List ]-->
                 <CollectionView
-                    BackgroundColor="{StaticResource PrimaryWhite}"
-                    Grid.Row="2"
                     ItemsSource="{Binding Products}"
-                    Margin="20,0"
                     SelectionMode="None"
                     VerticalScrollBarVisibility="Never"
                     x:Name="lstEmployees">
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10" />
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="models:Product">
-                            <Grid ColumnDefinitions="Auto,*,Auto">
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateToProductDetailCommand, Source={x:Reference lstEmployees}}" CommandParameter="{Binding .}" />
-                                </Grid.GestureRecognizers>
-                                <Frame
-                                    HeightRequest="100"
-                                    HorizontalOptions="Center"
-                                    IsClippedToBounds="True"
-                                    Padding="0"
-                                    VerticalOptions="Center"
-                                    WidthRequest="100">
-                                    <Image Aspect="AspectFit" Source="{Binding ProductImage}" />
-                                </Frame>
+                            <Frame
+                                Margin="8"
+                                Padding="13"
+                                BackgroundColor="White"
+                                CornerRadius="16"
+                                HasShadow="True">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateToProductDetailCommand, Source={x:Reference lstEmployees}}" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <VerticalStackLayout>
+                                    <!--  Image  -->
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="150"
+                                        Source="{Binding ProductImage}"
+                                        WidthRequest="150" />
 
-                                <StackLayout Grid.Column="1">
-
+                                    <!--  Name  -->
                                     <Label
-                                        FontFamily="Bold"
-                                        FontSize="15"
+                                        Padding="0,7,0,0"
+                                        FontAttributes="Bold"
+                                        FontSize="24"
                                         Text="{Binding Name}"
                                         TextColor="{StaticResource PrimaryBlack}" />
-                                    <Label>
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span
-                                                    FontFamily="Bold"
-                                                    FontSize="12"
-                                                    Text="Category: "
-                                                    TextColor="{StaticResource PrimaryDarkGray80}" />
-                                                <Span
-                                                    FontFamily="Bold"
-                                                    FontSize="12"
-                                                    Text="{Binding Category}"
-                                                    TextColor="{StaticResource PrimaryDarkGray80}" />
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
+                                    <!--  Price  -->
                                     <Label
-                                        FontFamily="Bold"
-                                        FontSize="10"
+                                        Padding="0,3,0,0"
+                                        FontSize="16"
+                                        Text="{Binding Price, StringFormat='${0:F2}'}"
+                                        TextColor="Green" />
+                                    <!--  Catgory  -->
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Padding="0,3,0,0"
+                                            FontSize="14"
+                                            Text="Category: "
+                                            TextColor="{StaticResource PrimaryBlack60}" />
+                                        <Label
+                                            Padding="0,3,0,0"
+                                            FontAttributes="Bold"
+                                            Text="{Binding Category}"
+                                            TextColor="{StaticResource PrimaryBlack60}" />
+                                    </HorizontalStackLayout>
+
+                                    <!--  Description  -->
+                                    <Label
+                                        FontSize="14"
+                                        LineBreakMode="TailTruncation"
                                         Text="{Binding Description}"
-                                        TextColor="{StaticResource PrimaryDarkGray80}" />
-                                    <BoxView
-                                        Color="LightGray"
-                                        HeightRequest="0.5"
-                                        Margin="0,3,0,0" />
-                                </StackLayout>
-                                <Label
-                                    FontFamily="Bold"
-                                    FontSize="15"
-                                    Grid.Column="2"
-                                    HorizontalTextAlignment="End"
-                                    Text="{Binding Price}"
-                                    TextColor="{StaticResource PrimaryBlack}"
-                                    VerticalTextAlignment="Start" />
-                            </Grid>
+                                        TextColor="{StaticResource PrimaryBlack60}" />
+                                </VerticalStackLayout>
+                            </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
 
-                <!--#endregion-->
+                <!--Add Button-->
+                <ImageButton
+                    x:Name="imgBtnAdd"
+                    Margin="0,7,12,5"
+                    Command="{Binding NavigateToAddProductCommand}"
+                    Source="icon_add.png"
+                    Style="{StaticResource PrimaryButtonAdd}"
+                    VerticalOptions="EndAndExpand" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 
-            </Grid>
-
-            <!--#region [ Button Add ]-->
-            <ImageButton
-                Command="{Binding NavigateToAddProductCommand}"
-                Margin="0,0,20,10"
-                Source="icon_add.png"
-                Style="{StaticResource PrimaryButtonAdd}"
-                VerticalOptions="EndAndExpand"
-                x:Name="imgBtnAdd" />
-
-            <!--#endregion-->
-        </Grid>
-    </StackLayout>
 </ContentPage>
+
+<!--<StackLayout>
+
+    <Grid VerticalOptions="FillAndExpand">
+
+        <Grid
+             Margin="0,10"
+             RowDefinitions="Auto,Auto,*"
+             RowSpacing="10">-->
+<!--#region [ Row 0 [Text Employees] ]-->
+<!--
+
+            <Label
+                 FontFamily="Bold"
+                 FontSize="20"
+                 HorizontalOptions="StartAndExpand"
+                 Margin="20,0"
+                 Text="Products"
+                 TextColor="{StaticResource PrimaryBlack}"
+                 VerticalOptions="CenterAndExpand" />-->
+<!--#endregion-->
+
+<!--#region [ Search Bar ]-->
+<!--
+
+            <Border
+                 Grid.Row="1"
+                 Margin="20"
+                 Style="{StaticResource PrimaryBorder}">
+                <Grid ColumnDefinitions="*,25" Padding="10,0">
+                    <Entry
+                         Placeholder="Search "
+                         Style="{StaticResource PrimaryEntry}"
+                         Text="{Binding SearchText}" />
+                    <Image
+                         Grid.Column="1"
+                         Source="icon_search.png"
+                         Style="{StaticResource PrimaryImageEntry}" />
+                </Grid>
+            </Border>-->
+<!--#endregion-->
+
+<!--#region [ Employee List ]-->
+<!--
+            <CollectionView
+                 BackgroundColor="{StaticResource PrimaryWhite}"
+                 Grid.Row="2"
+                 ItemsSource="{Binding Products}"
+                 Margin="20,0"
+                 SelectionMode="None"
+                 VerticalScrollBarVisibility="Never"
+                 x:Name="lstEmployees">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Product">
+                        <Grid ColumnDefinitions="Auto,*,Auto">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateToProductDetailCommand, Source={x:Reference lstEmployees}}" CommandParameter="{Binding .}" />
+                            </Grid.GestureRecognizers>
+                            <Frame
+                                 HeightRequest="100"
+                                 HorizontalOptions="Center"
+                                 IsClippedToBounds="True"
+                                 Padding="0"
+                                 VerticalOptions="Center"
+                                 WidthRequest="100">
+                                <Image Aspect="AspectFit" Source="{Binding ProductImage}" />
+                            </Frame>
+
+                            <StackLayout Grid.Column="1">
+
+                                <Label
+                                     FontFamily="Bold"
+                                     FontSize="15"
+                                     Text="{Binding Name}"
+                                     TextColor="{StaticResource PrimaryBlack}" />
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                 FontFamily="Bold"
+                                                 FontSize="12"
+                                                 Text="Category: "
+                                                 TextColor="{StaticResource PrimaryDarkGray80}" />
+                                            <Span
+                                                 FontFamily="Bold"
+                                                 FontSize="12"
+                                                 Text="{Binding Category}"
+                                                 TextColor="{StaticResource PrimaryDarkGray80}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label
+                                     FontFamily="Bold"
+                                     FontSize="10"
+                                     Text="{Binding Description}"
+                                     TextColor="{StaticResource PrimaryDarkGray80}" />
+                                <BoxView
+                                     Color="LightGray"
+                                     HeightRequest="0.5"
+                                     Margin="0,3,0,0" />
+                            </StackLayout>
+                            <Label
+                                 FontFamily="Bold"
+                                 FontSize="15"
+                                 Grid.Column="2"
+                                 HorizontalTextAlignment="End"
+                                 Text="{Binding Price}"
+                                 TextColor="{StaticResource PrimaryBlack}"
+                                 VerticalTextAlignment="Start" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>-->
+<!--#endregion-->
+<!--
+
+        </Grid>-->
+<!--#region [ Button Add ]-->
+<!--
+        <ImageButton
+             Command="{Binding NavigateToAddProductCommand}"
+             Margin="0,0,20,10"
+             Source="icon_add.png"
+             Style="{StaticResource PrimaryButtonAdd}"
+             VerticalOptions="EndAndExpand"
+             x:Name="imgBtnAdd" />-->
+<!--#endregion-->
+<!--
+    </Grid>
+</StackLayout>-->

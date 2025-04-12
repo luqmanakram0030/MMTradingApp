@@ -29,4 +29,12 @@
     <Color x:Key="PrimaryGreen00">#007F86</Color>
     <Color x:Key="PrimaryBlue">#3EAAF9</Color>
 
+    <!--  Faaiz define colors  -->
+    <Color x:Key="NavigationBar">#6200EE</Color>
+    <Color x:Key="TitleBar">white</Color>
+    <Color x:Key="TabbarUnselected">Gray</Color>
+
+
+    <!--  Faaiz define colors  -->
+
 </ResourceDictionary>
