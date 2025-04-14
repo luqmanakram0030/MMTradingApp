@@ -90,14 +90,15 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
 
-            <!--Add Button-->
-            <ImageButton x:Name="imgBtnAdd"
-             Margin="0,8,13,10"
-             Command="{Binding NavigateToAddEmployeeCommand}"
-             Source="icon_add.png"
-             Style="{StaticResource PrimaryButtonAdd}"
-             VerticalOptions="EndAndExpand" />
-                
+                <!--  Add Button  -->
+                <ImageButton
+                    x:Name="imgBtnAdd"
+                    Margin="0,8,13,10"
+                    Command="{Binding NavigateToAddEmployeeCommand}"
+                    Source="icon_add.png"
+                    Style="{StaticResource PrimaryButtonAdd}"
+                    VerticalOptions="EndAndExpand" />
+
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>

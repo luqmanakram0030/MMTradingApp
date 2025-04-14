@@ -37,11 +37,11 @@ namespace MMAdmin.Domain.Models
 
         // Image Source for the product
         public object ProductImage { get; set; }
-       
+
         // Constructor to initialize the product
         public Product()
         {
-           // Id = Guid.NewGuid();
+            // Id = Guid.NewGuid();
         }
 
         // Method to update the stock quantity

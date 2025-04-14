@@ -300,7 +300,7 @@ public class ProductService : IProductService
     //
     //     return null;
     // }
-    public async Task<bool> UploadImageAsync(Stream stream,string fileName)
+    public  Task<bool> UploadImageAsync(Stream stream,string fileName)
     {
         var response = false;
         try
@@ -327,8 +327,8 @@ public class ProductService : IProductService
         {
             response = false;
         }
-            
-        return response;
+
+        return Task.FromResult(response);
     }
 
 }

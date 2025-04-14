@@ -6,8 +6,8 @@ public partial class ProductView : ContentPage
 {
     ProductViewModel productViewModel;
     public ProductView(ProductViewModel _productViewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         productViewModel = _productViewModel;
         BindingContext = productViewModel;
     }

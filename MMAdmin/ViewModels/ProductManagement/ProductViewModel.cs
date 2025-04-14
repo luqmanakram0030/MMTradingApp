@@ -101,7 +101,7 @@ namespace MMAdmin.ViewModels.ProductManagement
                 Console.WriteLine(e);
                 throw;
             }
-            
+
         }
         [RelayCommand]
         private async Task NavigateToAddProduct(Product product)
@@ -116,7 +116,7 @@ namespace MMAdmin.ViewModels.ProductManagement
                 Console.WriteLine(e);
                 throw;
             }
-            
+
         }
         #endregion
     }
