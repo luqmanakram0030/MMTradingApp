@@ -18,7 +18,7 @@ namespace MMAdmin.Domain.Models
         [StringLength(15, ErrorMessage = "Phone number cannot exceed 15 characters")]
         public string PhoneNumber { get; set; } // Renamed for consistency
 
-        [Required(ErrorMessage = "Location is required")]
+        
         public PlaceDetails Location { get; set; } // Use the same type as EmployeeModel
     }
 
