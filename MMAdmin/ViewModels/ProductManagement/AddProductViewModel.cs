@@ -8,6 +8,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using MMAdmin.Domain.Models;
+using MMAdmin.Abstract;
 
 namespace MMAdmin.ViewModels.ProductManagement
 {
@@ -146,26 +152,25 @@ namespace MMAdmin.ViewModels.ProductManagement
         {
             await _productService.RequestPermissionAsync();
             var result = await App.Current.MainPage.DisplayActionSheet("Change Picture", "Cancel", null, "Take Photo", "Select Photo");
-            if (result == "Take Photo")
-            {
+           if (result == "Take Photo")
+           {
                 SelectedProduct.ImageUrl = await _productService.CapturePhotoAsync();
             }
             else if (result == "Select Photo")
             {
                 SelectedProduct.ImageUrl = await _productService.PickPhotoAsync();
-            }
-            if (!string.IsNullOrWhiteSpace(SelectedProduct.ImageUrl))
+         }
+          if (!string.IsNullOrWhiteSpace(SelectedProduct.ImageUrl))
             {
                 byte[] base64Stream = Convert.FromBase64String(SelectedProduct.ImageUrl);
                 // Get the image content as a byte array
 
-
-
-
-                ProductImage = ImageSource.FromStream(() => new MemoryStream(base64Stream));
-                IsImageVisible = true;
-            }
+              ProductImage = ImageSource.FromStream(() => new MemoryStream(base64Stream));
+               IsImageVisible = true;
+          }
         }
+      
+        
         [RelayCommand]
         public async Task NavigatetoCategory()
         {

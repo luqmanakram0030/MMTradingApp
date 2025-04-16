@@ -128,6 +128,10 @@
             "Syncfusion.Maui.Inputs": {
               "target": "Package",
               "version": "[23.1.44, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -237,6 +241,10 @@
             "Syncfusion.Maui.Inputs": {
               "target": "Package",
               "version": "[23.1.44, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -334,6 +342,10 @@
             "Syncfusion.Maui.Inputs": {
               "target": "Package",
               "version": "[23.1.44, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -426,6 +438,10 @@
             "Syncfusion.Maui.Inputs": {
               "target": "Package",
               "version": "[23.1.44, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MMAdmin.PracticeProjects.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MMAdmin.PracticeProjects.Model"
+    Title="Products">
+
+    <ScrollView>
+
+
+        <VerticalStackLayout>
+
+            <Button
+                Margin="0,30,0,0"
+                Command="{Binding AddProductCommand}"
+                Text="Add" />
+
+
+            <Frame>
+
+                <ListView
+                    x:Name="listView"
+                    HasUnevenRows="True"
+                    ItemTapped="listView_ItemTapped"
+                    ItemsSource="{Binding Products}"
+                    SeparatorVisibility="Default">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <VerticalStackLayout>
+                                    <Image Source="{Binding Images}" />
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding Price}" />
+                                    <Label Text="{Binding StockQty}" />
+                                    <Label Text="{Binding Description}" />
+                                    <Label Text="{Binding Category}" />
+                                    <Button
+                                        Command="{Binding Path=BindingContext.EditProductCommand, Source={x:Reference listView}}"
+                                        CommandParameter="{Binding}"
+                                        Text="Edit" />
+                                    <Button
+                                        Command="{Binding Path=BindingContext.DeleteProductCommand, Source={x:Reference listView}}"
+                                        CommandParameter="{Binding}"
+                                        Text="Delete" />
+                                </VerticalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+

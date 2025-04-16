@@ -643,6 +643,8 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.IsVisible">
             <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.isVisible"/>
@@ -661,6 +663,18 @@
         </member>
         <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.Categories">
             <inheritdoc cref="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.categories"/>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.updateProductCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.UpdateProductCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.UpdateProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.UpdateProductAsync"/>.</summary>
+        </member>
+        <member name="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.deleteProductCommand">
+            <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.DeleteProductCommand"/>.</summary>
+        </member>
+        <member name="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.DeleteProductCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.DeleteProductAsync"/>.</summary>
         </member>
         <member name="F:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.goBackCommand">
             <summary>The backing field for <see cref="P:MMAdmin.ViewModels.ProductManagement.ProductDetailViewModel.GoBackCommand"/>.</summary>

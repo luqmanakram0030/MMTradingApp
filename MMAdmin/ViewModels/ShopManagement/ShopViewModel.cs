@@ -38,6 +38,10 @@ namespace MMAdmin.ViewModels.ShopManagement
         [ObservableProperty]
         private ObservableCollection<ShopModel> shops;
 
+        public ICommand OpenDialer {  get; set; }
+        public ICommand OpenWatsapp { get; set; }
+       
+
         public ShopViewModel(ISharedService sharedService, IShopService shopService)
         {
             _shopService = shopService;
@@ -45,6 +49,44 @@ namespace MMAdmin.ViewModels.ShopManagement
             Shops = new ObservableCollection<ShopModel>();
             LoadShopsCommand = new AsyncRelayCommand(LoadShopsAsync);
             SearchCommand = new Command(async () => await PerformSearch());
+
+            OpenDialer = new Command<string>(async (phoneNumber) =>
+            {
+                if (!string.IsNullOrWhiteSpace(phoneNumber))
+                {
+                    PhoneDialer.Open(phoneNumber);
+                }
+            });
+
+            OpenWatsapp = new Command<string>(async (phoneNumber) =>
+            {
+                if (!string.IsNullOrWhiteSpace(phoneNumber))
+                {
+                    // Step 1: Remove dashes, spaces, etc.
+                    /* "0300-9400007" 
+                       "0300 9400007"
+                       " 03009400007 " 
+                    */
+                    var cleaned = phoneNumber.Replace("-", "").Replace(" ", "").Trim();
+
+                    // Step 2: Remove leading zero (if any), then add 92
+                    // "03009400007" becomes "92 3214330988"
+
+                    if (cleaned.StartsWith("0"))
+                    {
+                        cleaned = "92" + cleaned.Substring(1);
+                    }
+                    else if (cleaned.StartsWith("+"))
+                    {
+                        cleaned = cleaned.Replace("+", "");
+                    }
+
+                    // Step 3: Create WhatsApp URL
+                    var uri = new Uri($"https://wa.me/{cleaned}");
+                    await Launcher.OpenAsync(uri);
+                }
+            });
+            
         }
         #region Methods
         [RelayCommand]

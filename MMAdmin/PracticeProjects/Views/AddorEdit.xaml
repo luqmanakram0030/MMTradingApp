@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MMAdmin.PracticeProjects.Views.AddorEdit"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MMAdmin.PracticeProjects.Model"
+    Title="AddorEdit">
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Image Aspect="AspectFill" Source="{Binding Product.Images}" />
+
+
+
+            <Button
+                Margin="0,20,0,0"
+                Command="{Binding AddImageCommand}"
+                Text="Pick Image" />
+
+            <Entry Placeholder="Name" Text="{Binding Product.Name}" />
+            <Entry Placeholder="Price" Text="{Binding Product.Price}" />
+            <Entry Placeholder="Stock" Text="{Binding Product.StockQty}" />
+            <Entry Placeholder="Description" Text="{Binding Product.Description}" />
+            <Entry Placeholder="Caregory" Text="{Binding Product.Category}" />
+
+
+            <Button Command="{Binding SaveCommand}" Text="Save" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
